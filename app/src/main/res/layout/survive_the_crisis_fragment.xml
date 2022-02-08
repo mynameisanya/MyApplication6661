@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".survive_the_crisis.SurviveTheCrisisFragment">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="413dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/background2_" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:layout_marginTop="50dp">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Выживание в кризисе" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Принятие реальности" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Стать свободной" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ABCD" />
+
+
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <ImageButton
+        android:id="@+id/stop_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:src="@drawable/stop" />
+
+    <ImageButton
+        android:id="@+id/pros_and_cons_image"
+        android:layout_width="174dp"
+        android:layout_height="121dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="140dp"
+        android:src="@drawable/pros_and_cons" />
+
+    <ImageButton
+        android:id="@+id/tip_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="270dp"
+        android:src="@drawable/tip" />
+
+    <ImageButton
+        android:id="@+id/accepts_image"
+        android:layout_width="179dp"
+        android:layout_height="121dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="270dp"
+        android:src="@drawable/accepts" />
+
+    <ImageButton
+        android:id="@+id/self_soothe_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:src="@drawable/self_soothe" />
+
+    <ImageButton
+        android:id="@+id/шimprove_image"
+        android:layout_width="179dp"
+        android:layout_height="121dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="400dp"
+        android:src="@drawable/improve" />
+
+
+</FrameLayout>

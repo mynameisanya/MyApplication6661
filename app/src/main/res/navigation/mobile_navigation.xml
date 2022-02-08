@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_modules">
+
+    <fragment
+        android:id="@+id/navigation_modules"
+        android:name="com.example.myapplication666.ui.modules.ModulesFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_modules" />
+
+    <fragment
+        android:id="@+id/navigation_diary"
+        android:name="com.example.myapplication666.ui.diary.DiaryFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_diary" />
+
+    <fragment
+        android:id="@+id/navigation_crisis"
+        android:name="com.example.myapplication666.ui.crisis.CrisisFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_crisis" />
+
+    <fragment
+
+        android:id="@+id/wise_mind_fragment"
+        android:name="com.example.myapplication666.wise_mind.WiseMindFragment"
+        android:label="Привет!">
+
+    </fragment>
+</navigation>

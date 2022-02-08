@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.modules.ModulesFragment">
+
+
+    <ImageButton
+        android:id="@+id/observe_image"
+        android:layout_width="206dp"
+        android:layout_height="179dp"
+        android:layout_marginTop="132dp"
+        android:src="@drawable/observe_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/descibe_image"
+        android:layout_width="190dp"
+        android:layout_height="156dp"
+        android:layout_marginTop="140dp"
+        android:src="@drawable/describe_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/participate_image"
+        android:layout_width="206dp"
+        android:layout_height="179dp"
+        android:layout_marginTop="308dp"
+        android:src="@drawable/participate_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/exercises2_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/exercises"
+        tools:layout_editor_absoluteX="222dp"
+        tools:layout_editor_absoluteY="325dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

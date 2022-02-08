@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".how_skills.HOWSkillsFragment">
+
+
+    <ImageButton
+        android:id="@+id/non_judgmentally_image"
+        android:layout_width="177dp"
+        android:layout_height="114dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="220dp"
+        android:src="@drawable/non_judgmentally_image" />
+
+    <ImageButton
+        android:id="@+id/one_mindfully_image"
+        android:layout_width="178dp"
+        android:layout_height="120dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="360dp"
+        android:src="@drawable/one_mindfully_image" />
+
+    <ImageButton
+        android:id="@+id/effectively_image"
+        android:layout_width="180dp"
+        android:layout_height="113dp"
+        android:layout_marginLeft="240dp"
+        android:layout_marginTop="220dp"
+        android:src="@drawable/effectively_image" />
+
+    <ImageButton
+        android:id="@+id/exercises3_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="230dp"
+        android:layout_marginTop="355dp"
+        android:src="@drawable/exercises" />
+
+</FrameLayout>
