@@ -1,23 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".wise_mind.WiseMindFragment">
-
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tabLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="70dp">
-
-        </com.google.android.material.tabs.TabLayout>
-    </com.google.android.material.appbar.AppBarLayout>
 
     <ImageButton
         android:id="@+id/rational_mind_image"
@@ -49,10 +36,4 @@
         android:layout_marginTop="350dp"
         android:layout_marginLeft="200dp"/>
 
-
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/pager2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</FrameLayout>

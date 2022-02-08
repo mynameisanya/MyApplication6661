@@ -40,7 +40,7 @@ class ModulesFragment : Fragment() {
         val imageButton = view.findViewById<ImageButton>(R.id.mindfulness)
         imageButton.setOnClickListener()
         {
-            (requireActivity() as MainActivity).navigationTo(R.id.wise_mind_fragment)
+            (requireActivity() as MainActivity).navigationTo(R.id.navigation_mindfulness)
         }
 
     }
