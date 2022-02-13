@@ -7,7 +7,7 @@ import com.example.myapplication666.how_skills.HOWSkillsFragment
 import com.example.myapplication666.what_skills.WHATSkillsFragment
 import com.example.myapplication666.wise_mind.WiseMindFragment
 
-class WiseMindAdapter(activity: FragmentActivity): FragmentStateAdapter(activity) {
+class MindfulnessAdapter(activity: FragmentActivity): FragmentStateAdapter(activity) {
     override fun getItemCount(): Int {
         return 3
     }
