@@ -24,10 +24,8 @@
         tools:layout="@layout/fragment_crisis" />
 
     <fragment
-
         android:id="@+id/navigation_mindfulness"
-        android:name="com.example.myapplication666.MindFulnessFragment"
+        android:name="com.example.myapplication666.MindfulnessFragment"
         android:label="Привет!">
-
     </fragment>
 </navigation>

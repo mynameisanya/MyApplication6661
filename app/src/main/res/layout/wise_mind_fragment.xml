@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<androidx.fragment.app.FragmentContainerView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".wise_mind.WiseMindFragment">
 
+
+
+
     <ImageButton
         android:id="@+id/rational_mind_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/rational_mind"
-        android:layout_marginTop="220dp"/>
+        android:layout_marginTop="350dp"
+        android:layout_marginLeft="200dp"/>
+
     <ImageButton
         android:id="@+id/emotional_mind_image"
         android:layout_width="wrap_content"
@@ -36,4 +41,7 @@
         android:layout_marginTop="350dp"
         android:layout_marginLeft="200dp"/>
 
-</FrameLayout>
+
+
+
+</androidx.fragment.app.FragmentContainerView>

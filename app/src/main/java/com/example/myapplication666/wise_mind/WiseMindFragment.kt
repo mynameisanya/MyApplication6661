@@ -30,4 +30,5 @@ class WiseMindFragment : Fragment() {
     ): View? {
         return inflater.inflate(R.layout.wise_mind_fragment, container, false)
     }
+
 }

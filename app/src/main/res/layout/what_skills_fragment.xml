@@ -9,44 +9,45 @@
 
     <ImageButton
         android:id="@+id/observe_image"
-        android:layout_width="206dp"
-        android:layout_height="179dp"
-        android:layout_marginTop="132dp"
+        android:layout_width="177dp"
+        android:layout_height="122dp"
+        android:layout_marginTop="180dp"
         android:src="@drawable/observe_image"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintHorizontal_bias="0.081"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/descibe_image"
-        android:layout_width="190dp"
-        android:layout_height="156dp"
-        android:layout_marginTop="140dp"
+        android:layout_width="170dp"
+        android:layout_height="121dp"
+        android:layout_marginTop="180dp"
         android:src="@drawable/describe_image"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.915"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/participate_image"
-        android:layout_width="206dp"
-        android:layout_height="179dp"
-        android:layout_marginTop="308dp"
+        android:layout_width="175dp"
+        android:layout_height="126dp"
+        android:layout_marginTop="340dp"
         android:src="@drawable/participate_image"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintHorizontal_bias="0.08"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/exercises2_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="178dp"
+        android:layout_height="126dp"
         android:src="@drawable/exercises"
-        tools:layout_editor_absoluteX="222dp"
-        tools:layout_editor_absoluteY="325dp" />
+        tools:layout_editor_absoluteX="217dp"
+        tools:layout_editor_absoluteY="340dp"
+        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
