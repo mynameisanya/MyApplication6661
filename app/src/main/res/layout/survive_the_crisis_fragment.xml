@@ -79,7 +79,7 @@
         android:src="@drawable/self_soothe" />
 
     <ImageButton
-        android:id="@+id/шimprove_image"
+        android:id="@+id/improve_image"
         android:layout_width="179dp"
         android:layout_height="121dp"
         android:layout_marginLeft="200dp"

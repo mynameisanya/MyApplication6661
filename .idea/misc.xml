@@ -4,17 +4,19 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/MyApplication666/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1615" />
-        <entry key="..\:/MyApplication666/app/src/main/res/layout/accepting_reality_fragment.xml" value="0.24010416666666667" />
+        <entry key="..\:/MyApplication666/app/src/main/res/layout/accepting_reality_fragment.xml" value="0.4742468415937804" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/accepts_fragment.xml" value="0.24909420289855072" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/activity_main.xml" value="0.17708333333333334" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/activity_main2.xml" value="0.25416666666666665" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/activity_splash.xml" value="0.2" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/blank_fragment.xml" value="0.25416666666666665" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/content_splash.xml" value="0.25416666666666665" />
-        <entry key="..\:/MyApplication666/app/src/main/res/layout/distress_tolerance_fragment.xml" value="0.25416666666666665" />
+        <entry key="..\:/MyApplication666/app/src/main/res/layout/d_c_b_a_fragment.xml" value="0.25416666666666665" />
+        <entry key="..\:/MyApplication666/app/src/main/res/layout/distress_tolerance_fragment.xml" value="0.1" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/enum_fragment.xml" value="0.25416666666666665" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/fragment_diary.xml" value="0.11302083333333333" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/MyApplication666/app/src/main/res/layout/fragment_mindfullness.xml" value="0.25416666666666665" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/fragment_modules.xml" value="0.264" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/how_skills_fragment.xml" value="0.2" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/improve_fragment.xml" value="0.24909420289855072" />
@@ -22,10 +24,10 @@
         <entry key="..\:/MyApplication666/app/src/main/res/layout/mindfulness_fragment.xml" value="0.19635416666666666" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/non_judmentally_fragment.xml" value="0.24909420289855072" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/participle_fragment.xml" value="0.24010416666666667" />
-        <entry key="..\:/MyApplication666/app/src/main/res/layout/survive_the_crisis_fragment.xml" value="0.2" />
+        <entry key="..\:/MyApplication666/app/src/main/res/layout/survive_the_crisis_fragment.xml" value="0.264" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/t_fragment.xml" value="0.25416666666666665" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/what_skills_fragment.xml" value="0.264" />
-        <entry key="..\:/MyApplication666/app/src/main/res/layout/wise_mind_fragment.xml" value="0.4742468415937804" />
+        <entry key="..\:/MyApplication666/app/src/main/res/layout/wise_mind_fragment.xml" value="0.25" />
       </map>
     </option>
   </component>

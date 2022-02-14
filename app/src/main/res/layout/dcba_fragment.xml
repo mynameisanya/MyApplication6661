@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="accepting_reality.AcceptingRealityFragment">
+    tools:context="dcba.DCBAFragment">
 
     <ImageView
         android:id="@+id/imageView"
@@ -41,49 +41,50 @@
     </com.google.android.material.tabs.TabLayout>
 
     <ImageButton
-        android:id="@+id/radical_acceptance_image"
+        android:id="@+id/abstinence_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="140dp"
-        android:src="@drawable/radical_acceptance" />
+        android:src="@drawable/abstinence" />
+
 
     <ImageButton
-        android:id="@+id/turing_your_mind_image"
-        android:layout_width="174dp"
+        android:id="@+id/clear_mind_image"
+        android:layout_width="262dp"
+        android:layout_height="121dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="290dp"
+        android:src="@drawable/clear_mind" />
+
+    <ImageButton
+        android:id="@+id/support_community_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:src="@drawable/support_community" />
+
+    <ImageButton
+        android:id="@+id/bridges_image"
+        android:layout_width="278dp"
         android:layout_height="121dp"
         android:layout_marginLeft="200dp"
-        android:layout_marginTop="140dp"
-        android:src="@drawable/turing_your_mind" />
-
-    <ImageButton
-        android:id="@+id/willingness_image"
-        android:layout_width="176dp"
-        android:layout_height="121dp"
         android:layout_marginTop="270dp"
-        android:src="@drawable/willingness" />
+        android:src="@drawable/bridges" />
 
     <ImageButton
-        android:id="@+id/accepts_image"
+        android:id="@+id/riot_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="530dp"
+        android:src="@drawable/riot" />
+
+    <ImageButton
+        android:id="@+id/refusal_image"
         android:layout_width="179dp"
         android:layout_height="121dp"
         android:layout_marginLeft="200dp"
-        android:layout_marginTop="270dp"
-        android:src="@drawable/accepts" />
-
-    <ImageButton
-        android:id="@+id/half_smile_image"
-        android:layout_width="177dp"
-        android:layout_height="120dp"
-        android:layout_marginTop="400dp"
-        android:src="@drawable/half_smile" />
-
-    <ImageButton
-        android:id="@+id/directed_consciousness_image"
-        android:layout_width="173dp"
-        android:layout_height="117dp"
-        android:layout_marginLeft="200dp"
-        android:layout_marginTop="400dp"
-        android:src="@drawable/directed_consciousness" />
+        android:layout_marginTop="600dp"
+        android:src="@drawable/refusal" />
 
 
 </FrameLayout>
