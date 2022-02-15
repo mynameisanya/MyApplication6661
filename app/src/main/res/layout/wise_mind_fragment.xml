@@ -1,47 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.fragment.app.FragmentContainerView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".wise_mind.WiseMindFragment">
-
-
-
 
     <ImageButton
         android:id="@+id/rational_mind_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/rational_mind"
-        android:layout_marginTop="350dp"
-        android:layout_marginLeft="200dp"/>
+        app:layout_constraintEnd_toStartOf="@+id/emotional_mind_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/emotional_mind_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/emotional_mind"
-        android:layout_marginTop="220dp"
-        android:layout_marginLeft="200dp"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rational_mind_image" />
 
     <ImageButton
         android:id="@+id/wise_mind_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/wise_mind"
-        android:layout_marginTop="350dp"
-        android:layout_marginLeft="10dp"/>
+        app:layout_constraintEnd_toStartOf="@+id/exercises1_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emotional_mind_image" />
 
     <ImageButton
         android:id="@+id/exercises1_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/exercises"
-        android:layout_marginTop="350dp"
-        android:layout_marginLeft="200dp"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/emotional_mind_image"
+        app:layout_constraintTop_toBottomOf="@+id/rational_mind_image" />
 
 
-
-
-</androidx.fragment.app.FragmentContainerView>
+</androidx.constraintlayout.widget.ConstraintLayout>

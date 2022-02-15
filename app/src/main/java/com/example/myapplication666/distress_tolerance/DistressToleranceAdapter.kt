@@ -18,7 +18,7 @@ class DistressToleranceAdapter(activity: FragmentActivity) : FragmentStateAdapte
 
     override fun createFragment(position: Int): Fragment {
         return when (DistressToleranceEnum.values()[getItemViewType(position)]) {
-            DistressToleranceEnum.SURVIVE_THE_CRISIS -> TODO()
+            DistressToleranceEnum.SURVIVE_THE_CRISIS -> SurviveTheCrisisFragment()
             DistressToleranceEnum.ACCEPTING_REALITY -> TODO()
             DistressToleranceEnum.BEFREE -> TODO()
             DistressToleranceEnum.ABCD -> TODO()
