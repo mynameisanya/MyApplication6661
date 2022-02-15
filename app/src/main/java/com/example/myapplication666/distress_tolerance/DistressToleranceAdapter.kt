@@ -3,10 +3,12 @@ package com.example.myapplication666.distress_tolerance;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
+import com.example.myapplication666.BeFreeFragment
 import com.example.myapplication666.DistressToleranceEnum
 import com.example.myapplication666.FragmentTypeEnum;
 import com.example.myapplication666.survive_the_crisis.SurviveTheCrisisFragment;
 import com.example.myapplication666.accepting_reality.AcceptingRealityFragment;
+import com.example.myapplication666.dcba.DCBAFragment
 import com.example.myapplication666.how_skills.HOWSkillsFragment
 import com.example.myapplication666.what_skills.WHATSkillsFragment
 
@@ -19,9 +21,9 @@ class DistressToleranceAdapter(activity: FragmentActivity) : FragmentStateAdapte
     override fun createFragment(position: Int): Fragment {
         return when (DistressToleranceEnum.values()[getItemViewType(position)]) {
             DistressToleranceEnum.SURVIVE_THE_CRISIS -> SurviveTheCrisisFragment()
-            DistressToleranceEnum.ACCEPTING_REALITY -> TODO()
-            DistressToleranceEnum.BEFREE -> TODO()
-            DistressToleranceEnum.ABCD -> TODO()
+            DistressToleranceEnum.ACCEPTING_REALITY -> AcceptingRealityFragment()
+            DistressToleranceEnum.BEFREE -> BeFreeFragment()
+            DistressToleranceEnum.ABCD -> DCBAFragment()
         }
     }
 
