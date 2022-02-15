@@ -21,8 +21,6 @@ class MindfulnessFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_mindfullness, container, false)
     }
 
-
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         tabLayout = view.findViewById(R.id.tabLayout)
