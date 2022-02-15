@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".survive_the_crisis.SurviveTheCrisisFragment">
+    tools:context="dcba.DCBAFragment">
 
     <ImageView
         android:id="@+id/imageView"
@@ -35,56 +34,57 @@
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ABCD" />
+            android:text= "АБСД" />
 
 
 
     </com.google.android.material.tabs.TabLayout>
 
     <ImageButton
-        android:id="@+id/stop_image"
+        android:id="@+id/abstinence_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="140dp"
-        android:src="@drawable/stop" />
+        android:src="@drawable/abstinence" />
+
 
     <ImageButton
-        android:id="@+id/pros_and_cons_image"
-        android:layout_width="174dp"
+        android:id="@+id/clear_mind_image"
+        android:layout_width="262dp"
         android:layout_height="121dp"
-        android:layout_marginLeft="200dp"
-        android:layout_marginTop="140dp"
-        android:src="@drawable/pros_and_cons" />
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="290dp"
+        android:src="@drawable/clear_mind" />
 
     <ImageButton
-        android:id="@+id/tip_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="270dp"
-        android:src="@drawable/tip" />
-
-    <ImageButton
-        android:id="@+id/accepts_image"
-        android:layout_width="179dp"
-        android:layout_height="121dp"
-        android:layout_marginLeft="200dp"
-        android:layout_marginTop="270dp"
-        android:src="@drawable/accepts" />
-
-    <ImageButton
-        android:id="@+id/self_soothe_image"
+        android:id="@+id/support_community_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="400dp"
-        android:src="@drawable/self_soothe" />
+        android:src="@drawable/support_community" />
 
     <ImageButton
-        android:id="@+id/improve_image"
+        android:id="@+id/bridges_image"
+        android:layout_width="278dp"
+        android:layout_height="121dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="270dp"
+        android:src="@drawable/bridges" />
+
+    <ImageButton
+        android:id="@+id/riot_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="530dp"
+        android:src="@drawable/riot" />
+
+    <ImageButton
+        android:id="@+id/refusal_image"
         android:layout_width="179dp"
         android:layout_height="121dp"
         android:layout_marginLeft="200dp"
-        android:layout_marginTop="400dp"
-        android:src="@drawable/improve" />
+        android:layout_marginTop="600dp"
+        android:src="@drawable/refusal" />
 
 
 </FrameLayout>

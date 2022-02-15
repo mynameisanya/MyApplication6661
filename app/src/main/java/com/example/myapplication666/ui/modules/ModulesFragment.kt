@@ -12,6 +12,7 @@ import com.example.myapplication666.MainActivity
 import com.example.myapplication666.R
 import com.example.myapplication666.databinding.FragmentModulesBinding
 
+
 class ModulesFragment : Fragment() {
 
     private lateinit var modulesViewModel: ModulesViewModel
@@ -40,7 +41,12 @@ class ModulesFragment : Fragment() {
         val imageButton = view.findViewById<ImageButton>(R.id.mindfulness)
         imageButton.setOnClickListener()
         {
-            (requireActivity() as MainActivity).navigationTo(R.id.wise_mind_fragment)
+            (requireActivity() as MainActivity).navigationTo(R.id.navigation_mindfulness)
+        }
+        val imageButtonDistress = view.findViewById<ImageButton>(R.id.distress_tolerance)
+        imageButtonDistress.setOnClickListener()
+        {
+            (requireActivity() as MainActivity).navigationTo(R.id.navigation_distress_tolerance)
         }
 
     }

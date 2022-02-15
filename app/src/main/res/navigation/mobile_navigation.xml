@@ -24,10 +24,14 @@
         tools:layout="@layout/fragment_crisis" />
 
     <fragment
-
-        android:id="@+id/wise_mind_fragment"
-        android:name="com.example.myapplication666.wise_mind.WiseMindFragment"
+        android:id="@+id/navigation_mindfulness"
+        android:name="com.example.myapplication666.MindfulnessFragment"
         android:label="Привет!">
+    </fragment>
 
+    <fragment
+        android:id="@+id/navigation_distress_tolerance"
+        android:name="com.example.myapplication666.distress_tolerance.DistressToleranceFragment"
+        android:label="Привет!">
     </fragment>
 </navigation>

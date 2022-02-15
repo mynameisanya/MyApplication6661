@@ -3,6 +3,8 @@ package com.example.myapplication666.splash
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.widget.Button
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.ActivityResultLauncher
@@ -11,6 +13,9 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.myapplication666.BaseActivity
 import com.example.myapplication666.R
 import com.example.myapplication666.errors.NoAuthException
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class SplashActivity : BaseActivity() {
     override val startForResult =
@@ -19,20 +24,14 @@ class SplashActivity : BaseActivity() {
                 RESULT_OK -> renderData()
             }
         }
-    private lateinit var btnSigh: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
+
         val viewModel = ViewModelProvider(this).get(SplashViewModel::class.java)
 
-
-        btnSigh = findViewById(R.id.sign_in_btn)
-
-        btnSigh.setOnClickListener()
-        {
-            viewModel.requestUser()
-        }
+        viewModel.requestUser()
 
         viewModel.viewState.observe(this@SplashActivity)
         {
@@ -42,7 +41,5 @@ class SplashActivity : BaseActivity() {
                 SplashViewState.Success -> renderData()
             }
         }
-
-
     }
 }
