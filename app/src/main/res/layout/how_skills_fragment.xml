@@ -1,42 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background2_"
     tools:context=".how_skills.HOWSkillsFragment">
 
 
     <ImageButton
         android:id="@+id/non_judgmentally_image"
-        android:layout_width="177dp"
-        android:layout_height="114dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="220dp"
-        android:src="@drawable/non_judgmentally_image" />
+        android:layout_width="168dp"
+        android:layout_height="119dp"
+        android:src="@drawable/non_judgmentally_image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.299" />
 
     <ImageButton
         android:id="@+id/one_mindfully_image"
-        android:layout_width="178dp"
-        android:layout_height="120dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="360dp"
-        android:src="@drawable/one_mindfully_image" />
+        android:layout_width="172dp"
+        android:layout_height="121dp"
+        android:src="@drawable/one_mindfully_image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.895"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3" />
 
     <ImageButton
         android:id="@+id/effectively_image"
-        android:layout_width="180dp"
-        android:layout_height="113dp"
-        android:layout_marginLeft="240dp"
-        android:layout_marginTop="220dp"
-        android:src="@drawable/effectively_image" />
+        android:layout_width="170dp"
+        android:layout_height="117dp"
+        android:src="@drawable/effectively_image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.112"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.574" />
 
     <ImageButton
         android:id="@+id/exercises3_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="230dp"
-        android:layout_marginTop="355dp"
-        android:src="@drawable/exercises" />
+        android:layout_width="170dp"
+        android:layout_height="116dp"
+        android:src="@drawable/exercises"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.896"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.573" />
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

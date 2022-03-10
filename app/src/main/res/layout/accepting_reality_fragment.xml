@@ -7,34 +7,28 @@
     android:background="@drawable/background2_"
     tools:context="accepting_reality.AcceptingRealityFragment">
 
-    <com.google.android.material.tabs.TabLayout
-        android:layout_width="match_parent"
-        android:layout_height="63dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-
-    </com.google.android.material.tabs.TabLayout>
 
     <ImageButton
         android:id="@+id/radical_acceptance_image"
         android:layout_width="173dp"
         android:layout_height="117dp"
-        android:layout_marginStart="24dp"
         android:src="@drawable/radical_acceptance"
-        app:layout_constraintBottom_toTopOf="@+id/willingness_image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.067"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.612" />
+        app:layout_constraintVertical_bias="0.242" />
 
     <ImageButton
         android:id="@+id/turing_your_mind_image"
         android:layout_width="174dp"
         android:layout_height="121dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="148dp"
         android:src="@drawable/turing_your_mind"
-        app:layout_constraintBottom_toTopOf="@+id/accepts_image"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.932"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
@@ -52,9 +46,10 @@
         android:layout_width="174dp"
         android:layout_height="121dp"
         android:src="@drawable/accepts"
-        app:layout_constraintBottom_toTopOf="@+id/directed_consciousness_image"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/willingness_image" />
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toEndOf="@+id/willingness_image"
+        tools:layout_editor_absoluteY="314dp" />
 
     <ImageButton
         android:id="@+id/half_smile_image"
@@ -64,15 +59,18 @@
         android:src="@drawable/half_smile"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/willingness_image" />
+        app:layout_constraintTop_toBottomOf="@+id/willingness_image"
+        app:layout_constraintVertical_bias="0.267" />
 
     <ImageButton
         android:id="@+id/directed_consciousness_image"
         android:layout_width="173dp"
         android:layout_height="117dp"
+        android:layout_marginBottom="132dp"
         android:src="@drawable/directed_consciousness"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
         app:layout_constraintStart_toEndOf="@+id/half_smile_image" />
 
 

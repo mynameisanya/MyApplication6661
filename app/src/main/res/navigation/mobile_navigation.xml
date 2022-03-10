@@ -8,30 +8,49 @@
     <fragment
         android:id="@+id/navigation_modules"
         android:name="com.example.myapplication666.ui.modules.ModulesFragment"
-        android:label="@string/title_home"
+        android:label="@string/title_modules"
         tools:layout="@layout/fragment_modules" />
 
     <fragment
         android:id="@+id/navigation_diary"
         android:name="com.example.myapplication666.ui.diary.DiaryFragment"
-        android:label="@string/title_dashboard"
+        android:label="@string/title_diary"
         tools:layout="@layout/fragment_diary" />
 
     <fragment
         android:id="@+id/navigation_crisis"
         android:name="com.example.myapplication666.ui.crisis.CrisisFragment"
-        android:label="@string/title_notifications"
+        android:label="@string/title_crisis"
         tools:layout="@layout/fragment_crisis" />
 
     <fragment
         android:id="@+id/navigation_mindfulness"
         android:name="com.example.myapplication666.MindfulnessFragment"
-        android:label="Привет!">
+        android:label="@string/mindfulness">
     </fragment>
 
     <fragment
         android:id="@+id/navigation_distress_tolerance"
         android:name="com.example.myapplication666.distress_tolerance.DistressToleranceFragment"
-        android:label="Привет!">
+        android:label="@string/distress_tolerance">
     </fragment>
+
+    <fragment
+        android:id="@+id/navigation_emotional_regulation"
+        android:name="com.example.myapplication666.distress_tolerance.DistressToleranceFragment"
+        android:label="@string/emotional_regulation">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_interpersonal_effectiveness"
+        android:name="com.example.myapplication666.distress_tolerance.DistressToleranceFragment"
+        android:label="@string/interpersonal_effectiveness">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_rational_mind"
+        android:name="com.example.myapplication666.wise_mind.RationalMindFragment"
+        android:label="@string/rational_mind">
+    </fragment>
+
 </navigation>

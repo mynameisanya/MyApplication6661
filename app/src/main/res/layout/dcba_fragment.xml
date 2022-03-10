@@ -1,90 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background2_"
     tools:context="dcba.DCBAFragment">
+
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="413dp"
         android:layout_height="match_parent"
-        android:src="@drawable/background2_" />
-
-    <com.google.android.material.tabs.TabLayout
-        android:layout_width="match_parent"
-        android:layout_height="63dp"
-        android:layout_marginTop="50dp">
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Выживание в кризисе" />
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Принятие реальности" />
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Стать свободной" />
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text= "АБСД" />
-
-
-
-    </com.google.android.material.tabs.TabLayout>
+        android:src="@drawable/background2_"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="0dp" />
 
     <ImageButton
         android:id="@+id/abstinence_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="140dp"
-        android:src="@drawable/abstinence" />
-
+        android:layout_width="281dp"
+        android:layout_height="127dp"
+        android:src="@drawable/abstinence"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="27dp" />
 
     <ImageButton
         android:id="@+id/clear_mind_image"
-        android:layout_width="262dp"
-        android:layout_height="121dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="290dp"
-        android:src="@drawable/clear_mind" />
+        android:layout_width="276dp"
+        android:layout_height="119dp"
+        android:src="@drawable/clear_mind"
+        tools:layout_editor_absoluteX="67dp"
+        tools:layout_editor_absoluteY="169dp" />
 
     <ImageButton
         android:id="@+id/support_community_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="400dp"
-        android:src="@drawable/support_community" />
+        android:layout_width="282dp"
+        android:layout_height="125dp"
+        android:src="@drawable/support_community"
+        tools:layout_editor_absoluteX="83dp"
+        tools:layout_editor_absoluteY="271dp" />
 
     <ImageButton
         android:id="@+id/bridges_image"
         android:layout_width="278dp"
         android:layout_height="121dp"
-        android:layout_marginLeft="200dp"
-        android:layout_marginTop="270dp"
-        android:src="@drawable/bridges" />
+        android:src="@drawable/bridges"
+        tools:layout_editor_absoluteX="56dp"
+        tools:layout_editor_absoluteY="365dp" />
 
     <ImageButton
         android:id="@+id/riot_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="530dp"
-        android:src="@drawable/riot" />
+        android:src="@drawable/riot"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="425dp" />
 
     <ImageButton
         android:id="@+id/refusal_image"
         android:layout_width="179dp"
         android:layout_height="121dp"
-        android:layout_marginLeft="200dp"
-        android:layout_marginTop="600dp"
-        android:src="@drawable/refusal" />
+        android:src="@drawable/refusal"
+        tools:layout_editor_absoluteX="83dp"
+        tools:layout_editor_absoluteY="486dp" />
 
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

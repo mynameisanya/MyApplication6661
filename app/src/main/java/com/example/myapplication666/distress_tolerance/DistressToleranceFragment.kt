@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.viewpager2.widget.ViewPager2
-import com.example.myapplication666.DistressToleranceEnum
 import com.example.myapplication666.R
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
@@ -34,7 +33,7 @@ class DistressToleranceFragment : Fragment() {
                 DistressToleranceEnum.SURVIVE_THE_CRISIS -> tab.text = "Выживание в кризисе"
                 DistressToleranceEnum.ACCEPTING_REALITY -> tab.text = "Принятие реальности"
                 DistressToleranceEnum.BEFREE -> tab.text = "Стать свободной"
-                DistressToleranceEnum.ABCD -> tab.text = "ABCD"
+                DistressToleranceEnum.ABCD -> tab.text = "АБСД"
             }
         }.attach()
 

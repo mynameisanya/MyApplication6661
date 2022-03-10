@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,81 +10,67 @@
         android:id="@+id/imageView"
         android:layout_width="413dp"
         android:layout_height="match_parent"
-        android:src="@drawable/background2_" />
-
-    <com.google.android.material.tabs.TabLayout
-        android:layout_width="match_parent"
-        android:layout_height="63dp"
-        android:layout_marginTop="50dp">
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Выживание в кризисе" />
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Принятие реальности" />
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Стать свободной" />
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ABCD" />
-
-
-
-    </com.google.android.material.tabs.TabLayout>
+        android:src="@drawable/background2_"
+        tools:layout_editor_absoluteX="-1dp"
+        tools:layout_editor_absoluteY="16dp" />
 
     <ImageButton
         android:id="@+id/stop_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="140dp"
-        android:src="@drawable/stop" />
+        android:layout_width="179dp"
+        android:layout_height="120dp"
+        android:src="@drawable/stop"
+        app:layout_constraintBottom_toBottomOf="@+id/pros_and_cons_image"
+        app:layout_constraintTop_toTopOf="@+id/pros_and_cons_image"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="23dp" />
 
     <ImageButton
         android:id="@+id/pros_and_cons_image"
         android:layout_width="174dp"
         android:layout_height="121dp"
-        android:layout_marginLeft="200dp"
-        android:layout_marginTop="140dp"
-        android:src="@drawable/pros_and_cons" />
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/pros_and_cons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/tip_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="270dp"
-        android:src="@drawable/tip" />
+        android:layout_width="177dp"
+        android:layout_height="125dp"
+        android:src="@drawable/tip"
+        app:layout_constraintBottom_toBottomOf="@+id/accepts_image"
+        app:layout_constraintTop_toTopOf="@+id/accepts_image"
+        tools:layout_editor_absoluteX="23dp" />
 
     <ImageButton
         android:id="@+id/accepts_image"
-        android:layout_width="179dp"
-        android:layout_height="121dp"
-        android:layout_marginLeft="200dp"
-        android:layout_marginTop="270dp"
-        android:src="@drawable/accepts" />
+        android:layout_width="172dp"
+        android:layout_height="119dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/accepts"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pros_and_cons_image" />
 
     <ImageButton
         android:id="@+id/self_soothe_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="400dp"
-        android:src="@drawable/self_soothe" />
+        android:layout_width="176dp"
+        android:layout_height="126dp"
+        android:src="@drawable/self_soothe"
+        app:layout_constraintBottom_toBottomOf="@+id/improve_image"
+        app:layout_constraintTop_toTopOf="@+id/improve_image"
+        tools:layout_editor_absoluteX="23dp" />
 
     <ImageButton
         android:id="@+id/improve_image"
-        android:layout_width="179dp"
-        android:layout_height="121dp"
-        android:layout_marginLeft="200dp"
-        android:layout_marginTop="400dp"
-        android:src="@drawable/improve" />
+        android:layout_width="177dp"
+        android:layout_height="124dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/improve"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/accepts_image" />
 
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
