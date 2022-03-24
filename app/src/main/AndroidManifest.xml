@@ -24,6 +24,8 @@
             android:exported="false">
 
         </activity>
+
+        <activity android:name=".NewActionDiary"/>
     </application>
 
 </manifest>
