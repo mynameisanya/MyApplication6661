@@ -11,16 +11,19 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 class SplashViewModel : ViewModel() {
+    //аутентификация firebase
     val viewState = MutableLiveData<SplashViewState>()
     private val firebaseAuth: FirebaseAuth = FirebaseAuth.getInstance()
     private val currentUser
         get() = firebaseAuth.currentUser
 
+
     fun requestUser() {
-        viewModelScope.launch(Dispatchers.IO) {
-            delay(3000)
-            viewState.postValue(currentUser?.let { SplashViewState.Success }
-                ?: SplashViewState.Error(
+        viewModelScope.launch(Dispatchers.IO) //переход на новый поток IO
+        {
+            delay(3000) //ожидание
+            viewState.postValue(currentUser?.let { SplashViewState.Success } //обращаемся к юзеру
+                ?: SplashViewState.Error( //если ошибка
                     NoAuthException()
                 ))
         }

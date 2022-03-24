@@ -28,15 +28,20 @@
         <entry key="..\:/MyApplication666/app/src/main/res/layout/item_new_diary.xml" value="0.29683698296836986" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/m_fragment.xml" value="0.25416666666666665" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/mindfulness_fragment.xml" value="0.19635416666666666" />
+        <entry key="..\:/MyApplication666/app/src/main/res/layout/new_action_diary.xml" value="0.2513586956521739" />
+        <entry key="..\:/MyApplication666/app/src/main/res/layout/new_ada_diary.xml" value="0.2513586956521739" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/new_diary_fragment.xml" value="0.2513586956521739" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/new_diary_fragment2.xml" value="0.2513586956521739" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/non_judmentally_fragment.xml" value="0.24909420289855072" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/participle_fragment.xml" value="0.24010416666666667" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/rational_mind_fragment.xml" value="0.1171875" />
+        <entry key="..\:/MyApplication666/app/src/main/res/layout/stop_fragment.xml" value="0.2513586956521739" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/survive_the_crisis_fragment.xml" value="0.4" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/t_fragment.xml" value="0.25416666666666665" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/what_skills_fragment.xml" value="0.264" />
-        <entry key="..\:/MyApplication666/app/src/main/res/layout/wise_mind_fragment.xml" value="0.536" />
+        <entry key="..\:/MyApplication666/app/src/main/res/layout/wise_mind_exercises_fragment.xml" value="0.24010416666666667" />
+        <entry key="..\:/MyApplication666/app/src/main/res/layout/wise_mind_fragment.xml" value="0.264" />
+        <entry key="..\:/MyApplication666/app/src/main/res/layout/wise_mind_page1_fragment.xml" value="0.2513586956521739" />
       </map>
     </option>
   </component>

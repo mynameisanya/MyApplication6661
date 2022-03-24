@@ -6,13 +6,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication666.R
+import com.example.myapplication666.database.Model
 
 class DiaryFragment : Fragment() {
 
-    val DiaryAdapter = DiaryAdapter()
 
     companion object {
         fun newInstance() = DiaryFragment()
@@ -20,10 +21,12 @@ class DiaryFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val r = view.findViewById<RecyclerView>(R.id.recycler)
-        DiaryAdapter.setData(listOf("One", "Two", "Three"))
-        r.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-        r.adapter = DiaryAdapter
+        val nextBtn = view.findViewById<Button>(R.id.next_btn)
+
+        nextBtn.setOnClickListener {
+            childFragmentManager.beginTransaction()
+                .add(R.id.container, NewDiaryFragment.newInstance()).addToBackStack(null).commit()
+        }
     }
 
     private lateinit var viewModel: DiaryViewModel
@@ -32,7 +35,7 @@ class DiaryFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.new_diary_fragment, container, false)
+        return inflater.inflate(R.layout.fragment_diary, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

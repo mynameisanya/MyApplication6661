@@ -35,11 +35,20 @@ class WiseMindFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val imageButtonWisePage1 = view.findViewById<ImageButton>(R.id.wise_mind_image)
+        imageButtonWisePage1.setOnClickListener()
+        {
+            (requireActivity() as MainActivity).navigationTo(R.id.navigation_wise_mind_page1)
+        }
+
         val imageButton = view.findViewById<ImageButton>(R.id.rational_mind_image)
         imageButton.setOnClickListener()
         {
             (requireActivity() as MainActivity).navigationTo(R.id.navigation_rational_mind)
         }
+
+
 
     }
 }

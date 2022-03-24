@@ -53,4 +53,10 @@
         android:label="@string/rational_mind">
     </fragment>
 
+    <fragment
+        android:id="@+id/navigation_wise_mind_page1"
+        android:name="com.example.myapplication666.wise_mind.WiseMindPage1Fragment"
+        android:label="@string/wise_mind">
+    </fragment>
+
 </navigation>
