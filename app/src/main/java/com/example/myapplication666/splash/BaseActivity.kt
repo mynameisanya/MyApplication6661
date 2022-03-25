@@ -4,12 +4,14 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
+import androidx.core.content.ContextCompat
 import com.example.myapplication666.MainActivity
 import com.example.myapplication666.R
 import com.example.myapplication666.errors.NoAuthException
 import com.firebase.ui.auth.AuthUI
+import com.google.android.material.snackbar.Snackbar
 
-abstract class BaseActivity : AppCompatActivity() {
+ abstract class BaseActivity : AppCompatActivity() {
      //отрисовка элементов логина и пароля
     private fun startLoginActivity()
     {
@@ -43,7 +45,8 @@ abstract class BaseActivity : AppCompatActivity() {
         when (error)
         {
             is NoAuthException -> startLoginActivity()
-            else -> error.message?.let { Toast.makeText(applicationContext, "Exception is happen", Toast.LENGTH_SHORT).show() }
+            else -> error.message?.let { Toast.makeText(applicationContext,
+                "Exception is happen", Toast.LENGTH_SHORT).show() }
 
         }
      }

@@ -8,11 +8,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Toast
+import androidx.lifecycle.ViewModel
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication666.NewActionDiary
 import com.example.myapplication666.R
+import com.example.myapplication666.database.App
 import com.example.myapplication666.database.Model
 
 class NewDiaryFragment : Fragment() {
@@ -53,9 +56,16 @@ class NewDiaryFragment : Fragment() {
         }
 
         nextBtn.setOnClickListener {
-            viewModel.saveData(
-                diaryList
-            )
+            try {
+                viewModel.saveData(diaryList)
+            }
+            catch (ex:IllegalStateException)
+            {
+                Toast.makeText(context, "Вы хотите сохранить пустой список", Toast.LENGTH_SHORT).show()
+            }
+
+
+
 
 
         }
@@ -66,7 +76,12 @@ class NewDiaryFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        viewModel = ViewModelProvider(this).get(NewDiaryViewModel::class.java)
+        viewModel = ViewModelProvider(this, object : ViewModelProvider.Factory
+        {
+            override fun <T : ViewModel> create(modelClass: Class<T>): T {
+                return NewDiaryViewModel(App.returnDatabase.returnDao()) as T
+            }
+        }).get(NewDiaryViewModel::class.java)
         return inflater.inflate(R.layout.new_diary_fragment, container, false)
     }
 

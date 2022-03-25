@@ -5,3 +5,9 @@ sealed class SplashViewState
     class Error (throwable: Throwable): SplashViewState()
     object Success :SplashViewState()
 }
+
+
+
+
+
+

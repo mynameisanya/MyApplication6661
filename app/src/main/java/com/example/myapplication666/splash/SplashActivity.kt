@@ -20,7 +20,6 @@ class SplashActivity : BaseActivity() {
 
         setContentView(R.layout.activity_splash)    //связывает класс и разметку
         val viewModel = ViewModelProvider(this).get(SplashViewModel::class.java) //инициализация вью модели
-
         viewModel.requestUser() //вью модель запрашивает юзера
 
         viewModel.viewState.observe(this@SplashActivity) //наблюдатель за тем, что пришло (ошибка или юзер)
