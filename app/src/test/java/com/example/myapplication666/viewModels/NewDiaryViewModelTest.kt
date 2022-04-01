@@ -18,7 +18,10 @@ class NewDiaryViewModelTest {
     val viewModelRule = ViewModelTestingRules()
     //объявление вью модели и базы данных
     lateinit var newDiaryViewModel: NewDiaryViewModel
+    //аннотация, чтобы не нужно было инициализировать вручную это поле
+    @io.mockk.impl.annotations.MockK(relaxed = true)
     lateinit var newDiaryDao: DatabaseDao
+
 //методзапускающийся перед каждым тестом
     @Before
     fun setUp()

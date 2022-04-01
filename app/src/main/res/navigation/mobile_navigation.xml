@@ -59,4 +59,65 @@
         android:label="@string/wise_mind">
     </fragment>
 
+    <fragment
+        android:id="@+id/navigation_observe"
+        android:name="com.example.myapplication666.what_skills.observe.ObserveFragment"
+        android:label="@string/observe">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_observe_page2"
+        android:name="com.example.myapplication666.what_skills.observe.Observe_Page2_Fragment"
+        android:label="Наблюдение: зрение">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_observe_page3"
+        android:name="com.example.myapplication666.what_skills.observe.ObservePage3Fragment"
+        android:label="Наблюдение: звуки">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_observe_page4"
+        android:name="com.example.myapplication666.what_skills.observe.ObservePage4Fragment"
+        android:label="Наблюдение: запахи">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_observe_page5"
+        android:name="com.example.myapplication666.what_skills.observe.ObservePage5Fragment"
+        android:label="Наблюдение: вкус">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_observe_page6"
+        android:name="com.example.myapplication666.what_skills.observe.ObservePage6Fragment"
+        android:label="Наблюдение: побуждение">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_observe_page7"
+        android:name="com.example.myapplication666.what_skills.observe.ObservePage7Fragment"
+        android:label="Наблюдение: ощущения">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_observe_page8"
+        android:name="com.example.myapplication666.what_skills.observe.ObservePage8Fragment"
+        android:label="Наблюдение: дыхание">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_describe"
+        android:name="com.example.myapplication666.what_skills.DescribeFragment"
+        android:label="@string/describe">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_participle"
+        android:name="com.example.myapplication666.what_skills.ParticipleFragment"
+        android:label="@string/participle">
+    </fragment>
+
+
 </navigation>

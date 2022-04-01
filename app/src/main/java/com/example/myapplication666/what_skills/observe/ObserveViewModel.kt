@@ -1,4 +1,4 @@
-package com.example.myapplication666.what_skills
+package com.example.myapplication666.what_skills.observe
 
 import androidx.lifecycle.ViewModel
 

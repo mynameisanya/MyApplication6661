@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".what_skills.observe.ObservePage5Fragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/observe_page5"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Другие идеи:" />
+
+    <Button
+        android:id="@+id/next_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
+</FrameLayout>

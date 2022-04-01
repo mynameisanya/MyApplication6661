@@ -38,8 +38,8 @@ class ModulesFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val imageButton = view.findViewById<ImageButton>(R.id.mindfulness)
-        imageButton.setOnClickListener()
+        val imageButtonMindfulness = view.findViewById<ImageButton>(R.id.mindfulness)
+        imageButtonMindfulness.setOnClickListener()
         {
             (requireActivity() as MainActivity).navigationTo(R.id.navigation_mindfulness)
         }
@@ -47,6 +47,18 @@ class ModulesFragment : Fragment() {
         imageButtonDistress.setOnClickListener()
         {
             (requireActivity() as MainActivity).navigationTo(R.id.navigation_distress_tolerance)
+        }
+
+        val imageButtonEmotional = view.findViewById<ImageButton>(R.id.emotional_regulation)
+        imageButtonEmotional.setOnClickListener()
+        {
+            (requireActivity() as MainActivity).navigationTo(R.id.navigation_emotional_regulation)
+        }
+
+        val imageButtonInterpersonal = view.findViewById<ImageButton>(R.id.interpersonal_effectiveness)
+        imageButtonInterpersonal.setOnClickListener()
+        {
+            (requireActivity() as MainActivity).navigationTo(R.id.navigation_interpersonal_effectiveness)
         }
 
     }

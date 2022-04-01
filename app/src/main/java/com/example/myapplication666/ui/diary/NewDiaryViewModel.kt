@@ -7,13 +7,12 @@ import com.example.myapplication666.database.Model
 
 class NewDiaryViewModel(private val diaryDao: DatabaseDao): ViewModel() {
 
-    //private val diaryDao = App.returnDatabase.returnDao()
     fun saveData(dataToSave: List<Model>) {
         if (dataToSave.isEmpty()) {
             throw IllegalStateException()
         }
             dataToSave.forEach {
-                diaryDao.updateData(it)
+                diaryDao.insert(it)
             }
     }
 

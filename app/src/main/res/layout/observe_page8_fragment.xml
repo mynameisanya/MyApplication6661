@@ -3,20 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".what_skills.observe.ObserveFragment">
-
+    tools:context=".what_skills.observe.ObservePage8Fragment">
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="397dp"
-        android:text="@string/observe_page1"
+        android:layout_height="match_parent"
+        android:text="@string/observe_page8"
         android:textSize="16sp" />
-
-    <Button
-        android:id="@+id/next_btn"
-        android:layout_width="210dp"
-        android:layout_height="109dp"
-        android:text="Далее" />
-
 
 </FrameLayout>

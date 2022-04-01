@@ -22,10 +22,11 @@ class DiaryFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val nextBtn = view.findViewById<Button>(R.id.next_btn)
-
+        nextBtn.visibility = View.VISIBLE
         nextBtn.setOnClickListener {
             childFragmentManager.beginTransaction()
                 .add(R.id.container, NewDiaryFragment.newInstance()).addToBackStack(null).commit()
+                nextBtn.visibility = View.GONE
         }
     }
 

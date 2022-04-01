@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/add_new_action"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -20,23 +20,23 @@
         app:layout_constraintVertical_bias="0.326" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/cancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
         android:layout_marginTop="60dp"
-        android:text="Button"
+        android:text="Отменить"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
-        android:text="Button"
+        android:text="Сохранить"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.384"
-        app:layout_constraintStart_toEndOf="@+id/button4"
+        app:layout_constraintStart_toEndOf="@+id/cancel"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 </androidx.constraintlayout.widget.ConstraintLayout>

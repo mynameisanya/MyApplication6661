@@ -29,5 +29,21 @@
         tools:layout_editor_absoluteY="64dp"
         tools:src="@tools:sample/backgrounds/scenic" />
 
+    <ImageButton
+        android:id="@+id/emotional_regulation"
+        android:layout_width="276dp"
+        android:layout_height="113dp"
+        tools:layout_editor_absoluteX="83dp"
+        tools:layout_editor_absoluteY="407dp"
+        tools:src="@tools:sample/avatars" />
+
+    <ImageButton
+        android:id="@+id/interpersonal_effectiveness"
+        android:layout_width="324dp"
+        android:layout_height="179dp"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="536dp"
+        tools:src="@tools:sample/avatars" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
