@@ -7,6 +7,11 @@ import com.example.myapplication666.database.Model
 
 class NewDiaryViewModel(private val diaryDao: DatabaseDao): ViewModel() {
 
+    fun insertData(model: Model)
+    {
+        diaryDao.insert(model)
+    }
+
     fun saveData(dataToSave: List<Model>) {
         if (dataToSave.isEmpty()) {
             throw IllegalStateException()
@@ -19,7 +24,7 @@ class NewDiaryViewModel(private val diaryDao: DatabaseDao): ViewModel() {
     fun getDiaryList(): MutableList<Model> {
         val data = diaryDao.getAll()
         if (data.isEmpty()) {
-            return mutableListOf(Model("One", 3), Model("Two", 2), Model("Three", 4))
+            return mutableListOf(Model("One", 0), Model("Two", 0), Model("Three", 0))
         }
         return data
     }

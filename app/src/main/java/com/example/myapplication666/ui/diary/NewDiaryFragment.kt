@@ -58,7 +58,9 @@ class NewDiaryFragment : Fragment() {
         btnSave.setOnClickListener()
         {
             val editText = editTextAdd.text.toString()
-            diaryList.add(Model(editText, 0))
+            val model = Model(editText, 0)
+            diaryList.add(model)
+            viewModel.insertData(model)
             DiaryAdapter.notifyItemInserted(diaryList.size - 1)
             material.dismiss()
         }

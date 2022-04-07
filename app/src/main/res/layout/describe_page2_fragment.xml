@@ -3,20 +3,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".what_skills.observe.ObservePage3Fragment">
+    tools:context=".what_skills.describe.DescribeFragment">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/wise_mind_page1"
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="14sp"
             android:layout_marginRight="14sp"
             android:layout_marginTop="14sp"
-            android:textSize="16sp" />
+            android:text="@string/describe_page2"
+            android:scrollbarSize="16sp"/>
 
         <EditText
             android:id="@+id/editTextTextPersonName2"
@@ -34,9 +35,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
             android:layout_marginEnd="30dp"
-            android:layout_marginBottom="90dp"
-            android:layout_marginTop="-150dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="-100dp"
             android:text="Далее" />
-
     </LinearLayout>
+
 </ScrollView>

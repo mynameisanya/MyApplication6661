@@ -39,23 +39,9 @@
         android:src="@drawable/participate_image"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.088"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.54" />
-
-    <ImageButton
-        android:id="@+id/exercises2_image"
-        android:layout_width="169dp"
-        android:layout_height="127dp"
-        android:src="@drawable/exercises"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.879"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.54"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintVertical_bias="0.53" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

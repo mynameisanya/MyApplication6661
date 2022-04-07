@@ -23,26 +23,32 @@
         android:id="@+id/mindfulness"
         android:layout_width="308dp"
         android:layout_height="131dp"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toTopOf="@+id/distress_tolerance"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="64dp"
         tools:src="@tools:sample/backgrounds/scenic" />
 
     <ImageButton
         android:id="@+id/emotional_regulation"
         android:layout_width="276dp"
         android:layout_height="113dp"
-        tools:layout_editor_absoluteX="83dp"
-        tools:layout_editor_absoluteY="407dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/distress_tolerance"
         tools:src="@tools:sample/avatars" />
 
     <ImageButton
         android:id="@+id/interpersonal_effectiveness"
-        android:layout_width="324dp"
-        android:layout_height="179dp"
-        tools:layout_editor_absoluteX="51dp"
-        tools:layout_editor_absoluteY="536dp"
+        android:layout_width="248dp"
+        android:layout_height="124dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emotional_regulation"
         tools:src="@tools:sample/avatars" />
 
 

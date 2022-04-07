@@ -6,28 +6,27 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import com.example.myapplication666.MainActivity
 import com.example.myapplication666.R
 
-class HOWSkillsFragment : Fragment() {
+class EffectivelyPage2Fragment : Fragment() {
 
     companion object {
-        fun newInstance() = HOWSkillsFragment()
+        fun newInstance() = EffectivelyPage2Fragment()
     }
 
-    private lateinit var viewModel: HOWSkillsViewModel
+    private lateinit var viewModel: EffectivelyPage2ViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.how_skills_fragment, container, false)
+        return inflater.inflate(R.layout.effectively_page2_fragment, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(HOWSkillsViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(EffectivelyPage2ViewModel::class.java)
         // TODO: Use the ViewModel
     }
+
 }

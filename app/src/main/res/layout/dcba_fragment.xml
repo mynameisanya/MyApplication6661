@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -14,55 +15,60 @@
         android:layout_height="match_parent"
         android:src="@drawable/background2_"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="0dp" />
+        tools:layout_editor_absoluteY="-79dp" />
 
     <ImageButton
         android:id="@+id/abstinence_image"
         android:layout_width="281dp"
         android:layout_height="127dp"
+        android:layout_marginBottom="8dp"
         android:src="@drawable/abstinence"
-        tools:layout_editor_absoluteX="36dp"
-        tools:layout_editor_absoluteY="27dp" />
+        app:layout_constraintBottom_toTopOf="@+id/clear_mind_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
         android:id="@+id/clear_mind_image"
         android:layout_width="276dp"
         android:layout_height="119dp"
+        android:layout_marginBottom="8dp"
         android:src="@drawable/clear_mind"
-        tools:layout_editor_absoluteX="67dp"
-        tools:layout_editor_absoluteY="169dp" />
+        app:layout_constraintBottom_toTopOf="@+id/support_community_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
         android:id="@+id/support_community_image"
         android:layout_width="282dp"
         android:layout_height="125dp"
+        android:layout_marginBottom="8dp"
         android:src="@drawable/support_community"
-        tools:layout_editor_absoluteX="83dp"
-        tools:layout_editor_absoluteY="271dp" />
+        app:layout_constraintBottom_toTopOf="@+id/bridges_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
         android:id="@+id/bridges_image"
         android:layout_width="278dp"
         android:layout_height="121dp"
+        android:layout_marginBottom="8dp"
         android:src="@drawable/bridges"
-        tools:layout_editor_absoluteX="56dp"
-        tools:layout_editor_absoluteY="365dp" />
+        app:layout_constraintBottom_toTopOf="@+id/riot_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
         android:id="@+id/riot_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="277dp"
+        android:layout_height="116dp"
         android:src="@drawable/riot"
-        tools:layout_editor_absoluteX="36dp"
-        tools:layout_editor_absoluteY="425dp" />
-
-    <ImageButton
-        android:id="@+id/refusal_image"
-        android:layout_width="179dp"
-        android:layout_height="121dp"
-        android:src="@drawable/refusal"
-        tools:layout_editor_absoluteX="83dp"
-        tools:layout_editor_absoluteY="486dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="552dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

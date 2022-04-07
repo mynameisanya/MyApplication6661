@@ -44,7 +44,7 @@ class WHATSkillsFragment : Fragment() {
         val imageButtonDescribe = view.findViewById<ImageButton>(R.id.descibe_image)
         imageButtonDescribe.setOnClickListener()
         {
-            (requireActivity() as MainActivity).navigationTo(R.id.navigation_observe)
+            (requireActivity() as MainActivity).navigationTo(R.id.navigation_describe)
         }
         val imageButtonParticiple = view.findViewById<ImageButton>(R.id.participate_image)
         imageButtonParticiple.setOnClickListener()

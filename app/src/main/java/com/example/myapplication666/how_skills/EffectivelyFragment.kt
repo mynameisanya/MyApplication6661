@@ -6,6 +6,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import com.example.myapplication666.MainActivity
 import com.example.myapplication666.R
 
 class EffectivelyFragment : Fragment() {
@@ -27,6 +29,15 @@ class EffectivelyFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(EffectivelyViewModel::class.java)
         // TODO: Use the ViewModel
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val buttonEffectivelyPage2 = view.findViewById<Button>(R.id.next_btn)
+        buttonEffectivelyPage2.setOnClickListener()
+        {
+            (requireActivity() as MainActivity).navigationTo(R.id.navigation_one_mindfully_page2)
+        }
     }
 
 }

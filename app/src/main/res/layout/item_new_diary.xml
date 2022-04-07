@@ -8,30 +8,28 @@
 
     <TextView
         android:id="@+id/text"
-        android:layout_width="200dp"
-        android:layout_height="73dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="136dp"
+        android:layout_width="246dp"
+        android:layout_height="36dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:textSize="96sp"
+        android:text=" Name"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <SeekBar
         android:id="@+id/seekBar"
         android:layout_width="82dp"
         android:layout_height="42dp"
+        android:layout_marginEnd="56dp"
         android:max="5"
         android:min="0"
-        android:progress="3"
+        android:progress="0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.869"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.772" />
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

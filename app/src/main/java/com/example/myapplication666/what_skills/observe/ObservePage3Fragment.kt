@@ -33,8 +33,8 @@ class ObservePage3Fragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val buttonObservePage4 = view.findViewById<Button>(R.id.next_btn)
-        buttonObservePage4.setOnClickListener()
+        val buttonObservePage3 = view.findViewById<Button>(R.id.next_btn)
+        buttonObservePage3.setOnClickListener()
         {
             (requireActivity() as MainActivity).navigationTo(R.id.navigation_observe_page4)
         }

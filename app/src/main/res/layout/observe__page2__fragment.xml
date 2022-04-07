@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".what_skills.observe.Observe_Page2_Fragment">
 
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="320dp"
+        android:layout_height="725dp"
+        android:layout_marginLeft="14sp"
+        android:layout_marginTop="14sp"
+        android:layout_marginRight="14sp"
         android:text="@string/observe_page2"
         android:textSize="16sp" />
 
@@ -15,14 +23,22 @@
         android:id="@+id/editTextTextPersonName2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="190dp"
+        android:layout_marginBottom="180dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:text="Другие идеи:" />
 
     <Button
         android:id="@+id/next_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="-100dp"
         android:text="Далее" />
 
-</FrameLayout>
+
+</LinearLayout>
+</ScrollView>

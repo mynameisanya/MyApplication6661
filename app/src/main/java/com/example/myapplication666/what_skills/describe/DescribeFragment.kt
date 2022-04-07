@@ -1,4 +1,4 @@
-package com.example.myapplication666.what_skills
+package com.example.myapplication666.what_skills.describe
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -10,33 +10,33 @@ import android.widget.Button
 import com.example.myapplication666.MainActivity
 import com.example.myapplication666.R
 
-class ParticipleFragment : Fragment() {
+class DescribeFragment : Fragment() {
 
     companion object {
-        fun newInstance() = ParticipleFragment()
+        fun newInstance() = DescribeFragment()
     }
 
-    private lateinit var viewModel: ParticipleViewModel
+    private lateinit var viewModel: DescribeViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.participle_fragment, container, false)
+        return inflater.inflate(R.layout.describe_fragment, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(ParticipleViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(DescribeViewModel::class.java)
         // TODO: Use the ViewModel
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val buttonParticiplePage2 = view.findViewById<Button>(R.id.next_btn)
-        buttonParticiplePage2.setOnClickListener()
+        val buttonDescribePage2 = view.findViewById<Button>(R.id.next_btn)
+        buttonDescribePage2.setOnClickListener()
         {
-            (requireActivity() as MainActivity).navigationTo(R.id.navigation_participle_page2)
+            (requireActivity() as MainActivity).navigationTo(R.id.navigation_describe_page2)
         }
     }
 

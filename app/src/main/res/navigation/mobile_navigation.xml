@@ -109,8 +109,19 @@
 
     <fragment
         android:id="@+id/navigation_describe"
-        android:name="com.example.myapplication666.what_skills.DescribeFragment"
-        android:label="@string/describe">
+        android:name="com.example.myapplication666.what_skills.describe.DescribeFragment"
+        android:label="Описание: вокруг себя">
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_describe_page2"
+        android:name="com.example.myapplication666.what_skills.describe.DescribePage2Fragment"
+        android:label="Описание: мысли и чувства">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_describe_page3"
+        android:name="com.example.myapplication666.what_skills.describe.DescribePage3Fragment"
+        android:label="Описание: дыхание">
     </fragment>
 
     <fragment
@@ -119,5 +130,45 @@
         android:label="@string/participle">
     </fragment>
 
+    <fragment
+        android:id="@+id/navigation_participle_page2"
+        android:name="com.example.myapplication666.what_skills.ParticiplePage2Fragment"
+        android:label="@string/participle">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_non_judmentally"
+        android:name="com.example.myapplication666.how_skills.NonJudmentallyFragment"
+        android:label="Безоценочность">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_non_judmentally_page2"
+        android:name="com.example.myapplication666.how_skills.NonJudmentallyPage2Fragment"
+        android:label="Безоценочность">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_one_mindfully"
+        android:name="com.example.myapplication666.how_skills.OneMindfullyFragment"
+        android:label="Однозадачность">
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_one_mindfully_page2"
+        android:name="com.example.myapplication666.how_skills.OneMindfullyPage2Fragment"
+        android:label="Однозадачность">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_effectively"
+        android:name="com.example.myapplication666.how_skills.EffectivelyFragment"
+        android:label="Эффективность">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_effectively_page2"
+        android:name="com.example.myapplication666.how_skills.EffectivelyPage2Fragment"
+        android:label="Эффективность">
+    </fragment>
 
 </navigation>

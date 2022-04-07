@@ -43,17 +43,5 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.597" />
 
-    <ImageButton
-        android:id="@+id/exercises1_image"
-        android:layout_width="172dp"
-        android:layout_height="126dp"
-        android:src="@drawable/exercises"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.916"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.596" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
