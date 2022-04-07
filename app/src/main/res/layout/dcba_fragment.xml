@@ -8,15 +8,6 @@
     android:background="@drawable/background2_"
     tools:context="dcba.DCBAFragment">
 
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="413dp"
-        android:layout_height="match_parent"
-        android:src="@drawable/background2_"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="-79dp" />
-
     <ImageButton
         android:id="@+id/abstinence_image"
         android:layout_width="281dp"

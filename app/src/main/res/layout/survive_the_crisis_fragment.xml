@@ -3,26 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/background2_"
     android:layout_height="match_parent"
     tools:context=".survive_the_crisis.SurviveTheCrisisFragment">
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="413dp"
-        android:layout_height="match_parent"
-        android:src="@drawable/background2_"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="-1dp" />
 
     <ImageButton
         android:id="@+id/stop_image"
         android:layout_width="179dp"
+        android:layout_marginStart="16dp"
         android:layout_height="120dp"
         android:layout_marginEnd="20dp"
         android:src="@drawable/stop"
         app:layout_constraintBottom_toBottomOf="@+id/pros_and_cons_image"
         app:layout_constraintEnd_toStartOf="@+id/pros_and_cons_image"
-        app:layout_constraintTop_toTopOf="@+id/pros_and_cons_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
     <ImageButton
@@ -39,10 +34,12 @@
         android:id="@+id/tip_image"
         android:layout_width="177dp"
         android:layout_height="125dp"
+        android:layout_marginStart="16dp"
         android:layout_marginEnd="20dp"
         android:src="@drawable/tip"
         app:layout_constraintBottom_toBottomOf="@+id/accepts_image"
         app:layout_constraintEnd_toStartOf="@+id/accepts_image"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/accepts_image"
         app:layout_constraintVertical_bias="0.0" />
 
@@ -51,18 +48,21 @@
         android:layout_width="175dp"
         android:layout_height="116dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginTop="36dp"
         android:src="@drawable/accepts"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="202dp" />
+        app:layout_constraintTop_toBottomOf="@+id/pros_and_cons_image" />
 
     <ImageButton
         android:id="@+id/self_soothe_image"
         android:layout_width="176dp"
         android:layout_height="126dp"
         android:layout_marginEnd="20dp"
+        android:layout_marginStart="16dp"
         android:src="@drawable/self_soothe"
         app:layout_constraintBottom_toBottomOf="@+id/improve_image"
         app:layout_constraintEnd_toStartOf="@+id/improve_image"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/improve_image"
         app:layout_constraintVertical_bias="1.0" />
 
