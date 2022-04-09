@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModel
@@ -38,7 +39,6 @@ class NewDiaryFragment : Fragment() {
         val nextBtn = view.findViewById<Button>(R.id.next_btn)
         diaryList = viewModel.getDiaryList()
 
-
         DiaryAdapter.setData(
             diaryList
         )
@@ -64,8 +64,7 @@ class NewDiaryFragment : Fragment() {
                 OnSwipeOptionsClickListener { viewID, position ->
                     when (viewID) {
                         R.id.delete_task -> {
-                            //diaryList.remove(position)
-                            DiaryAdapter.setData(diaryList)
+                            DiaryAdapter.removeByPosition(position)
                         }
                         R.id.edit_task -> Toast.makeText(
                            context,
