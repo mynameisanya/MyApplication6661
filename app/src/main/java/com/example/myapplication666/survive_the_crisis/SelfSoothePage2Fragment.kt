@@ -10,33 +10,32 @@ import android.widget.ImageButton
 import com.example.myapplication666.MainActivity
 import com.example.myapplication666.R
 
-class AcceptsFragment : Fragment() {
+class SelfSoothePage2Fragment : Fragment() {
 
     companion object {
-        fun newInstance() = AcceptsFragment()
+        fun newInstance() = SelfSoothePage2Fragment()
     }
 
-    private lateinit var viewModel: AcceptsViewModel
+    private lateinit var viewModel: SelfSoothePage2ViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.accepts_fragment, container, false)
+        return inflater.inflate(R.layout.self_smoothe_page2_fragment, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(AcceptsViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(SelfSoothePage2ViewModel::class.java)
         // TODO: Use the ViewModel
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val imageButtonAcceptsPage2 = view.findViewById<ImageButton>(R.id.next_btn)
-        imageButtonAcceptsPage2.setOnClickListener()
+        val imageButtonSelfSoothePage3 = view.findViewById<ImageButton>(R.id.next_btn)
+        imageButtonSelfSoothePage3.setOnClickListener()
         {
-            (requireActivity() as MainActivity).navigationTo(R.id.navigation_accepts_page2)
+            (requireActivity() as MainActivity).navigationTo(R.id.navigation_self_soothe_page3)
         }
     }
 

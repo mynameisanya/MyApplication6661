@@ -10,33 +10,34 @@ import android.widget.ImageButton
 import com.example.myapplication666.MainActivity
 import com.example.myapplication666.R
 
-class ImproveFragment : Fragment() {
+class ImprovePage2 : Fragment() {
 
     companion object {
-        fun newInstance() = ImproveFragment()
+        fun newInstance() = ImprovePage2()
     }
 
-    private lateinit var viewModel: ImproveViewModel
+    private lateinit var viewModel: ImprovePage2ViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.improve_fragment, container, false)
+        return inflater.inflate(R.layout.improve_page2_fragment, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(ImproveViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(ImprovePage2ViewModel::class.java)
         // TODO: Use the ViewModel
     }
-//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-//        super.onViewCreated(view, savedInstanceState)
-//        val imageButtonImprovePage2 = view.findViewById<ImageButton>(R.id.next_btn)
-//        imageButtonImprovePage2.setOnClickListener()
-//        {
-//            (requireActivity() as MainActivity).navigationTo(R.id.navigation_improve_page2)
-//        }
-//    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val imageButtonImprovePage3 = view.findViewById<ImageButton>(R.id.next_btn)
+        imageButtonImprovePage3.setOnClickListener()
+        {
+            (requireActivity() as MainActivity).navigationTo(R.id.navigation_improve_page3)
+        }
+    }
 
 }

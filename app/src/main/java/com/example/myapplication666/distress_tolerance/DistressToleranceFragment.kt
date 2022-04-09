@@ -32,7 +32,7 @@ class DistressToleranceFragment : Fragment() {
             when (DistressToleranceEnum.values()[pagerAdapter.getItemViewType(position)]) {
                 DistressToleranceEnum.SURVIVE_THE_CRISIS -> tab.text = "Выживание в кризисе"
                 DistressToleranceEnum.ACCEPTING_REALITY -> tab.text = "Принятие реальности"
-                DistressToleranceEnum.BEFREE -> tab.text = "Стать свободной"
+                //DistressToleranceEnum.BEFREE -> tab.text = "Стать свободной"
                 DistressToleranceEnum.ABCD -> tab.text = "АБСД"
             }
         }.attach()

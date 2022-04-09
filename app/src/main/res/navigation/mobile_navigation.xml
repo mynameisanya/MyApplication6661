@@ -171,4 +171,123 @@
         android:label="Эффективность">
     </fragment>
 
+    <fragment
+        android:id="@+id/navigation_stop"
+        android:name="com.example.myapplication666.survive_the_crisis.StopFragment"
+        android:label="СТОП">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_pros_and_cons"
+        android:name="com.example.myapplication666.survive_the_crisis.ProsAndConsFragment"
+        android:label="За и Против">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_tip"
+        android:name="com.example.myapplication666.survive_the_crisis.TIPFragment"
+        android:label="ТРУД">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_accepts"
+        android:name="com.example.myapplication666.survive_the_crisis.AcceptsFragment"
+        android:label="Развлечения">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_accepts_page2"
+        android:name="com.example.myapplication666.survive_the_crisis.AcceptsPage2"
+        android:label="Сравнение">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_self_soothe"
+        android:name="com.example.myapplication666.survive_the_crisis.SelfSootheFragment"
+        android:label="Зрение">
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_self_soothe_page2"
+        android:name="com.example.myapplication666.survive_the_crisis.SelfSoothePage2Fragment"
+        android:label="Слух">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_self_soothe_page3"
+        android:name="com.example.myapplication666.survive_the_crisis.SelfSoothePage3Fragment"
+        android:label="Обоняние">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_improve"
+        android:name="com.example.myapplication666.survive_the_crisis.ImproveFragment"
+        android:label="Воображение">
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_improve_page2"
+        android:name="com.example.myapplication666.survive_the_crisis.ImprovePage2"
+        android:label="Смысл">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_improve_page3"
+        android:name="com.example.myapplication666.survive_the_crisis.ImprovePage3"
+        android:label="Молитва">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_improve_page4"
+        android:name="com.example.myapplication666.survive_the_crisis.ImprovePage4"
+        android:label="Расслабляющие действия">
+    </fragment>
+    <fragment
+    android:id="@+id/navigation_improve_page5"
+    android:name="com.example.myapplication666.survive_the_crisis.ImprovePage5"
+    android:label="Фокус на одной задаче">
+</fragment>
+
+    <fragment
+        android:id="@+id/navigation_improve_page6"
+        android:name="com.example.myapplication666.survive_the_crisis.ImprovePage6"
+        android:label="Каникулы">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_improve_page7"
+        android:name="com.example.myapplication666.survive_the_crisis.ImprovePage7"
+        android:label="Самоподдержка и переосмысление ситуации">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_radical_acceptance"
+        android:name="com.example.myapplication666.accepting_reality.RadicalAcceptanceFragment"
+        android:label="Радикальное принятие">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_radical_acceptance_page2"
+        android:name="com.example.myapplication666.accepting_reality.RadicalAcceptancePage2"
+        android:label="Практика радикального принятия">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_turing_your_mind"
+        android:name="com.example.myapplication666.accepting_reality.TuringYourMindFragment"
+        android:label="Поворот сознания">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_willingness"
+        android:name="com.example.myapplication666.accepting_reality.WillingnessFragment"
+        android:label="Готовность">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_half_smile"
+        android:name="com.example.myapplication666.accepting_reality.HalfSmileFragment"
+        android:label="Полуулыбка">
+    </fragment>
+
+
+
 </navigation>

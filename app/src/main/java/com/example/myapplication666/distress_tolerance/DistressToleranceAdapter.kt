@@ -18,7 +18,7 @@ class DistressToleranceAdapter(activity: FragmentActivity) : FragmentStateAdapte
         return when (DistressToleranceEnum.values()[getItemViewType(position)]) {
             DistressToleranceEnum.SURVIVE_THE_CRISIS -> SurviveTheCrisisFragment()
             DistressToleranceEnum.ACCEPTING_REALITY -> AcceptingRealityFragment()
-            DistressToleranceEnum.BEFREE -> BeFreeFragment()
+            //DistressToleranceEnum.BEFREE -> BeFreeFragment()
             DistressToleranceEnum.ABCD -> DCBAFragment()
         }
     }
@@ -29,8 +29,9 @@ class DistressToleranceAdapter(activity: FragmentActivity) : FragmentStateAdapte
         if (position == 1)
             return DistressToleranceEnum.ACCEPTING_REALITY.ordinal
         if (position == 2) {
-            return DistressToleranceEnum.BEFREE.ordinal
+            return DistressToleranceEnum.ABCD.ordinal
         } else
             return DistressToleranceEnum.ABCD.ordinal
     }
+
 }

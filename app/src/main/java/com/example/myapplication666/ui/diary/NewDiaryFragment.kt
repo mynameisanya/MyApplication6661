@@ -1,23 +1,25 @@
 package com.example.myapplication666.ui.diary
 
-import android.content.Intent
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModel
-import androidx.navigation.fragment.findNavController
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication666.R
 import com.example.myapplication666.database.App
 import com.example.myapplication666.database.Model
+import com.example.myapplication666.ui.diary.RecyclerTouchListener.OnRowClickListener
+import com.example.myapplication666.ui.diary.RecyclerTouchListener.OnSwipeOptionsClickListener
+import com.firebase.ui.auth.AuthUI.getApplicationContext
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+
 
 class NewDiaryFragment : Fragment() {
 
@@ -48,6 +50,31 @@ class NewDiaryFragment : Fragment() {
         })
         r.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
         r.adapter = DiaryAdapter
+        val touchListener = RecyclerTouchListener(requireActivity(), r)
+        touchListener
+            .setClickable(object : OnRowClickListener {
+                override fun onRowClicked(position: Int) {
+
+                }
+
+                override fun onIndependentViewClicked(independentViewID: Int, position: Int) {}
+            })
+            .setSwipeOptionViews(R.id.delete_task, R.id.edit_task)
+            .setSwipeable(R.id.rowFG, R.id.rowBG,
+                OnSwipeOptionsClickListener { viewID, position ->
+                    when (viewID) {
+                        R.id.delete_task -> {
+                            //diaryList.remove(position)
+                            DiaryAdapter.setData(diaryList)
+                        }
+                        R.id.edit_task -> Toast.makeText(
+                           context,
+                            "Edit Not Available",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                })
+        r.addOnItemTouchListener(touchListener)
 
         val dialogView = LayoutInflater.from(context).inflate(R.layout.new_add_diary, null)
         val btnSave = dialogView.findViewById<Button>(R.id.save)
