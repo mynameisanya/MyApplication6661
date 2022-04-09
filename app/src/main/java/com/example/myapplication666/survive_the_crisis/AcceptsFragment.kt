@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageButton
 import com.example.myapplication666.MainActivity
 import com.example.myapplication666.R
@@ -33,7 +34,7 @@ class AcceptsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val imageButtonAcceptsPage2 = view.findViewById<ImageButton>(R.id.next_btn)
+        val imageButtonAcceptsPage2 = view.findViewById<Button>(R.id.next_btn)
         imageButtonAcceptsPage2.setOnClickListener()
         {
             (requireActivity() as MainActivity).navigationTo(R.id.navigation_accepts_page2)
