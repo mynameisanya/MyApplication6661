@@ -17,4 +17,8 @@ interface DatabaseDao {
     //обновить
     @Update
     fun updateData(model:Model)
+
+    @Query("delete from Table_model")
+   fun dropTable()
+
 }

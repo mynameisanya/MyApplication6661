@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background2_"
-    tools:context=".how_skills.HOWSkillsFragment">
+    tools:context=".ui.modules.how_skills.HOWSkillsFragment">
 
 
     <ImageButton

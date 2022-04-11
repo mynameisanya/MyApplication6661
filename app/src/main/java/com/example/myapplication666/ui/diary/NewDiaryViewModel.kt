@@ -16,16 +16,13 @@ class NewDiaryViewModel(private val diaryDao: DatabaseDao): ViewModel() {
         if (dataToSave.isEmpty()) {
             throw IllegalStateException()
         }
+
             dataToSave.forEach {
                 diaryDao.insert(it)
             }
     }
 
     fun getDiaryList(): MutableList<Model> {
-        val data = diaryDao.getAll()
-        if (data.isEmpty()) {
-            return mutableListOf(Model("One", 0), Model("Two", 0), Model("Three", 0))
-        }
-        return data
+        return mutableListOf(Model("One", 0), Model("Two", 0), Model("Three", 0))
     }
 }

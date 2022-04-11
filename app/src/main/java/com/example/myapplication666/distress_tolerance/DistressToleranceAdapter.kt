@@ -3,8 +3,7 @@ package com.example.myapplication666.distress_tolerance;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
-import com.example.myapplication666.BeFreeFragment
-import com.example.myapplication666.survive_the_crisis.SurviveTheCrisisFragment;
+import com.example.myapplication666.ui.modules.survive_the_crisis.SurviveTheCrisisFragment;
 import com.example.myapplication666.accepting_reality.AcceptingRealityFragment;
 import com.example.myapplication666.dcba.DCBAFragment
 
