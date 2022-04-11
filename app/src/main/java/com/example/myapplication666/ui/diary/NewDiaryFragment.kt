@@ -37,6 +37,12 @@ class NewDiaryFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val r = view.findViewById<RecyclerView>(R.id.recycler)
         val nextBtn = view.findViewById<Button>(R.id.next_btn)
+        val dialogView = LayoutInflater.from(context).inflate(R.layout.new_add_diary, null)
+        val btnSave = dialogView.findViewById<Button>(R.id.save)
+        val material = MaterialAlertDialogBuilder(requireContext()).create()
+        val editTextAdd = dialogView.findViewById<EditText>(R.id.add_new_action)
+        val btnAddAction = view.findViewById<Button>(R.id.showDialog)
+
         diaryList = viewModel.getDiaryList()
 
         DiaryAdapter.setData(
@@ -64,32 +70,25 @@ class NewDiaryFragment : Fragment() {
                 OnSwipeOptionsClickListener { viewID, position ->
                     when (viewID) {
                         R.id.delete_task -> {
-                            DiaryAdapter.removeByPosition(position)
+                            diaryList.removeAt(position)
+                            DiaryAdapter.notifyItemRemoved(position)
+                            //  DiaryAdapter.removeByPosition(position)
                         }
-                        R.id.edit_task -> Toast.makeText(
-                           context,
-                            "Edit Not Available",
-                            Toast.LENGTH_SHORT
-                        ).show()
+                        R.id.edit_task -> {
+                            editTextAdd.setText(diaryList[position].text)
+                            btnSave.setOnClickListener {
+                                val editText = editTextAdd.text.toString()
+                                val model = Model(editText, 0)
+                                diaryList.set(position, model)
+                                DiaryAdapter.notifyItemChanged(position)
+                                material.dismiss()
+                            }
+                            material.show()
+                        }
                     }
                 })
         r.addOnItemTouchListener(touchListener)
 
-        val dialogView = LayoutInflater.from(context).inflate(R.layout.new_add_diary, null)
-        val btnSave = dialogView.findViewById<Button>(R.id.save)
-        val material = MaterialAlertDialogBuilder(requireContext()).create()
-        val editTextAdd = dialogView.findViewById<EditText>(R.id.add_new_action)
-        val btnAddAction = view.findViewById<Button>(R.id.showDialog)
-
-        btnSave.setOnClickListener()
-        {
-            val editText = editTextAdd.text.toString()
-            val model = Model(editText, 0)
-            diaryList.add(model)
-            viewModel.insertData(model)
-            DiaryAdapter.notifyItemInserted(diaryList.size - 1)
-            material.dismiss()
-        }
         val btnCancel = dialogView.findViewById<Button>(R.id.cancel)
         btnCancel.setOnClickListener()
         {
@@ -100,6 +99,14 @@ class NewDiaryFragment : Fragment() {
 
         material.setView(dialogView)
         btnAddAction.setOnClickListener {
+            btnSave.setOnClickListener()
+            {
+                val editText = editTextAdd.text.toString()
+                val model = Model(editText, 0)
+                diaryList.add(model)
+                DiaryAdapter.notifyItemInserted(diaryList.size - 1)
+                material.dismiss()
+            }
             material.show()
         }
 
