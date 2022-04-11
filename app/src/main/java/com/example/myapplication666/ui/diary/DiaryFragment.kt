@@ -45,8 +45,6 @@ class DiaryFragment : Fragment() {
         }
     }
 
-
-
     private lateinit var viewModel: DiaryViewModel
 
     override fun onCreateView(
@@ -62,5 +60,10 @@ class DiaryFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_diary, container, false)
     }
 
+    override fun onResume() {
+        super.onResume()
+        diaryList = viewModel.getDiaryList()
+        DiaryAdapter.setData(diaryList)
+    }
 
 }

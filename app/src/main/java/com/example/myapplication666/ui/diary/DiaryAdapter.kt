@@ -65,6 +65,7 @@ class DiaryAdapter : RecyclerView.Adapter<DiaryAdapter.NewDiaryVewHolder>() {
 
     fun setData(list: MutableList<Model>) {
         this.list = list
+        notifyDataSetChanged()
     }
 
     fun removeByPosition(position: Int) {
