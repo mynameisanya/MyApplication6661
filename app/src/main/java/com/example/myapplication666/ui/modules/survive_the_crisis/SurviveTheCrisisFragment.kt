@@ -64,6 +64,6 @@ class SurviveTheCrisisFragment : Fragment() {
         {
             (requireActivity() as MainActivity).navigationTo(R.id.navigation_improve)
         }
-    }
 
+    }
 }

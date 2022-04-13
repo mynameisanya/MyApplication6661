@@ -16,7 +16,7 @@
             android:layout_marginLeft="14sp"
             android:layout_marginRight="14sp"
             android:layout_marginTop="14sp"
-            android:text="@string/abstinence"
+            android:text="@string/abstinence_page3"
             android:textSize="16sp"/>
 
         <EditText
@@ -29,15 +29,6 @@
             android:ems="10"
             android:text="Другие идеи:" />
 
-        <Button
-            android:id="@+id/next_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:layout_marginEnd="30dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="-130dp"
-            android:text="Далее" />
     </LinearLayout>
 
 </ScrollView>

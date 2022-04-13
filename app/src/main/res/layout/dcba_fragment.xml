@@ -13,14 +13,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="413dp"
-        android:layout_height="match_parent"
-        android:src="@drawable/background2_"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="-79dp" />
-
     <ImageButton
         android:id="@+id/abstinence_image"
         android:layout_width="281dp"
@@ -50,7 +42,7 @@
         android:layout_width="281dp"
         android:layout_height="127dp"
         android:layout_marginBottom="8dp"
-        android:src="@drawable/support_community"
+        android:src="@drawable/support"
         app:layout_constraintBottom_toTopOf="@+id/bridges_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"

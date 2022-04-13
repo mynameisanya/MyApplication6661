@@ -1,4 +1,4 @@
-package com.example.myapplication666.emotional_regulation
+package com.example.myapplication666.ui.modules.emotional_regulation
 
 import androidx.lifecycle.ViewModel
 

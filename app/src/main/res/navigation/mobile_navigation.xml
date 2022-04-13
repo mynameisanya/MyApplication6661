@@ -37,13 +37,13 @@
 
     <fragment
         android:id="@+id/navigation_emotional_regulation"
-        android:name="com.example.myapplication666.distress_tolerance.DistressToleranceFragment"
+        android:name="com.example.myapplication666.emotional_regulation.EmotionalRegulationFragment"
         android:label="@string/emotional_regulation">
     </fragment>
 
     <fragment
         android:id="@+id/navigation_interpersonal_effectiveness"
-        android:name="com.example.myapplication666.distress_tolerance.DistressToleranceFragment"
+        android:name="com.example.myapplication666.InterpersonalEffectiveness"
         android:label="@string/interpersonal_effectiveness">
     </fragment>
 
@@ -288,6 +288,48 @@
         android:label="Полуулыбка">
     </fragment>
 
+    <fragment
+        android:id="@+id/navigation_abstinence"
+        android:name="com.example.myapplication666.dcba.AbstinenceFragment"
+        android:label="Диалектическая абстиненция">
+    </fragment>
 
+    <fragment
+        android:id="@+id/navigation_abstinence_page2"
+        android:name="com.example.myapplication666.dcba.AbstinencePage2"
+        android:label="План для абстиненции">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_abstinence_page3"
+        android:name="com.example.myapplication666.dcba.AbstinencePage3"
+        android:label="План для снижения вреда">
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_dcba"
+        android:name="com.example.myapplication666.dcba.DCBAFragment">
+    </fragment>
+
+    <fragment
+    android:id="@+id/navigation_clear_mind"
+    android:name="com.example.myapplication666.dcba.ClearMindFragment"
+        android:label="Ясное сознание">
+</fragment>
+
+    <fragment
+        android:id="@+id/navigation_support_community"
+        android:name="com.example.myapplication666.dcba.SupportCommunityFragment"
+        android:label="Поддержка сообщества">
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_bridges"
+        android:name="com.example.myapplication666.dcba.BrigdesFragment"
+        android:label="Сжигание и выстраивание мостов">
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_riot"
+        android:name="com.example.myapplication666.dcba.RiotFragment"
+        android:label="Альтернативный бунт">
+    </fragment>
 
 </navigation>

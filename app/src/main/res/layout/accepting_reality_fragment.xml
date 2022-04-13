@@ -10,58 +10,50 @@
 
     <ImageButton
         android:id="@+id/radical_acceptance_image"
-        android:layout_width="172dp"
-        android:layout_height="112dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="104dp"
-        android:src="@drawable/radical_acceptance"
-        app:layout_constraintEnd_toStartOf="@+id/turing_your_mind_image"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_width="353dp"
+        android:layout_height="166dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/radical_acceptance_"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/turing_your_mind_image"
-        android:layout_width="172dp"
-        android:layout_height="112dp"
-        android:layout_marginTop="104dp"
-        android:layout_marginEnd="16dp"
-        android:src="@drawable/turing_your_mind"
-        app:layout_constraintBottom_toTopOf="@+id/half_smile_image"
+        android:layout_width="353dp"
+        android:layout_height="166dp"
+        android:layout_marginEnd="28dp"
+        android:src="@drawable/turing"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        tools:layout_editor_absoluteY="203dp" />
 
     <ImageButton
         android:id="@+id/willingness_image"
-        android:layout_width="172dp"
-        android:layout_height="112dp"
-        android:layout_marginTop="44dp"
+        android:layout_width="353dp"
+        android:layout_height="166dp"
+        android:layout_marginStart="28dp"
         android:src="@drawable/willingness"
-        app:layout_constraintEnd_toStartOf="@+id/half_smile_image"
-        app:layout_constraintHorizontal_bias="0.705"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radical_acceptance_image" />
+        tools:layout_editor_absoluteY="383dp" />
 
     <ImageButton
         android:id="@+id/half_smile_image"
-        android:layout_width="172dp"
-        android:layout_height="112dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="348dp"
-        android:src="@drawable/half_smile"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_width="353dp"
+        android:layout_height="166dp"
+        android:layout_marginEnd="28dp"
+        android:src="@drawable/half_smile_"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="490dp" />
 
     <ImageButton
         android:id="@+id/directed_consciousness_image"
-        android:layout_width="172dp"
-        android:layout_height="112dp"
-        android:layout_marginBottom="212dp"
+        android:layout_width="353dp"
+        android:layout_height="166dp"
+        android:layout_marginBottom="4dp"
         android:src="@drawable/directed_consciousness"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.46"
+        app:layout_constraintHorizontal_bias="0.482"
         app:layout_constraintStart_toStartOf="parent" />
 
 

@@ -1,4 +1,4 @@
-package com.example.myapplication666.ui.modules.survive_the_crisis
+package com.example.myapplication666.dcba
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -7,38 +7,35 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.ImageButton
 import com.example.myapplication666.MainActivity
 import com.example.myapplication666.R
 
-class ImprovePage6 : Fragment() {
+class AbstinencePage2 : Fragment() {
 
     companion object {
-        fun newInstance() = ImprovePage6()
+        fun newInstance() = AbstinencePage2()
     }
 
-    private lateinit var viewModel: ImprovePage6ViewModel
+    private lateinit var viewModel: AbstinencePage2ViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.improve_page6_fragment, container, false)
+        return inflater.inflate(R.layout.abstinence_page2_fragment, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(ImprovePage6ViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(AbstinencePage2ViewModel::class.java)
         // TODO: Use the ViewModel
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val imageButtonImprovePage7 = view.findViewById<Button>(R.id.next_btn)
-        imageButtonImprovePage7.setOnClickListener()
+        val imageButtonAbstinencePage3 = view.findViewById<Button>(R.id.next_btn)
+        imageButtonAbstinencePage3.setOnClickListener()
         {
-            (requireActivity() as MainActivity).navigationTo(R.id.navigation_improve_page7)
+            (requireActivity() as MainActivity).navigationTo(R.id.navigation_abstinence_page3)
         }
     }
-
 }

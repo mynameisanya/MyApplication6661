@@ -16,7 +16,7 @@
             android:layout_marginLeft="14sp"
             android:layout_marginRight="14sp"
             android:layout_marginTop="14sp"
-            android:text="@string/abstinence"
+            android:text="@string/abstinence_page2"
             android:textSize="16sp"/>
 
         <EditText
