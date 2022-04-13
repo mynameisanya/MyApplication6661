@@ -10,70 +10,51 @@
 
     <ImageButton
         android:id="@+id/radical_acceptance_image"
-        android:layout_width="173dp"
-        android:layout_height="117dp"
-        android:src="@drawable/radical_acceptance"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.174" />
-
-    <ImageButton
-        android:id="@+id/turing_your_mind_image"
-        android:layout_width="177dp"
-        android:layout_height="124dp"
-        android:layout_marginTop="104dp"
-        android:src="@drawable/turing_your_mind"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.924"
+        android:layout_width="353dp"
+        android:layout_height="166dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/radical_acceptance_"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/willingness_image"
-        android:layout_width="176dp"
-        android:layout_height="121dp"
-        android:layout_marginStart="24dp"
-        android:src="@drawable/willingness"
-        app:layout_constraintBottom_toBottomOf="@+id/accepts_image"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/accepts_image"
-        app:layout_constraintVertical_bias="0.0" />
+        android:id="@+id/turing_your_mind_image"
+        android:layout_width="353dp"
+        android:layout_height="166dp"
+        android:layout_marginEnd="28dp"
+        android:src="@drawable/turing"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="203dp" />
 
     <ImageButton
-        android:id="@+id/accepts_image"
-        android:layout_width="174dp"
-        android:layout_height="121dp"
-        android:layout_marginTop="28dp"
-        android:src="@drawable/accepts"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.432"
-        app:layout_constraintStart_toEndOf="@+id/willingness_image"
-        app:layout_constraintTop_toBottomOf="@+id/turing_your_mind_image" />
+        android:id="@+id/willingness_image"
+        android:layout_width="353dp"
+        android:layout_height="166dp"
+        android:layout_marginStart="28dp"
+        android:src="@drawable/willingness"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="383dp" />
 
     <ImageButton
         android:id="@+id/half_smile_image"
-        android:layout_width="177dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="24dp"
-        android:src="@drawable/half_smile"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/willingness_image"
-        app:layout_constraintVertical_bias="0.147" />
+        android:layout_width="353dp"
+        android:layout_height="166dp"
+        android:layout_marginEnd="28dp"
+        android:src="@drawable/half_smile_"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="490dp" />
 
     <ImageButton
         android:id="@+id/directed_consciousness_image"
-        android:layout_width="173dp"
-        android:layout_height="117dp"
-        android:layout_marginBottom="200dp"
+        android:layout_width="353dp"
+        android:layout_height="166dp"
+        android:layout_marginBottom="4dp"
         android:src="@drawable/directed_consciousness"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.405"
-        app:layout_constraintStart_toEndOf="@+id/half_smile_image" />
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

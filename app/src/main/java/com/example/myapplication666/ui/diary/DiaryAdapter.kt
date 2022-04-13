@@ -9,23 +9,24 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication666.R
 import com.example.myapplication666.database.Model
 
-class DiaryAdapter: RecyclerView.Adapter<DiaryAdapter.NewDiaryVewHolder>() {
+class DiaryAdapter : RecyclerView.Adapter<DiaryAdapter.NewDiaryVewHolder>() {
 
     var list = mutableListOf<Model>()
-    private lateinit var listener:OnChangeSeekBarListener
+    private lateinit var listener: OnChangeSeekBarListener
 
-    fun attachListener(listener:OnChangeSeekBarListener){
+    fun attachListener(listener: OnChangeSeekBarListener) {
         this.listener = listener
     }
-    inner class NewDiaryVewHolder(private val itemView: View): RecyclerView.ViewHolder(itemView) {
 
-       val textView = itemView.findViewById<TextView>(R.id.text)
+    inner class NewDiaryVewHolder(private val itemView: View) : RecyclerView.ViewHolder(itemView) {
+
+        val textView = itemView.findViewById<TextView>(R.id.text)
         val seekBar = itemView.findViewById<SeekBar>(R.id.seekBar)
-        fun bind(position: Int)
-        {
+        val counter = itemView.findViewById<TextView>(R.id.counter)
+        fun bind(position: Int) {
             textView.text = list[position].text
             seekBar.progress = list[position].characteristic
-            seekBar.setOnSeekBarChangeListener(object:SeekBar.OnSeekBarChangeListener{
+            seekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
                 override fun onProgressChanged(
                     seekBar: SeekBar?,
                     progress: Int,
@@ -41,6 +42,7 @@ class DiaryAdapter: RecyclerView.Adapter<DiaryAdapter.NewDiaryVewHolder>() {
                 override fun onStopTrackingTouch(seekBar: SeekBar?) {
                     list[position].characteristic = seekBar!!.progress
                     listener.onChanged(list)
+                    counter.text = seekBar.progress.toString()
                 }
 
             })
@@ -48,7 +50,8 @@ class DiaryAdapter: RecyclerView.Adapter<DiaryAdapter.NewDiaryVewHolder>() {
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewDiaryVewHolder {
-        val param = LayoutInflater.from(parent.context).inflate(R.layout.item_new_diary, parent, false)
+        val param =
+            LayoutInflater.from(parent.context).inflate(R.layout.item_new_diary, parent, false)
         return NewDiaryVewHolder(param)
     }
 
@@ -60,9 +63,14 @@ class DiaryAdapter: RecyclerView.Adapter<DiaryAdapter.NewDiaryVewHolder>() {
         return list.size
     }
 
-    fun setData(list: MutableList<Model>)
-    {
+    fun setData(list: MutableList<Model>) {
         this.list = list
+        notifyDataSetChanged()
+    }
+
+    fun removeByPosition(position: Int) {
+        this.list.removeAt(position)
+        notifyItemRemoved(position)
     }
 
 }

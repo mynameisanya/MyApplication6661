@@ -3,8 +3,7 @@ package com.example.myapplication666.distress_tolerance;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
-import com.example.myapplication666.BeFreeFragment
-import com.example.myapplication666.survive_the_crisis.SurviveTheCrisisFragment;
+import com.example.myapplication666.ui.modules.survive_the_crisis.SurviveTheCrisisFragment;
 import com.example.myapplication666.accepting_reality.AcceptingRealityFragment;
 import com.example.myapplication666.dcba.DCBAFragment
 
@@ -18,7 +17,7 @@ class DistressToleranceAdapter(activity: FragmentActivity) : FragmentStateAdapte
         return when (DistressToleranceEnum.values()[getItemViewType(position)]) {
             DistressToleranceEnum.SURVIVE_THE_CRISIS -> SurviveTheCrisisFragment()
             DistressToleranceEnum.ACCEPTING_REALITY -> AcceptingRealityFragment()
-            DistressToleranceEnum.BEFREE -> BeFreeFragment()
+            //DistressToleranceEnum.BEFREE -> BeFreeFragment()
             DistressToleranceEnum.ABCD -> DCBAFragment()
         }
     }
@@ -29,8 +28,9 @@ class DistressToleranceAdapter(activity: FragmentActivity) : FragmentStateAdapte
         if (position == 1)
             return DistressToleranceEnum.ACCEPTING_REALITY.ordinal
         if (position == 2) {
-            return DistressToleranceEnum.BEFREE.ordinal
+            return DistressToleranceEnum.ABCD.ordinal
         } else
             return DistressToleranceEnum.ABCD.ordinal
     }
+
 }

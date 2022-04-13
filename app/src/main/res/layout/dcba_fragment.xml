@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,6 +7,11 @@
     android:layout_height="match_parent"
     android:background="@drawable/background2_"
     tools:context="dcba.DCBAFragment">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <ImageButton
         android:id="@+id/abstinence_image"
@@ -17,12 +22,14 @@
         app:layout_constraintBottom_toTopOf="@+id/clear_mind_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageButton
         android:id="@+id/clear_mind_image"
-        android:layout_width="276dp"
-        android:layout_height="119dp"
+        android:layout_width="281dp"
+        android:layout_height="127dp"
         android:layout_marginBottom="8dp"
         android:src="@drawable/clear_mind"
         app:layout_constraintBottom_toTopOf="@+id/support_community_image"
@@ -32,10 +39,10 @@
 
     <ImageButton
         android:id="@+id/support_community_image"
-        android:layout_width="282dp"
-        android:layout_height="125dp"
+        android:layout_width="281dp"
+        android:layout_height="127dp"
         android:layout_marginBottom="8dp"
-        android:src="@drawable/support_community"
+        android:src="@drawable/support"
         app:layout_constraintBottom_toTopOf="@+id/bridges_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -43,8 +50,8 @@
 
     <ImageButton
         android:id="@+id/bridges_image"
-        android:layout_width="278dp"
-        android:layout_height="121dp"
+        android:layout_width="281dp"
+        android:layout_height="127dp"
         android:layout_marginBottom="8dp"
         android:src="@drawable/bridges"
         app:layout_constraintBottom_toTopOf="@+id/riot_image"
@@ -54,12 +61,15 @@
 
     <ImageButton
         android:id="@+id/riot_image"
-        android:layout_width="277dp"
-        android:layout_height="116dp"
+        android:layout_width="281dp"
+        android:layout_height="127dp"
+        android:layout_marginBottom="44dp"
         android:src="@drawable/riot"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="552dp" />
+        app:layout_constraintHorizontal_bias="0.522"
+        app:layout_constraintStart_toStartOf="parent" />
 
+</LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

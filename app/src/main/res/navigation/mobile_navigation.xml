@@ -37,138 +37,299 @@
 
     <fragment
         android:id="@+id/navigation_emotional_regulation"
-        android:name="com.example.myapplication666.distress_tolerance.DistressToleranceFragment"
+        android:name="com.example.myapplication666.emotional_regulation.EmotionalRegulationFragment"
         android:label="@string/emotional_regulation">
     </fragment>
 
     <fragment
         android:id="@+id/navigation_interpersonal_effectiveness"
-        android:name="com.example.myapplication666.distress_tolerance.DistressToleranceFragment"
+        android:name="com.example.myapplication666.InterpersonalEffectiveness"
         android:label="@string/interpersonal_effectiveness">
     </fragment>
 
     <fragment
         android:id="@+id/navigation_rational_mind"
-        android:name="com.example.myapplication666.wise_mind.RationalMindFragment"
+        android:name="com.example.myapplication666.ui.modules.wise_mind.RationalMindFragment"
         android:label="@string/rational_mind">
     </fragment>
 
     <fragment
         android:id="@+id/navigation_wise_mind_page1"
-        android:name="com.example.myapplication666.wise_mind.WiseMindPage1Fragment"
+        android:name="com.example.myapplication666.ui.modules.wise_mind.WiseMindPage1Fragment"
         android:label="@string/wise_mind">
     </fragment>
 
     <fragment
         android:id="@+id/navigation_observe"
-        android:name="com.example.myapplication666.what_skills.observe.ObserveFragment"
+        android:name="com.example.myapplication666.ui.modules.what_skills.observe.ObserveFragment"
         android:label="@string/observe">
     </fragment>
 
     <fragment
         android:id="@+id/navigation_observe_page2"
-        android:name="com.example.myapplication666.what_skills.observe.Observe_Page2_Fragment"
+        android:name="com.example.myapplication666.ui.modules.what_skills.observe.Observe_Page2_Fragment"
         android:label="Наблюдение: зрение">
     </fragment>
 
     <fragment
         android:id="@+id/navigation_observe_page3"
-        android:name="com.example.myapplication666.what_skills.observe.ObservePage3Fragment"
+        android:name="com.example.myapplication666.ui.modules.what_skills.observe.ObservePage3Fragment"
         android:label="Наблюдение: звуки">
     </fragment>
 
     <fragment
         android:id="@+id/navigation_observe_page4"
-        android:name="com.example.myapplication666.what_skills.observe.ObservePage4Fragment"
+        android:name="com.example.myapplication666.ui.modules.what_skills.observe.ObservePage4Fragment"
         android:label="Наблюдение: запахи">
     </fragment>
 
     <fragment
         android:id="@+id/navigation_observe_page5"
-        android:name="com.example.myapplication666.what_skills.observe.ObservePage5Fragment"
+        android:name="com.example.myapplication666.ui.modules.what_skills.observe.ObservePage5Fragment"
         android:label="Наблюдение: вкус">
     </fragment>
 
     <fragment
         android:id="@+id/navigation_observe_page6"
-        android:name="com.example.myapplication666.what_skills.observe.ObservePage6Fragment"
+        android:name="com.example.myapplication666.ui.modules.what_skills.observe.ObservePage6Fragment"
         android:label="Наблюдение: побуждение">
     </fragment>
 
     <fragment
         android:id="@+id/navigation_observe_page7"
-        android:name="com.example.myapplication666.what_skills.observe.ObservePage7Fragment"
+        android:name="com.example.myapplication666.ui.modules.what_skills.observe.ObservePage7Fragment"
         android:label="Наблюдение: ощущения">
     </fragment>
 
     <fragment
         android:id="@+id/navigation_observe_page8"
-        android:name="com.example.myapplication666.what_skills.observe.ObservePage8Fragment"
+        android:name="com.example.myapplication666.ui.modules.what_skills.observe.ObservePage8Fragment"
         android:label="Наблюдение: дыхание">
     </fragment>
 
     <fragment
         android:id="@+id/navigation_describe"
-        android:name="com.example.myapplication666.what_skills.describe.DescribeFragment"
+        android:name="com.example.myapplication666.ui.modules.what_skills.describe.DescribeFragment"
         android:label="Описание: вокруг себя">
     </fragment>
     <fragment
         android:id="@+id/navigation_describe_page2"
-        android:name="com.example.myapplication666.what_skills.describe.DescribePage2Fragment"
+        android:name="com.example.myapplication666.ui.modules.what_skills.describe.DescribePage2Fragment"
         android:label="Описание: мысли и чувства">
     </fragment>
 
     <fragment
         android:id="@+id/navigation_describe_page3"
-        android:name="com.example.myapplication666.what_skills.describe.DescribePage3Fragment"
+        android:name="com.example.myapplication666.ui.modules.what_skills.describe.DescribePage3Fragment"
         android:label="Описание: дыхание">
     </fragment>
 
     <fragment
         android:id="@+id/navigation_participle"
-        android:name="com.example.myapplication666.what_skills.ParticipleFragment"
+        android:name="com.example.myapplication666.ui.modules.what_skills.ParticipleFragment"
         android:label="@string/participle">
     </fragment>
 
     <fragment
         android:id="@+id/navigation_participle_page2"
-        android:name="com.example.myapplication666.what_skills.ParticiplePage2Fragment"
+        android:name="com.example.myapplication666.ui.modules.what_skills.ParticiplePage2Fragment"
         android:label="@string/participle">
     </fragment>
 
     <fragment
         android:id="@+id/navigation_non_judmentally"
-        android:name="com.example.myapplication666.how_skills.NonJudmentallyFragment"
+        android:name="com.example.myapplication666.ui.modules.how_skills.NonJudmentallyFragment"
         android:label="Безоценочность">
     </fragment>
 
     <fragment
         android:id="@+id/navigation_non_judmentally_page2"
-        android:name="com.example.myapplication666.how_skills.NonJudmentallyPage2Fragment"
+        android:name="com.example.myapplication666.ui.modules.how_skills.NonJudmentallyPage2Fragment"
         android:label="Безоценочность">
     </fragment>
 
     <fragment
         android:id="@+id/navigation_one_mindfully"
-        android:name="com.example.myapplication666.how_skills.OneMindfullyFragment"
+        android:name="com.example.myapplication666.ui.modules.how_skills.OneMindfullyFragment"
         android:label="Однозадачность">
     </fragment>
     <fragment
         android:id="@+id/navigation_one_mindfully_page2"
-        android:name="com.example.myapplication666.how_skills.OneMindfullyPage2Fragment"
+        android:name="com.example.myapplication666.ui.modules.how_skills.OneMindfullyPage2Fragment"
         android:label="Однозадачность">
     </fragment>
 
     <fragment
         android:id="@+id/navigation_effectively"
-        android:name="com.example.myapplication666.how_skills.EffectivelyFragment"
+        android:name="com.example.myapplication666.ui.modules.how_skills.EffectivelyFragment"
         android:label="Эффективность">
     </fragment>
 
     <fragment
         android:id="@+id/navigation_effectively_page2"
-        android:name="com.example.myapplication666.how_skills.EffectivelyPage2Fragment"
+        android:name="com.example.myapplication666.ui.modules.how_skills.EffectivelyPage2Fragment"
         android:label="Эффективность">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_stop"
+        android:name="com.example.myapplication666.ui.modules.survive_the_crisis.StopFragment"
+        android:label="СТОП">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_pros_and_cons"
+        android:name="com.example.myapplication666.ui.modules.survive_the_crisis.ProsAndConsFragment"
+        android:label="За и Против">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_tip"
+        android:name="com.example.myapplication666.ui.modules.survive_the_crisis.TIPFragment"
+        android:label="ТРУД">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_accepts"
+        android:name="com.example.myapplication666.ui.modules.survive_the_crisis.AcceptsFragment"
+        android:label="Развлечения">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_accepts_page2"
+        android:name="com.example.myapplication666.ui.modules.survive_the_crisis.AcceptsPage2"
+        android:label="Сравнение">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_self_soothe"
+        android:name="com.example.myapplication666.ui.modules.survive_the_crisis.SelfSootheFragment"
+        android:label="Зрение">
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_self_soothe_page2"
+        android:name="com.example.myapplication666.ui.modules.survive_the_crisis.SelfSoothePage2Fragment"
+        android:label="Слух">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_self_soothe_page3"
+        android:name="com.example.myapplication666.ui.modules.survive_the_crisis.SelfSoothePage3Fragment"
+        android:label="Обоняние">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_improve"
+        android:name="com.example.myapplication666.ui.modules.survive_the_crisis.ImproveFragment"
+        android:label="Воображение">
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_improve_page2"
+        android:name="com.example.myapplication666.ui.modules.survive_the_crisis.ImprovePage2"
+        android:label="Смысл">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_improve_page3"
+        android:name="com.example.myapplication666.ui.modules.survive_the_crisis.ImprovePage3"
+        android:label="Молитва">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_improve_page4"
+        android:name="com.example.myapplication666.ui.modules.survive_the_crisis.ImprovePage4"
+        android:label="Расслабляющие действия">
+    </fragment>
+    <fragment
+    android:id="@+id/navigation_improve_page5"
+    android:name="com.example.myapplication666.ui.modules.survive_the_crisis.ImprovePage5"
+    android:label="Фокус на одной задаче">
+</fragment>
+
+    <fragment
+        android:id="@+id/navigation_improve_page6"
+        android:name="com.example.myapplication666.ui.modules.survive_the_crisis.ImprovePage6"
+        android:label="Каникулы">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_improve_page7"
+        android:name="com.example.myapplication666.ui.modules.survive_the_crisis.ImprovePage7"
+        android:label="Самоподдержка и переосмысление ситуации">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_radical_acceptance"
+        android:name="com.example.myapplication666.accepting_reality.RadicalAcceptanceFragment"
+        android:label="Радикальное принятие">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_radical_acceptance_page2"
+        android:name="com.example.myapplication666.accepting_reality.RadicalAcceptancePage2"
+        android:label="Практика радикального принятия">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_turing_your_mind"
+        android:name="com.example.myapplication666.accepting_reality.TuringYourMindFragment"
+        android:label="Поворот сознания">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_willingness"
+        android:name="com.example.myapplication666.accepting_reality.WillingnessFragment"
+        android:label="Готовность">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_half_smile"
+        android:name="com.example.myapplication666.accepting_reality.HalfSmileFragment"
+        android:label="Полуулыбка">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_abstinence"
+        android:name="com.example.myapplication666.dcba.AbstinenceFragment"
+        android:label="Диалектическая абстиненция">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_abstinence_page2"
+        android:name="com.example.myapplication666.dcba.AbstinencePage2"
+        android:label="План для абстиненции">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_abstinence_page3"
+        android:name="com.example.myapplication666.dcba.AbstinencePage3"
+        android:label="План для снижения вреда">
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_dcba"
+        android:name="com.example.myapplication666.dcba.DCBAFragment">
+    </fragment>
+
+    <fragment
+    android:id="@+id/navigation_clear_mind"
+    android:name="com.example.myapplication666.dcba.ClearMindFragment"
+        android:label="Ясное сознание">
+</fragment>
+
+    <fragment
+        android:id="@+id/navigation_support_community"
+        android:name="com.example.myapplication666.dcba.SupportCommunityFragment"
+        android:label="Поддержка сообщества">
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_bridges"
+        android:name="com.example.myapplication666.dcba.BrigdesFragment"
+        android:label="Сжигание и выстраивание мостов">
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_riot"
+        android:name="com.example.myapplication666.dcba.RiotFragment"
+        android:label="Альтернативный бунт">
     </fragment>
 
 </navigation>
