@@ -21,7 +21,7 @@ class SplashViewModel : ViewModel() {
     fun requestUser() {
         viewModelScope.launch(Dispatchers.IO) //переход на новый поток IO
         {
-            delay(3000) //ожидание
+          //  delay(3000) //ожидание
             viewState.postValue(currentUser?.let { SplashViewState.Success } //обращаемся к юзеру
                 ?: SplashViewState.Error( //если ошибка
                     NoAuthException()
