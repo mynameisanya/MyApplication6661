@@ -608,4 +608,10 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="what_skils_tab_text">Навыки ЧТО</string>
+    <string name="wise_mind_tab_text">Мудрое сознание</string>
+    <string name="how_skils_tab_text">Навыки КАК</string>
+    <string name="survive_the_crisis_tab_text">Выживание в кризисе</string>
+    <string name="accepting_reality_tab_text">Принятие реальности</string>
+    <string name="abcd_tab_text">АБСД</string>
 </resources>
