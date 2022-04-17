@@ -5,12 +5,13 @@
       <map>
         <entry key="..\:/MyApplication666/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1615" />
         <entry key="..\:/MyApplication666/app/src/main/res/drawable/abstinence.xml" value="0.1615" />
+        <entry key="..\:/MyApplication666/app/src/main/res/drawable/background.xml" value="0.1745" />
         <entry key="..\:/MyApplication666/app/src/main/res/drawable/half_smile.xml" value="0.1735" />
         <entry key="..\:/MyApplication666/app/src/main/res/drawable/refusal.xml" value="0.1615" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/abstinence_fragment.xml" value="0.1" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/abstinence_page2_fragment.xml" value="0.25416666666666665" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/abstinence_page3_fragment.xml" value="0.25416666666666665" />
-        <entry key="..\:/MyApplication666/app/src/main/res/layout/accepting_reality_fragment.xml" value="0.3888446215139442" />
+        <entry key="..\:/MyApplication666/app/src/main/res/layout/accepting_reality_fragment.xml" value="0.28470715835141" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/accepts_fragment.xml" value="0.1" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/accepts_page2_fragment.xml" value="0.24010416666666667" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/activity_main.xml" value="0.17708333333333334" />
