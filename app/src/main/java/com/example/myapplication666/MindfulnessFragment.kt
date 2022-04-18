@@ -26,7 +26,6 @@ class MindfulnessFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         tabLayout = view.findViewById(R.id.tabLayout)
         pager2 = view.findViewById(R.id.pager2)
-        val imageButton = view.findViewById<ImageButton>(R.id.rational_mind_image)
         val pagerAdapter = MindfulnessAdapter(requireActivity())
         pager2.adapter = pagerAdapter
         TabLayoutMediator(tabLayout, pager2) { tab, position ->

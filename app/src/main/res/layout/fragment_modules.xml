@@ -3,53 +3,50 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@drawable/background2_"
+    android:background="@drawable/background3"
     android:layout_height="match_parent"
     tools:context=".ui.modules.ModulesFragment">
 
 
     <ImageButton
         android:id="@+id/distress_tolerance"
-        android:layout_width="280dp"
-        android:layout_height="123dp"
-        android:layout_marginTop="256dp"
-        android:src="@drawable/distress_tolerance_image"
+        android:layout_width="355dp"
+        android:layout_height="141dp"
+        android:layout_marginTop="180dp"
+        android:src="@drawable/distress_tolerance"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/mindfulness"
-        android:layout_width="308dp"
-        android:layout_height="131dp"
-        android:layout_marginBottom="60dp"
+        android:layout_width="355dp"
+        android:layout_height="141dp"
+        android:layout_marginBottom="12dp"
+        android:src="@drawable/mind"
         app:layout_constraintBottom_toTopOf="@+id/distress_tolerance"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:src="@tools:sample/backgrounds/scenic" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
         android:id="@+id/emotional_regulation"
-        android:layout_width="276dp"
-        android:layout_height="113dp"
-        android:layout_marginTop="36dp"
+        android:layout_width="355dp"
+        android:layout_height="141dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/emotional2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/distress_tolerance"
-        tools:src="@tools:sample/avatars" />
+        app:layout_constraintTop_toBottomOf="@+id/distress_tolerance" />
 
     <ImageButton
         android:id="@+id/interpersonal_effectiveness"
-        android:layout_width="248dp"
-        android:layout_height="124dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="355dp"
+        android:layout_height="141dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/inter2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emotional_regulation"
-        tools:src="@tools:sample/avatars" />
+        app:layout_constraintTop_toBottomOf="@+id/emotional_regulation" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
