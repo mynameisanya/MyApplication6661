@@ -37,7 +37,7 @@
 
     <fragment
         android:id="@+id/navigation_emotional_regulation"
-        android:name="com.example.myapplication666.emotional_regulation.EmotionalRegulationFragment"
+        android:name="com.example.myapplication666.ui.modules.emotional_regulation.TheoryFragment"
         android:label="@string/emotional_regulation">
     </fragment>
 
@@ -330,6 +330,18 @@
         android:id="@+id/navigation_riot"
         android:name="com.example.myapplication666.dcba.RiotFragment"
         android:label="Альтернативный бунт">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_purpose_emotional"
+        android:name="com.example.myapplication666.ui.modules.emotional_regulation.PurposeEmotional"
+        android:label="Цели регуляции эмоций">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_name_of_emotional"
+        android:name="com.example.myapplication666.ui.modules.emotional_regulation.NameOfEmotional"
+        android:label="Для чего нам нужны эмоции">
     </fragment>
 
 </navigation>
