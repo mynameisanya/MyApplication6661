@@ -1,12 +1,9 @@
-package com.example.myapplication666
-
+package com.example.myapplication666.ui.modules.emotional_regulation
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.example.myapplication666.ui.modules.emotional_regulation.ExercisesFragment
-import com.example.myapplication666.ui.modules.emotional_regulation.TheoryFragment
-
+import com.example.myapplication666.EnumER
 
 class EmotionalRegulationAdapter(activity: FragmentActivity): FragmentStateAdapter(activity) {
     override fun getItemCount(): Int {
