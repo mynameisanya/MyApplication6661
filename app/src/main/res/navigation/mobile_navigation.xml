@@ -37,7 +37,7 @@
 
     <fragment
         android:id="@+id/navigation_emotional_regulation"
-        android:name="com.example.myapplication666.ui.modules.emotional_regulation.TheoryFragment"
+        android:name="com.example.myapplication666.ui.modules.emotional_regulation.EmotionalRegulationFragment"
         android:label="@string/emotional_regulation">
     </fragment>
 

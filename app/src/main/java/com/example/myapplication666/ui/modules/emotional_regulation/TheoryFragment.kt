@@ -31,7 +31,7 @@ class TheoryFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.emotional_regulation_fragment, container, false)
+        return inflater.inflate(R.layout.theory_fragment, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
