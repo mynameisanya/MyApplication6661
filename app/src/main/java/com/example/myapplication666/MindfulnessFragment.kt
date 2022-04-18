@@ -30,9 +30,9 @@ class MindfulnessFragment : Fragment() {
         pager2.adapter = pagerAdapter
         TabLayoutMediator(tabLayout, pager2) { tab, position ->
             when (FragmentTypeEnum.values()[pagerAdapter.getItemViewType(position)]) {
-                FragmentTypeEnum.WISEMIND -> tab.text = "Мудрое сознание"
-                FragmentTypeEnum.WHATSKILLS -> tab.text = "Навыки ЧТО"
-                FragmentTypeEnum.HOWSKILLS -> tab.text = "Навыки КАК"
+                FragmentTypeEnum.WISEMIND -> tab.text = getString(R.string.wise_mind_tab_text)
+                FragmentTypeEnum.WHATSKILLS -> tab.text = getString(R.string.what_skils_tab_text)
+                FragmentTypeEnum.HOWSKILLS -> tab.text = getString(R.string.how_skils_tab_text)
             }
 
         }.attach()

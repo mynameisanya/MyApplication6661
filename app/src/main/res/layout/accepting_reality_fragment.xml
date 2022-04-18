@@ -7,6 +7,7 @@
     android:background="@drawable/background3"
     tools:context="accepting_reality.AcceptingRealityFragment">
 
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -30,7 +31,6 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"/>
 
-
         <ImageButton
             android:id="@+id/willingness_image"
             android:layout_width="353dp"
@@ -42,6 +42,7 @@
             tools:layout_editor_absoluteY="261dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"/>
+
         <ImageButton
             android:id="@+id/half_smile_image"
             android:layout_width="353dp"
