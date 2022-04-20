@@ -26,6 +26,7 @@
         </activity>
 
         <activity android:name=".ui.diary.NewDiaryActivity"/>
+        <activity android:name=".ui.modules.emotional_regulation.CreateExerciseActivity"/>
     </application>
 
 </manifest>
