@@ -14,6 +14,7 @@ import com.example.myapplication666.R
 import com.example.myapplication666.database.App
 import com.example.myapplication666.database.Model
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class NewDiaryActivity : AppCompatActivity() {
 
@@ -35,7 +36,7 @@ class NewDiaryActivity : AppCompatActivity() {
         val btnSave = dialogView.findViewById<Button>(R.id.save)
         val material = MaterialAlertDialogBuilder(this).create()
         val editTextAdd = dialogView.findViewById<EditText>(R.id.add_new_action)
-        val btnAddAction = findViewById<Button>(R.id.showDialog)
+        val btnAddAction = findViewById<FloatingActionButton>(R.id.showDialog)
 
         diaryList = viewModel.getDiaryList()
 
