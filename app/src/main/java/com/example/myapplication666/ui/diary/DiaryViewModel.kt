@@ -15,9 +15,6 @@ class DiaryViewModel (private val diaryDao: DatabaseDao): ViewModel() {
 
     fun getDiaryList(): MutableList<Model> {
         val data = diaryDao.getAll()
-        if (data.isEmpty()) {
-            return mutableListOf(Model("One", 0), Model("Two", 0), Model("Three", 0))
-        }
         return data
     }
 }
