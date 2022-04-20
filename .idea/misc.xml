@@ -5,13 +5,12 @@
       <map>
         <entry key="..\:/MyApplication666/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1615" />
         <entry key="..\:/MyApplication666/app/src/main/res/drawable/abstinence.xml" value="0.1615" />
-        <entry key="..\:/MyApplication666/app/src/main/res/drawable/background.xml" value="0.1745" />
         <entry key="..\:/MyApplication666/app/src/main/res/drawable/half_smile.xml" value="0.1735" />
         <entry key="..\:/MyApplication666/app/src/main/res/drawable/refusal.xml" value="0.1615" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/abstinence_fragment.xml" value="0.1" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/abstinence_page2_fragment.xml" value="0.25416666666666665" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/abstinence_page3_fragment.xml" value="0.25416666666666665" />
-        <entry key="..\:/MyApplication666/app/src/main/res/layout/accepting_reality_fragment.xml" value="0.28470715835141" />
+        <entry key="..\:/MyApplication666/app/src/main/res/layout/accepting_reality_fragment.xml" value="0.3888446215139442" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/accepts_fragment.xml" value="0.1" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/accepts_page2_fragment.xml" value="0.24010416666666667" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/activity_main.xml" value="0.17708333333333334" />
@@ -28,10 +27,9 @@
         <entry key="..\:/MyApplication666/app/src/main/res/layout/distress_tolerance_fragment.xml" value="0.1" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/effectively_fragment.xml" value="0.25416666666666665" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/effectively_page2_fragment.xml" value="0.24010416666666667" />
-        <entry key="..\:/MyApplication666/app/src/main/res/layout/emotional_regulation_fragment.xml" value="0.2" />
+        <entry key="..\:/MyApplication666/app/src/main/res/layout/emotional_regulation_fragment.xml" value="0.2513586956521739" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/enum_fragment.xml" value="0.25416666666666665" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/fragment_diary.xml" value="0.1" />
-        <entry key="..\:/MyApplication666/app/src/main/res/layout/fragment_emotional_regulation.xml" value="0.25416666666666665" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/fragment_home.xml" value="0.1" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/fragment_mindfullness.xml" value="0.25416666666666665" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/fragment_modules.xml" value="0.264" />
@@ -47,7 +45,6 @@
         <entry key="..\:/MyApplication666/app/src/main/res/layout/item_new_diary.xml" value="0.1" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/m_fragment.xml" value="0.25416666666666665" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/mindfulness_fragment.xml" value="0.19635416666666666" />
-        <entry key="..\:/MyApplication666/app/src/main/res/layout/name_of_emotional_fragment.xml" value="0.24010416666666667" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/new_action_diary.xml" value="0.2513586956521739" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/new_ada_diary.xml" value="0.2513586956521739" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/new_add_diary.xml" value="0.24864130434782608" />
@@ -68,7 +65,6 @@
         <entry key="..\:/MyApplication666/app/src/main/res/layout/participle_fragment.xml" value="0.24010416666666667" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/participle_page2_fragment.xml" value="0.25416666666666665" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/pros_and_cons_fragment.xml" value="0.25416666666666665" />
-        <entry key="..\:/MyApplication666/app/src/main/res/layout/purpose_emotional_fragment.xml" value="0.25416666666666665" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/radical_acceptance_fragment.xml" value="0.264" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/radical_acceptance_page2_fragment.xml" value="0.25416666666666665" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/rational_mind_fragment.xml" value="0.1171875" />
@@ -78,7 +74,7 @@
         <entry key="..\:/MyApplication666/app/src/main/res/layout/stop_fragment.xml" value="0.2513586956521739" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/survive_the_crisis_fragment.xml" value="0.264" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/t_fragment.xml" value="0.25416666666666665" />
-        <entry key="..\:/MyApplication666/app/src/main/res/layout/theory_fragment.xml" value="0.2" />
+        <entry key="..\:/MyApplication666/app/src/main/res/layout/theory_fragment.xml" value="0.11302083333333333" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/tip_fragment.xml" value="0.25416666666666665" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/turing_your_mind_fragment.xml" value="0.25416666666666665" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/what_skills_fragment.xml" value="0.264" />
@@ -86,6 +82,26 @@
         <entry key="..\:/MyApplication666/app/src/main/res/layout/wise_mind_exercises_fragment.xml" value="0.24010416666666667" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/wise_mind_fragment.xml" value="0.264" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/wise_mind_page1_fragment.xml" value="0.2513586956521739" />
+        <entry key="..\:/Users/panko/AndroidStudioProjects/AnyaProject/app/src/main/res/drawable/arrow_icon.xml" value="0.2035" />
+        <entry key="..\:/Users/panko/AndroidStudioProjects/AnyaProject/app/src/main/res/drawable/clear_mind.xml" value="0.2195" />
+        <entry key="..\:/Users/panko/AndroidStudioProjects/AnyaProject/app/src/main/res/drawable/willingness.xml" value="0.3075" />
+        <entry key="..\:/Users/panko/AndroidStudioProjects/AnyaProject/app/src/main/res/layout/accepting_reality_fragment.xml" value="0.33" />
+        <entry key="..\:/Users/panko/AndroidStudioProjects/AnyaProject/app/src/main/res/layout/activitity_create_exercise.xml" value="0.25" />
+        <entry key="..\:/Users/panko/AndroidStudioProjects/AnyaProject/app/src/main/res/layout/activity_main.xml" value="0.30416666666666664" />
+        <entry key="..\:/Users/panko/AndroidStudioProjects/AnyaProject/app/src/main/res/layout/be_free_fragment.xml" value="0.30416666666666664" />
+        <entry key="..\:/Users/panko/AndroidStudioProjects/AnyaProject/app/src/main/res/layout/dcba_fragment.xml" value="0.30416666666666664" />
+        <entry key="..\:/Users/panko/AndroidStudioProjects/AnyaProject/app/src/main/res/layout/distress_tolerance_fragment.xml" value="0.30416666666666664" />
+        <entry key="..\:/Users/panko/AndroidStudioProjects/AnyaProject/app/src/main/res/layout/emotional_regulation_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/panko/AndroidStudioProjects/AnyaProject/app/src/main/res/layout/exercises_fragment.xml" value="0.22" />
+        <entry key="..\:/Users/panko/AndroidStudioProjects/AnyaProject/app/src/main/res/layout/fragment_diary.xml" value="0.1634963768115942" />
+        <entry key="..\:/Users/panko/AndroidStudioProjects/AnyaProject/app/src/main/res/layout/fragment_mindfullness.xml" value="0.31068840579710144" />
+        <entry key="..\:/Users/panko/AndroidStudioProjects/AnyaProject/app/src/main/res/layout/fragment_modules.xml" value="0.22735507246376813" />
+        <entry key="..\:/Users/panko/AndroidStudioProjects/AnyaProject/app/src/main/res/layout/how_skills_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/panko/AndroidStudioProjects/AnyaProject/app/src/main/res/layout/item_expandable.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/panko/AndroidStudioProjects/AnyaProject/app/src/main/res/layout/item_inner.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/panko/AndroidStudioProjects/AnyaProject/app/src/main/res/layout/survive_the_crisis_fragment.xml" value="0.31068840579710144" />
+        <entry key="..\:/Users/panko/AndroidStudioProjects/AnyaProject/app/src/main/res/layout/theory_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/panko/AndroidStudioProjects/AnyaProject/app/src/main/res/layout/what_skills_fragment.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>

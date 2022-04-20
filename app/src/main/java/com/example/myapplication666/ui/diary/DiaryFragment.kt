@@ -28,6 +28,11 @@ class DiaryFragment : Fragment() {
         val nextBtn = view.findViewById<Button>(R.id.next_btn)
         val r = view.findViewById<RecyclerView>(R.id.recycler)
         diaryList = viewModel.getDiaryList()
+        if(diaryList.isEmpty()){
+            r.visibility = View.GONE
+        }else{
+            r.visibility = View.VISIBLE
+        }
         DiaryAdapter.attachListener(object : OnChangeSeekBarListener {
             override fun onChanged(list: MutableList<Model>) {
                 diaryList = list
