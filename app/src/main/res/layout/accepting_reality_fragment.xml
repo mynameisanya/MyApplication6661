@@ -7,16 +7,40 @@
     android:background="@drawable/background3"
     tools:context="accepting_reality.AcceptingRealityFragment">
 
-
+<<<<<<<<< Temporary merge branch 1
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background2_"
+        tools:context="accepting_reality.AcceptingRealityFragment">
+=========
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+>>>>>>>>> Temporary merge branch 2
 
         <ImageButton
             android:id="@+id/radical_acceptance_image"
             android:layout_width="353dp"
             android:layout_height="166dp"
+<<<<<<<<< Temporary merge branch 1
+            android:layout_marginTop="@dimen/main_margin_top_bottom"
+            android:src="@drawable/radical_acceptance_"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/turing_your_mind_image"
+            android:layout_width="353dp"
+            android:layout_height="166dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/turing"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radical_acceptance_image" />
+=========
             android:src="@drawable/radical_acceptance_"
             android:layout_marginStart="20dp"
             android:layout_marginTop="70dp"/>
@@ -31,10 +55,20 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"/>
 
+>>>>>>>>> Temporary merge branch 2
+
         <ImageButton
             android:id="@+id/willingness_image"
             android:layout_width="353dp"
             android:layout_height="166dp"
+<<<<<<<<< Temporary merge branch 1
+            android:layout_marginTop="20dp"
+            android:src="@drawable/willingness"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/turing_your_mind_image" />
+
+=========
             android:src="@drawable/willigness"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.517"
@@ -42,26 +76,47 @@
             tools:layout_editor_absoluteY="261dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"/>
-
+>>>>>>>>> Temporary merge branch 2
         <ImageButton
             android:id="@+id/half_smile_image"
             android:layout_width="353dp"
             android:layout_height="166dp"
+<<<<<<<<< Temporary merge branch 1
+            android:layout_marginTop="20dp"
+            android:src="@drawable/half_smile_"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/willingness_image" />
+=========
             android:layout_marginEnd="40dp"
             android:src="@drawable/half_smile_"
             tools:layout_editor_absoluteY="192dp"
             android:layout_marginBottom="20dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"/>
+>>>>>>>>> Temporary merge branch 2
 
         <ImageButton
             android:id="@+id/directed_consciousness_image"
             android:layout_width="353dp"
             android:layout_height="166dp"
+<<<<<<<<< Temporary merge branch 1
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="@dimen/main_margin_top_bottom"
+            android:src="@drawable/directed_consciousness"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/half_smile_image" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+=========
             android:layout_marginStart="20dp"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="70dp"
             android:src="@drawable/directed" />
 
     </LinearLayout>
+>>>>>>>>> Temporary merge branch 2
 </ScrollView>
