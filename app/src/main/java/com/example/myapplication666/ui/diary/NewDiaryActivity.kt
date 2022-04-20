@@ -109,6 +109,7 @@ class NewDiaryActivity : AppCompatActivity() {
         nextBtn.setOnClickListener {
             try {
                 viewModel.saveData(diaryList)
+                finish()
             } catch (ex: IllegalStateException) {
                 Toast.makeText(this, "Вы хотите сохранить пустой список", Toast.LENGTH_SHORT)
                     .show()

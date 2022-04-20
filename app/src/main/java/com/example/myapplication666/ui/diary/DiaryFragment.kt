@@ -71,4 +71,5 @@ class DiaryFragment : Fragment() {
         DiaryAdapter.setData(diaryList)
     }
 
+
 }
