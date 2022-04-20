@@ -38,7 +38,7 @@ class NewDiaryActivity : AppCompatActivity() {
         val editTextAdd = dialogView.findViewById<EditText>(R.id.add_new_action)
         val btnAddAction = findViewById<FloatingActionButton>(R.id.showDialog)
 
-        diaryList = viewModel.getDiaryList()
+        diaryList = viewModel.getDefaultDiaryList()
 
         DiaryAdapter.setData(
             diaryList
@@ -92,7 +92,6 @@ class NewDiaryActivity : AppCompatActivity() {
             material.dismiss()
         }
 
-
         material.setView(dialogView)
         btnAddAction.setOnClickListener {
             btnSave.setOnClickListener()
@@ -114,10 +113,6 @@ class NewDiaryActivity : AppCompatActivity() {
                 Toast.makeText(this, "Вы хотите сохранить пустой список", Toast.LENGTH_SHORT)
                     .show()
             }
-
-
         }
-
     }
-
 }

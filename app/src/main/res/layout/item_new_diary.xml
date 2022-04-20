@@ -106,6 +106,7 @@
             android:layout_width="216dp"
             android:layout_height="70dp"
             android:ems="10"
+            android:paddingStart="20dp"
             android:gravity="center_vertical"
             android:text="Name"
             android:textSize="24sp"
@@ -113,7 +114,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
 
         <SeekBar
             android:id="@+id/seekBar"

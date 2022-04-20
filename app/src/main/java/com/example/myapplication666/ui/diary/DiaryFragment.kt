@@ -17,25 +17,36 @@ import com.example.myapplication666.database.Model
 
 class DiaryFragment : Fragment() {
 
-
-    companion object {
-        fun newInstance() = DiaryFragment()
-    }
     val DiaryAdapter = DiaryAdapter()
     private var diaryList = mutableListOf<Model>()
+
+    private lateinit var viewModel: DiaryViewModel
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        viewModel = ViewModelProvider(this, object : ViewModelProvider.Factory {
+            override fun <T : ViewModel> create(modelClass: Class<T>): T {
+                return DiaryViewModel(App.returnDatabase.returnDao()) as T
+            }
+        })[DiaryViewModel::class.java]
+        return inflater.inflate(R.layout.fragment_diary, container, false)
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val nextBtn = view.findViewById<Button>(R.id.next_btn)
         val r = view.findViewById<RecyclerView>(R.id.recycler)
         diaryList = viewModel.getDiaryList()
-        if(diaryList.isEmpty()){
+        if (diaryList.isEmpty()) {
             r.visibility = View.GONE
-        }else{
+        } else {
             r.visibility = View.VISIBLE
         }
         DiaryAdapter.attachListener(object : OnChangeSeekBarListener {
-            override fun onChanged(list: MutableList<Model>) {
-                diaryList = list
+            override fun onChanged(diaryList: MutableList<Model>) {
+                this@DiaryFragment.diaryList = diaryList
             }
 
         })
@@ -46,23 +57,9 @@ class DiaryFragment : Fragment() {
         )
         nextBtn.visibility = View.VISIBLE
         nextBtn.setOnClickListener {
-            startActivity(Intent(context, NewDiaryActivity::class.java))
+            val intent = Intent(context, NewDiaryActivity::class.java)
+            startActivity(intent)
         }
-    }
-
-    private lateinit var viewModel: DiaryViewModel
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-
-        viewModel = ViewModelProvider(this, object : ViewModelProvider.Factory {
-            override fun <T : ViewModel> create(modelClass: Class<T>): T {
-                return DiaryViewModel(App.returnDatabase.returnDao()) as T
-            }
-        }).get(DiaryViewModel::class.java)
-        return inflater.inflate(R.layout.fragment_diary, container, false)
     }
 
     override fun onResume() {
@@ -71,5 +68,7 @@ class DiaryFragment : Fragment() {
         DiaryAdapter.setData(diaryList)
     }
 
-
+    companion object {
+        fun newInstance() = DiaryFragment()
+    }
 }

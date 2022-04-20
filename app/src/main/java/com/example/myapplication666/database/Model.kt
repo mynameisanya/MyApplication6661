@@ -9,7 +9,4 @@ import java.io.Serializable
 //описание класса, который сохраняется в бд
 @Entity (tableName = "Table_model")
 @Parcelize
-data class Model(val text: String, var characteristic:Int, @PrimaryKey(autoGenerate = true) val id: Int = 0
-):Parcelable {
-
-}
+data class Model(@PrimaryKey val text: String, var characteristic:Int):Parcelable
