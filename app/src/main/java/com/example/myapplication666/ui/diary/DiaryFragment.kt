@@ -1,14 +1,16 @@
 package com.example.myapplication666.ui.diary
 
 import android.content.Intent
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageButton
+import android.widget.TextView
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication666.R
@@ -22,6 +24,7 @@ class DiaryFragment : Fragment() {
 
     private lateinit var viewModel: DiaryViewModel
 
+    private var currentMonth = 3
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -38,6 +41,24 @@ class DiaryFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val nextBtn = view.findViewById<Button>(R.id.next_btn)
         val r = view.findViewById<RecyclerView>(R.id.recycler)
+        val prevArrow = view.findViewById<ImageButton>(R.id.prev_month)
+        val nextArrow = view.findViewById<ImageButton>(R.id.next_month)
+        val monthTv = view.findViewById<TextView>(R.id.month_tv)
+        val months = resources.getStringArray(R.array.months)
+        nextArrow.setOnClickListener {
+            currentMonth++
+            if(currentMonth==12){
+                currentMonth = 0
+            }
+            monthTv.text = months[currentMonth]
+        }
+        prevArrow.setOnClickListener {
+            currentMonth--
+            if (currentMonth == -1) {
+                currentMonth = 11
+            }
+            monthTv.text = months[currentMonth]
+        }
         diaryList = viewModel.getDiaryList()
         if (diaryList.isEmpty()) {
             r.visibility = View.GONE
