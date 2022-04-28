@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModel
@@ -61,6 +62,7 @@ class DiaryFragment : Fragment() {
         initAdapter()
 
         viewModel.allDiaryLiveData.observe(viewLifecycleOwner) {
+            monthTv?.text = months[currentMonth.ordinal]
             mapDiaryList()
             diaryAdapter.setData(diaryList)
         }
@@ -107,6 +109,7 @@ class DiaryFragment : Fragment() {
 
         saveBtn?.setOnClickListener {
             viewModel.saveAllDiary()
+            Toast.makeText(context, "Дневники были сохранены", Toast.LENGTH_SHORT).show()
         }
     }
 

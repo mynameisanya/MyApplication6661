@@ -15,6 +15,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myapplication666.MainActivity
 import com.example.myapplication666.R
 import com.example.myapplication666.database.App
 import com.example.myapplication666.database.Model
@@ -85,7 +86,7 @@ class NewDiaryFragment : Fragment() {
             Log.e(javaClass.simpleName, "saveBtn")
             try {
                 viewModel.saveData(currentMonth, diaryList)
-                parentFragmentManager.popBackStack()
+                (requireActivity() as MainActivity).popBackStack()
             } catch (ex: IllegalStateException) {
                 Toast.makeText(context, "Вы хотите сохранить пустой список", Toast.LENGTH_SHORT)
                     .show()
