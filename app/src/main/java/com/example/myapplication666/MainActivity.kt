@@ -46,11 +46,8 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-
-    fun navigationTo(id:Int)
-    {
-        navController.navigate(id)
-
+    fun navigationTo(id: Int, bundle: Bundle = Bundle()) {
+        navController.navigate(id, bundle)
     }
 
     override fun onSupportNavigateUp(): Boolean {

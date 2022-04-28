@@ -1,6 +1,5 @@
 package com.example.myapplication666.ui.diary
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,87 +8,158 @@ import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myapplication666.MainActivity
 import com.example.myapplication666.R
 import com.example.myapplication666.database.App
+import com.example.myapplication666.database.DiaryModel
 import com.example.myapplication666.database.Model
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class DiaryFragment : Fragment() {
 
-    val DiaryAdapter = DiaryAdapter()
+    private val diaryAdapter = DiaryAdapter()
     private var diaryList = mutableListOf<Model>()
 
-    private lateinit var viewModel: DiaryViewModel
+    private var nextBtn: FloatingActionButton? = null
+    private var recyclerView: RecyclerView? = null
+    private var prevArrow: ImageButton? = null
+    private var nextArrow: ImageButton? = null
+    private var monthTv: TextView? = null
+    private var saveBtn: Button? = null
 
-    private var currentMonth = 3
+    private val viewModel by activityViewModels<DiaryViewModel> {
+        object : ViewModelProvider.Factory {
+            override fun <T : ViewModel> create(modelClass: Class<T>): T {
+                return DiaryViewModel(App.returnDatabase.returnDao()) as T
+            }
+        }
+    }
+
+    private var currentMonth = Months.APR
+    private var months = arrayOf<String>()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        viewModel = ViewModelProvider(this, object : ViewModelProvider.Factory {
-            override fun <T : ViewModel> create(modelClass: Class<T>): T {
-                return DiaryViewModel(App.returnDatabase.returnDao()) as T
-            }
-        })[DiaryViewModel::class.java]
         return inflater.inflate(R.layout.fragment_diary, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val nextBtn = view.findViewById<Button>(R.id.next_btn)
-        val r = view.findViewById<RecyclerView>(R.id.recycler)
-        val prevArrow = view.findViewById<ImageButton>(R.id.prev_month)
-        val nextArrow = view.findViewById<ImageButton>(R.id.next_month)
-        val monthTv = view.findViewById<TextView>(R.id.month_tv)
-        val months = resources.getStringArray(R.array.months)
-        nextArrow.setOnClickListener {
-            currentMonth++
-            if(currentMonth==12){
-                currentMonth = 0
-            }
-            monthTv.text = months[currentMonth]
+
+        initViews(view)
+
+        months = resources.getStringArray(R.array.months)
+
+        setClickListeners()
+        initAdapter()
+
+        viewModel.allDiaryLiveData.observe(viewLifecycleOwner) {
+            mapDiaryList()
+            diaryAdapter.setData(diaryList)
         }
-        prevArrow.setOnClickListener {
-            currentMonth--
-            if (currentMonth == -1) {
-                currentMonth = 11
-            }
-            monthTv.text = months[currentMonth]
-        }
-        diaryList = viewModel.getDiaryList()
-        if (diaryList.isEmpty()) {
-            r.visibility = View.GONE
-        } else {
-            r.visibility = View.VISIBLE
-        }
-        DiaryAdapter.attachListener(object : OnChangeSeekBarListener {
+    }
+
+    private fun initAdapter() {
+        diaryAdapter.attachListener(object : OnChangeSeekBarListener {
             override fun onChanged(diaryList: MutableList<Model>) {
                 this@DiaryFragment.diaryList = diaryList
             }
-
         })
-        r.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-        r.adapter = DiaryAdapter
-        DiaryAdapter.setData(
-            diaryList
-        )
-        nextBtn.visibility = View.VISIBLE
-        nextBtn.setOnClickListener {
-            val intent = Intent(context, NewDiaryActivity::class.java)
-            startActivity(intent)
+        recyclerView?.layoutManager =
+            LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+        recyclerView?.adapter = diaryAdapter
+        mapDiaryList()
+        diaryAdapter.setData(diaryList)
+    }
+
+    private fun setClickListeners() {
+        nextArrow?.setOnClickListener {
+            viewModel.updateList(currentMonth, diaryList)
+            currentMonth = currentMonth.next()
+            monthTv?.text = months[currentMonth.ordinal]
+            mapDiaryList()
+            diaryAdapter.setData(diaryList)
+        }
+        prevArrow?.setOnClickListener {
+            viewModel.updateList(currentMonth, diaryList)
+            currentMonth = currentMonth.prev()
+            monthTv?.text = months[currentMonth.ordinal]
+            mapDiaryList()
+            diaryAdapter.setData(diaryList)
+        }
+
+        nextBtn?.setOnClickListener {
+            val bundle = Bundle()
+            bundle.putSerializable(EXTRA_NEW_DIARY, currentMonth)
+
+            (requireActivity() as MainActivity).navigationTo(
+                R.id.navigation_new_diary_fragment,
+                bundle
+            )
+        }
+
+        saveBtn?.setOnClickListener {
+            viewModel.saveAllDiary()
         }
     }
 
-    override fun onResume() {
-        super.onResume()
-        diaryList = viewModel.getDiaryList()
-        DiaryAdapter.setData(diaryList)
+    private fun initViews(view: View) {
+        nextBtn = view.findViewById(R.id.next_btn)
+        recyclerView = view.findViewById(R.id.recycler)
+        prevArrow = view.findViewById(R.id.prev_month)
+        nextArrow = view.findViewById(R.id.next_month)
+        monthTv = view.findViewById(R.id.month_tv)
+        saveBtn = view.findViewById(R.id.save_btn)
+    }
+
+    private fun mapDiaryList() {
+        val diaryModel = viewModel.allDiaryLiveData.value ?: return
+        if (diaryModel.data.isEmpty()) {
+            return
+        }
+        when (monthTv?.text) {
+            months[0] -> setUpdatedDiaryList(diaryModel, Months.JAN)
+            months[1] -> setUpdatedDiaryList(diaryModel, Months.FEB)
+            months[2] -> setUpdatedDiaryList(diaryModel, Months.MAR)
+            months[3] -> setUpdatedDiaryList(diaryModel, Months.APR)
+            months[4] -> setUpdatedDiaryList(diaryModel, Months.MAY)
+            months[5] -> setUpdatedDiaryList(diaryModel, Months.JUN)
+            months[6] -> setUpdatedDiaryList(diaryModel, Months.JUL)
+            months[7] -> setUpdatedDiaryList(diaryModel, Months.AUG)
+            months[8] -> setUpdatedDiaryList(diaryModel, Months.SEP)
+            months[9] -> setUpdatedDiaryList(diaryModel, Months.OCT)
+            months[10] -> setUpdatedDiaryList(diaryModel, Months.NOV)
+            months[11] -> setUpdatedDiaryList(diaryModel, Months.DEC)
+        }
+    }
+
+    private fun setUpdatedDiaryList(diaryModel: DiaryModel, month: Months) {
+        val list = diaryModel.data[month]
+        diaryList = list?.toMutableList() ?: mutableListOf()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        nextBtn = null
+        recyclerView = null
+        prevArrow = null
+        nextArrow = null
+        monthTv = null
+        saveBtn = null
     }
 
     companion object {
-        fun newInstance() = DiaryFragment()
+        fun newInstance(bundle: Bundle = Bundle()) = DiaryFragment().apply {
+            arguments = bundle
+        }
+
+        const val EXTRA_NEW_DIARY = "EXTRA_NEW_DIARY"
     }
 }

@@ -344,4 +344,8 @@
         android:label="Для чего нам нужны эмоции">
     </fragment>
 
+    <fragment
+        android:id="@+id/navigation_new_diary_fragment"
+        android:name="com.example.myapplication666.ui.diary.NewDiaryFragment"
+        android:label="@string/title_diary" />
 </navigation>
