@@ -34,17 +34,22 @@ class ExercisesFragment : Fragment() {
 
         val createBtn = view.findViewById<FloatingActionButton>(R.id.create_btn)
         recycler.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-
+        val rep = Rep.list
+        val innerItems = mutableListOf<InnerItem>()
+        rep.forEach()
+        {
+            innerItems.add(InnerItem(it.first, it.second))
+        }
         adapter.items = listOf(
             ExpandableItem(
                 "One expanded",
                 false,
-                listOf(InnerItem("One Inner", "EditText1"), InnerItem("Two inner","EditText2"), InnerItem("Third inner","EditText2"))
+                innerItems
             ),
             ExpandableItem(
                 "Two expanded",
                 true,
-                listOf(InnerItem("One Inner", "EditText1"), InnerItem("Two inner","EditText2"), InnerItem("Third inner","EditText2"))
+                innerItems
             ),
         )
 
@@ -58,6 +63,29 @@ class ExercisesFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(ExercisesViewModel::class.java)
         // TODO: Use the ViewModel
+    }
+
+    override fun onResume() {
+        super.onResume()
+        val rep = Rep.list
+        val innerItems = mutableListOf<InnerItem>()
+        rep.forEach()
+        {
+            innerItems.add(InnerItem(it.first, it.second))
+        }
+        adapter.items = listOf(
+            ExpandableItem(
+                "One expanded",
+                false,
+                innerItems
+            ),
+            ExpandableItem(
+                "Two expanded",
+                true,
+                innerItems
+            ),
+        )
+        adapter.notifyDataSetChanged()
     }
 
 }

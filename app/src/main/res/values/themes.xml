@@ -19,6 +19,10 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="ButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="backgroundTint">@color/backgroundButton</item>
+        <item name="android:textColor">@color/textColorButton</item>
+    </style>
     <style name="Theme.MyApplication666.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.MyApplication666.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />

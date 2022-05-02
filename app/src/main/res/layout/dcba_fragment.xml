@@ -7,24 +7,20 @@
     android:background="@drawable/background3"
     tools:context="dcba.DCBAFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
-    <ImageButton
+   <ImageButton
         android:id="@+id/abstinence_image"
         android:layout_width="353dp"
         android:layout_height="166dp"
+       android:layout_marginTop="70dp"
         android:layout_marginBottom="8dp"
         android:src="@drawable/abstinence1"
         app:layout_constraintBottom_toTopOf="@+id/clear_mind_image"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="70dp"/>
+        android:layout_marginStart="20dp" />
 
     <ImageButton
         android:id="@+id/clear_mind_image"
@@ -33,9 +29,6 @@
         android:layout_marginBottom="8dp"
         android:src="@drawable/clear_mind1"
         app:layout_constraintBottom_toTopOf="@+id/support_community_image"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"/>
 
@@ -45,10 +38,6 @@
         android:layout_height="166dp"
         android:layout_marginBottom="8dp"
         android:src="@drawable/support"
-        app:layout_constraintBottom_toTopOf="@+id/bridges_image"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"/>
 
@@ -56,28 +45,18 @@
         android:id="@+id/bridges_image"
         android:layout_width="353dp"
         android:layout_height="166dp"
-        android:layout_marginBottom="8dp"
-        android:src="@drawable/bridges"
-        app:layout_constraintBottom_toTopOf="@+id/riot_image"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/bridges3" />
 
     <ImageButton
         android:id="@+id/riot_image"
         android:layout_width="353dp"
         android:layout_height="166dp"
-        android:src="@drawable/riot"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.522"
-        app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="70dp"/>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
+        android:layout_marginBottom="70dp"
+        android:src="@drawable/riot2" />
+</LinearLayout>
 </ScrollView>

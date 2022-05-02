@@ -7,7 +7,7 @@ import com.example.myapplication666.EnumER
 
 class EmotionalRegulationAdapter(activity: FragmentActivity): FragmentStateAdapter(activity) {
     override fun getItemCount(): Int {
-        return 3
+        return 2
     }
 
     override fun createFragment(position: Int): Fragment {

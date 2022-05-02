@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.modules.what_skills.observe.ObservePage4Fragment">
 <LinearLayout
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
@@ -13,22 +13,11 @@
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/observe_page4"
+        android:layout_height="643dp"
         android:layout_marginLeft="14sp"
-        android:layout_marginRight="14sp"
         android:layout_marginTop="14sp"
-        />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_marginEnd="190dp"
-        android:layout_marginBottom="180dp"
-        android:ems="10"
-        android:text="Другие идеи:" />
+        android:layout_marginRight="14sp"
+        android:text="@string/observe_page4" />
 
     <Button
         android:id="@+id/next_btn"
@@ -37,7 +26,7 @@
         android:layout_gravity="bottom|end"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="10dp"
-        android:layout_marginTop="-100dp"
+        android:layout_marginTop="-10dp"
         android:text="Далее" />
 
 </LinearLayout>

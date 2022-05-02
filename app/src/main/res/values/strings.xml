@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">My Application666</string>
     <string name="title_modules">Модули</string>
-    <string name="title_diary">Дневниковые карточки</string>
-    <string name="title_crisis">Кризис</string>
+    <string name="title_diary">Дневник</string>
+    <string name="title_config">Настройки</string>
     <string name="title_activity_splash">SplashActivity</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -54,6 +54,8 @@
         5. Отметьте только глаза, губы или руки другого человека (или какую-то часть животного).\n
         6. Подберите лист, цветок, шишку или ракушку. Рассмотрите его с близкого расстояния, пытаясь различить каждую деталь.\n
         7. Найдите что-то красивое, чтобы посмотреть на это, и проведите несколько минут, созерцая эту красоту.\n
+        \n
+        \n
     </string>
 
     <string name="observe_page3">
@@ -617,12 +619,15 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
     <string name="what_skils_tab_text">Навыки ЧТО</string>
     <string name="wise_mind_tab_text">Мудрое сознание</string>
     <string name="how_skils_tab_text">Навыки КАК</string>
     <string name="survive_the_crisis_tab_text">Выживание в кризисе</string>
     <string name="accepting_reality_tab_text">Принятие реальности</string>
     <string name="abcd_tab_text">АБСД</string>
+=========
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
+>>>>>>>>> Temporary merge branch 2
 </resources>

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background3"
-    tools:context=".ui.modules.wise_mind.WiseMindFragment">
+    tools:context=".ui.modules.mindfulness.wise_mind.WiseMindFragment">
 
     <ImageButton
         android:id="@+id/rational_mind_image"

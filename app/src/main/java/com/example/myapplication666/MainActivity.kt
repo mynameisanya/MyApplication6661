@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         val viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
         viewModel.currentUserLiveData.observe(this)
         {
-            Toast.makeText(this, "Ура!", Toast.LENGTH_SHORT).show()
+            //Toast.makeText(this, "Ура!", Toast.LENGTH_SHORT).show()
         }
 
         val navView: BottomNavigationView = binding.navView
@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
             setOf(
                 R.id.navigation_modules,
                 R.id.navigation_diary,
-                R.id.navigation_crisis
+                R.id.navigation_config
             )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)

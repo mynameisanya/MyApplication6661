@@ -20,7 +20,7 @@ class InnerItemDelegate :
 
     inner class InnerItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val textView: TextView = itemView.findViewById(R.id.title)
-        val editText:TextView = itemView.findViewById(R.id.description)
+        val editText:EditText = itemView.findViewById(R.id.editText)
     }
 
     override fun onBindViewHolder(
@@ -29,7 +29,7 @@ class InnerItemDelegate :
         payloads: MutableList<Any>
     ) {
         holder.textView.text = item.title
-        holder.editText.text = item.description
+        holder.editText.setText(item.description)
     }
 
     override fun isForViewType(
