@@ -36,15 +36,20 @@ class TheoryFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-            val imageButtonPurpose = view.findViewById<ImageButton>(R.id.purpose_emotional)
-            imageButtonPurpose?.setOnClickListener()
+            val imageButtonEmotions = view.findViewById<ImageButton>(R.id.emotions)
+            imageButtonEmotions?.setOnClickListener()
             {
-                (requireActivity() as MainActivity).navigationTo(R.id.navigation_purpose_emotional)
+                (requireActivity() as MainActivity).navigationTo(R.id.navigation_emotions)
             }
-            val imageButtonNameOf = view.findViewById<ImageButton>(R.id.name_of_emotional)
-            imageButtonNameOf?.setOnClickListener()
+            val imageButtonTips = view.findViewById<ImageButton>(R.id.tips_of_emo)
+            imageButtonTips?.setOnClickListener()
             {
-                (requireActivity() as MainActivity).navigationTo(R.id.navigation_name_of_emotional)
+                (requireActivity() as MainActivity).navigationTo(R.id.navigation_tips_of_emo)
             }
+        val imageButtonAbc = view.findViewById<ImageButton>(R.id.abc_please)
+        imageButtonAbc?.setOnClickListener()
+        {
+            (requireActivity() as MainActivity).navigationTo(R.id.navigation_abc_please)
+        }
         }
 }

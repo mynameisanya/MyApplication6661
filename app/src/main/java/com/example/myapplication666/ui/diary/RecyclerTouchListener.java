@@ -23,17 +23,11 @@ import java.util.List;
 import java.util.Set;
 
 
-
-
 public class RecyclerTouchListener implements RecyclerView.OnItemTouchListener, OnActivityTouchListener {
     private static final String TAG = "RecyclerTouchListener";
     final Handler handler = new Handler();
     Activity act;
     List<Integer> unSwipeableRows;
-    /*
-     * independentViews are views on the foreground layer which when clicked, act "independent" from the foreground
-     * ie, they are treated separately from the "row click" action
-     */
     List<Integer> independentViews;
     List<Integer> unClickableRows;
     List<Integer> optionViews;

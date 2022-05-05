@@ -3,9 +3,9 @@ package com.example.myapplication666
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.example.myapplication666.ui.modules.how_skills.HOWSkillsFragment
+import com.example.myapplication666.ui.modules.mindfulness.how_skills.HOWSkillsFragment
 import com.example.myapplication666.ui.modules.what_skills.WHATSkillsFragment
-import com.example.myapplication666.ui.modules.wise_mind.WiseMindFragment
+import com.example.myapplication666.ui.modules.mindfulness.wise_mind.WiseMindFragment
 
 class MindfulnessAdapter(activity: FragmentActivity): FragmentStateAdapter(activity) {
     override fun getItemCount(): Int {

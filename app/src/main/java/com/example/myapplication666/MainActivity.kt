@@ -1,9 +1,12 @@
 package com.example.myapplication666
 
+import android.os.Build
 import android.os.Bundle
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.res.ResourcesCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
@@ -17,6 +20,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
 
+    @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -26,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         val viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
         viewModel.currentUserLiveData.observe(this)
         {
-            Toast.makeText(this, "Ура!", Toast.LENGTH_SHORT).show()
+            //Toast.makeText(this, "Ура!", Toast.LENGTH_SHORT).show()
         }
 
         val navView: BottomNavigationView = binding.navView
@@ -38,13 +42,18 @@ class MainActivity : AppCompatActivity() {
             setOf(
                 R.id.navigation_modules,
                 R.id.navigation_diary,
-                R.id.navigation_crisis
+                R.id.navigation_config
             )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
-    }
 
+        navView.setBackgroundColor(resources.getColor(R.color.purple_200, null))
+        supportActionBar?.let {
+            it.setDisplayHomeAsUpEnabled(false)
+            it.setHomeButtonEnabled(false)
+        }
+    }
 
     fun navigationTo(id: Int, bundle: Bundle = Bundle()) {
         navController.navigate(id, bundle)
@@ -52,6 +61,9 @@ class MainActivity : AppCompatActivity() {
 
     fun popBackStack(){
         navController.popBackStack()
+    }
+    fun navigationTo(id: Int) {
+        navController.navigate(id)
     }
 
     override fun onSupportNavigateUp(): Boolean {

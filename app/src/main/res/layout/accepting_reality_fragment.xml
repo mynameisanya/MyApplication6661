@@ -10,7 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/background2_"
+        android:background="@drawable/background3"
         tools:context="accepting_reality.AcceptingRealityFragment">
 
 
@@ -19,7 +19,7 @@
             android:id="@+id/radical_acceptance_image"
             android:layout_width="353dp"
             android:layout_height="166dp"
-            android:layout_marginTop="@dimen/main_margin_top_bottom"
+            android:layout_marginTop="70dp"
             android:src="@drawable/radical_acceptance_"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

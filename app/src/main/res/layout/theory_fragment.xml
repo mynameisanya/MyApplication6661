@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,16 +8,37 @@
 
 
     <ImageButton
-        android:id="@+id/purpose_emotional"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/emotions"
+        android:layout_width="301dp"
+        android:layout_height="131dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintBottom_toTopOf="@+id/tips_of_emo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:src="@tools:sample/avatars" />
 
-
     <ImageButton
-        android:id="@+id/name_of_emotional"
-        android:layout_width="225dp"
-        android:layout_height="330dp"
+        android:id="@+id/tips_of_emo"
+        android:layout_width="312dp"
+        android:layout_height="107dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/abc_please"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
         tools:src="@tools:sample/backgrounds/scenic" />
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <ImageButton
+        android:id="@+id/abc_please"
+        android:layout_width="282dp"
+        android:layout_height="118dp"
+        android:layout_marginBottom="224dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

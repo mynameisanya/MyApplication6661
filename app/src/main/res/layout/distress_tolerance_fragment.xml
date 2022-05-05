@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".distress_tolerance.DistressToleranceFragment">
+    tools:context=".ui.modules.distress_tolerance.DistressToleranceFragment">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBar"

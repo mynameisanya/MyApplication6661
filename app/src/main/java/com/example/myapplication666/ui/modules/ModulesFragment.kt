@@ -11,14 +11,11 @@ import com.example.myapplication666.MainActivity
 import com.example.myapplication666.R
 import com.example.myapplication666.databinding.FragmentModulesBinding
 
-
 class ModulesFragment : Fragment() {
 
     private lateinit var modulesViewModel: ModulesViewModel
     private var _binding: FragmentModulesBinding? = null
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
