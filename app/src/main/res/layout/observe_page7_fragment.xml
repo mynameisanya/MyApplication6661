@@ -6,8 +6,12 @@
     tools:context=".ui.modules.what_skills.observe.ObservePage7Fragment">
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
+        android:layout_marginLeft="14sp"
+        android:layout_marginTop="14sp"
+        android:layout_marginRight="14sp"
+        android:textSize="16sp"
         android:text="@string/observe_page7" />
 
     <Button

@@ -10,25 +10,13 @@
         android:orientation="vertical">
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/non_judmentally_page2"
-            android:layout_marginLeft="14sp"
-            android:layout_marginRight="14sp"
-            android:layout_marginTop="14sp"
-            android:textSize="16sp" />
-
-        <EditText
-            android:id="@+id/non_judmentally_page2"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:layout_marginEnd="190dp"
-            android:layout_marginBottom="180dp"
-            android:ems="10"
-            android:text="Другие идеи:" />
-
-
+            android:layout_height="1600dp"
+            android:layout_marginLeft="14sp"
+            android:layout_marginTop="14sp"
+            android:layout_marginRight="14sp"
+            android:text="@string/non_judmentally_page2"
+            android:textSize="16sp" />
 
     </LinearLayout>
 </ScrollView>

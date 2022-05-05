@@ -8,24 +8,37 @@
 
 
     <ImageButton
-        android:id="@+id/purpose_emotional"
+        android:id="@+id/emotions"
         android:layout_width="301dp"
         android:layout_height="131dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintBottom_toTopOf="@+id/tips_of_emo"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:src="@tools:sample/avatars" />
 
     <ImageButton
-        android:id="@+id/name_of_emotional"
+        android:id="@+id/tips_of_emo"
         android:layout_width="312dp"
         android:layout_height="107dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/abc_please"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/purpose_emotional"
         tools:src="@tools:sample/backgrounds/scenic" />
+
+    <ImageButton
+        android:id="@+id/abc_please"
+        android:layout_width="282dp"
+        android:layout_height="118dp"
+        android:layout_marginBottom="224dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

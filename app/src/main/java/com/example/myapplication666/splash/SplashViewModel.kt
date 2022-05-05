@@ -1,6 +1,6 @@
 package com.example.myapplication666.splash
 
-import androidx.constraintlayout.motion.utils.ViewState
+
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -21,7 +21,7 @@ class SplashViewModel : ViewModel() {
     fun requestUser() {
         viewModelScope.launch(Dispatchers.IO) //переход на новый поток IO
         {
-          //  delay(3000) //ожидание
+           delay(3000) //ожидание
             viewState.postValue(currentUser?.let { SplashViewState.Success } //обращаемся к юзеру
                 ?: SplashViewState.Error( //если ошибка
                     NoAuthException()

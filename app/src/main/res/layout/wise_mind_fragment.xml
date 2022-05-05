@@ -7,6 +7,7 @@
     android:background="@drawable/background3"
     tools:context=".ui.modules.mindfulness.wise_mind.WiseMindFragment">
 
+
     <ImageButton
         android:id="@+id/rational_mind_image"
         android:layout_width="175dp"
@@ -14,34 +15,21 @@
         android:src="@drawable/rational_mind"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.067"
+        app:layout_constraintHorizontal_bias="0.411"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.349" />
-
-    <ImageButton
-        android:id="@+id/emotional_mind_image"
-        android:layout_width="175dp"
-        android:layout_height="120dp"
-        android:src="@drawable/emotional_mind"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.915"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.348" />
+        app:layout_constraintVertical_bias="0.196" />
 
     <ImageButton
         android:id="@+id/wise_mind_image"
-        android:layout_width="173dp"
-        android:layout_height="125dp"
-        android:src="@drawable/wise_mind"
+        android:layout_width="353dp"
+        android:layout_height="166dp"
+        android:src="@drawable/wise"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.075"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.597" />
+        tools:layout_editor_absoluteX="29dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,7 +11,11 @@
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="553dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="14sp"
+        android:layout_marginTop="14sp"
+        android:layout_marginRight="14sp"
+        android:textSize="16sp"
         android:text="@string/observe_page6" />
 
     <Button

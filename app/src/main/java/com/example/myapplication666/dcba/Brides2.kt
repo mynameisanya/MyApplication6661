@@ -1,4 +1,4 @@
-package com.example.myapplication666.ui.modules.emotional_regulation
+package com.example.myapplication666.dcba
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -8,24 +8,24 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.myapplication666.R
 
-class PurposeEmotional : Fragment() {
+class Brides2 : Fragment() {
 
     companion object {
-        fun newInstance() = PurposeEmotional()
+        fun newInstance() = Brides2()
     }
 
-    private lateinit var viewModel: PurposeEmotionalViewModel
+    private lateinit var viewModel: Brides2ViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.purpose_emotional_fragment, container, false)
+        return inflater.inflate(R.layout.brides2_fragment, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(PurposeEmotionalViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(Brides2ViewModel::class.java)
         // TODO: Use the ViewModel
     }
 

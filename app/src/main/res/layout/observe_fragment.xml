@@ -19,8 +19,8 @@
         android:layout_marginLeft="14sp"
         android:layout_marginTop="14sp"
         android:layout_marginRight="14sp"
-        android:text="@string/observe_page1"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        android:text="@string/observe_page1" />
 
 
 </LinearLayout>
@@ -32,19 +32,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Далее"
-        android:theme="@style/ButtonStyle"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginLeft="150dp"/>
+        style="@style/ButtonStyle"/>
+
     <Button
         android:id="@+id/back_btn"
+        style="@style/ButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Назад"
-        android:theme="@style/ButtonStyle"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginLeft="-150dp"/>
+        app:layout_constraintBottom_toBottomOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

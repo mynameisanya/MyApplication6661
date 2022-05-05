@@ -11,6 +11,7 @@ import android.widget.ImageButton
 import com.example.myapplication666.MainActivity
 import com.example.myapplication666.R
 import com.example.myapplication666.ui.modules.mindfulness.wise_mind.WiseMindViewModel
+import kotlinx.android.synthetic.main.what_skills_fragment.*
 
 class WHATSkillsFragment : Fragment() {
 
@@ -39,13 +40,15 @@ class WHATSkillsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val imageButtonObserve = view.findViewById<ImageButton>(R.id.observe_image)
-        val builder = AlertDialog.Builder(context)
-        val dialog = builder.create()
+        //val imageButtonObserve = view.findViewById<ImageButton>(R.id.observe_image)
+        //val builder = AlertDialog.Builder(context)
+        //val dialog = builder.create()
 
-        imageButtonObserve.setOnClickListener()
+        observe_image.setOnClickListener()
         {
             val view = View.inflate(context, R.layout.observe_fragment, null)
+            val builder = AlertDialog.Builder(context)
+            val dialog = builder.create()
             //(requireActivity() as MainActivity).navigationTo(R.id.navigation_observe)
             builder.setView(view)
             dialog.show()

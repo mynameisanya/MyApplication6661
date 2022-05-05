@@ -36,7 +36,7 @@ class EffectivelyFragment : Fragment() {
         val buttonEffectivelyPage2 = view.findViewById<Button>(R.id.next_btn)
         buttonEffectivelyPage2.setOnClickListener()
         {
-            (requireActivity() as MainActivity).navigationTo(R.id.navigation_one_mindfully_page2)
+            (requireActivity() as MainActivity).navigationTo(R.id.navigation_effectively_page2)
         }
     }
 

@@ -324,7 +324,7 @@
     <fragment
         android:id="@+id/navigation_bridges"
         android:name="com.example.myapplication666.dcba.BrigdesFragment"
-        android:label="Сжигание и выстраивание мостов">
+        android:label="Сжигание мостов">
     </fragment>
     <fragment
         android:id="@+id/navigation_riot"
@@ -333,15 +333,42 @@
     </fragment>
 
     <fragment
+        android:id="@+id/navigation_emotions"
+        android:name="com.example.myapplication666.ui.modules.emotional_regulation.emotions.Emotions"
+        android:label="Понимание эмоций">
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_tips_of_emo"
+        android:name="com.example.myapplication666.ui.modules.emotional_regulation.tips_of_emo.TipsOfEmo"
+        android:label="Виды эмоций">
+
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_abc_please"
+        android:name="com.example.myapplication666.ui.modules.emotional_regulation.abc_please.AbcPlease"
+        android:label="ABC Забота">
+
+    </fragment>
+    <fragment
         android:id="@+id/navigation_purpose_emotional"
-        android:name="com.example.myapplication666.ui.modules.emotional_regulation.PurposeEmotional"
+        android:name="com.example.myapplication666.ui.modules.emotional_regulation.emotions.PurposeEmotional"
         android:label="Цели регуляции эмоций">
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_name_of_emotional"
+        android:name="com.example.myapplication666.ui.modules.emotional_regulation.emotions.NameOfEmotional"
+        android:label="Для чего нам нужны эмоции">
     </fragment>
 
     <fragment
-        android:id="@+id/navigation_name_of_emotional"
-        android:name="com.example.myapplication666.ui.modules.emotional_regulation.NameOfEmotional"
-        android:label="Для чего нам нужны эмоции">
+        android:id="@+id/navigation_myths_of_emo"
+        android:name="com.example.myapplication666.ui.modules.emotional_regulation.emotions.MythsOfEmo"
+        android:label="Мифы об эмоциях">
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_brides2"
+        android:name="com.example.myapplication666.dcba.Brides2"
+        android:label="Построение новых мостов">
     </fragment>
 
 </navigation>
