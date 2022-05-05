@@ -2,11 +2,8 @@ package com.example.myapplication666
 
 import android.os.Build
 import android.os.Bundle
-import android.widget.Toast
 import androidx.annotation.RequiresApi
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.res.ResourcesCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
@@ -14,6 +11,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.myapplication666.databinding.ActivityMainBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
 
@@ -61,9 +59,6 @@ class MainActivity : AppCompatActivity() {
 
     fun popBackStack(){
         navController.popBackStack()
-    }
-    fun navigationTo(id: Int) {
-        navController.navigate(id)
     }
 
     override fun onSupportNavigateUp(): Boolean {

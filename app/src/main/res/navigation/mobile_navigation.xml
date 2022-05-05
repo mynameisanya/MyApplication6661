@@ -365,6 +365,7 @@
         android:name="com.example.myapplication666.ui.diary.NewDiaryFragment"
         android:label="@string/title_diary" />
 
+    <fragment
         android:id="@+id/navigation_myths_of_emo"
         android:name="com.example.myapplication666.ui.modules.emotional_regulation.emotions.MythsOfEmo"
         android:label="Мифы об эмоциях">
