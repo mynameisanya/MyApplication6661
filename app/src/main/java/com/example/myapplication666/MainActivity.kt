@@ -55,10 +55,15 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    fun navigationTo(id: Int, bundle: Bundle = Bundle()) {
+        navController.navigate(id, bundle)
+    }
 
+    fun popBackStack(){
+        navController.popBackStack()
+    }
     fun navigationTo(id: Int) {
         navController.navigate(id)
-
     }
 
     override fun onSupportNavigateUp(): Boolean {

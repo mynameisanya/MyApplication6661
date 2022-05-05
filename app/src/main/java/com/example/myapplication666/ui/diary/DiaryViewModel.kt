@@ -4,17 +4,41 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.myapplication666.database.DatabaseDao
+import com.example.myapplication666.database.DiaryModel
 import com.example.myapplication666.database.Model
 
-class DiaryViewModel (private val diaryDao: DatabaseDao): ViewModel() {
+class DiaryViewModel(private val diaryDao: DatabaseDao) : ViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is diary Fragment"
+    private val _allDiaryLiveData = MutableLiveData<DiaryModel>()
+    val allDiaryLiveData: LiveData<DiaryModel> get() = _allDiaryLiveData
+
+    init {
+        var data = diaryDao.getAllDiary()
+        if (data == null) {
+            data = DiaryModel(HashMap())
+        }
+        _allDiaryLiveData.value = data
     }
-    val text: LiveData<String> = _text
 
-    fun getDiaryList(): MutableList<Model> {
-        val data = diaryDao.getAll()
-        return data
+    fun saveAllDiary() {
+        diaryDao.insertDiaryData(allDiaryLiveData.value!!)
+    }
+
+    fun updateList(currentMonth: Months, diaryList: MutableList<Model>) {
+        _allDiaryLiveData.value?.let {
+            it.data[currentMonth] = diaryList
+        }
+    }
+
+    fun saveData(currentMonth: Months, dataToSave: List<Model>) {
+        if (dataToSave.isEmpty()) {
+            throw IllegalStateException()
+        }
+        _allDiaryLiveData.value?.data?.set(currentMonth, dataToSave)
+
+    }
+
+    fun getDefaultDiaryList(): MutableList<Model> {
+        return mutableListOf(Model("One", 0), Model("Two", 0), Model("Three", 0))
     }
 }

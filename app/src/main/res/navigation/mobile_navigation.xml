@@ -361,6 +361,10 @@
     </fragment>
 
     <fragment
+        android:id="@+id/navigation_new_diary_fragment"
+        android:name="com.example.myapplication666.ui.diary.NewDiaryFragment"
+        android:label="@string/title_diary" />
+
         android:id="@+id/navigation_myths_of_emo"
         android:name="com.example.myapplication666.ui.modules.emotional_regulation.emotions.MythsOfEmo"
         android:label="Мифы об эмоциях">
@@ -370,5 +374,4 @@
         android:name="com.example.myapplication666.dcba.Brides2"
         android:label="Построение новых мостов">
     </fragment>
-
 </navigation>
