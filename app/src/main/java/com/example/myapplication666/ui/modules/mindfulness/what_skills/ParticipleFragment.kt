@@ -1,4 +1,4 @@
-package com.example.myapplication666.ui.modules.what_skills
+package com.example.myapplication666.ui.modules.mindfulness.what_skills
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import com.example.myapplication666.MainActivity
 import com.example.myapplication666.R
+import com.example.myapplication666.ui.modules.what_skills.ParticipleViewModel
 
 class ParticipleFragment : Fragment() {
 
@@ -18,6 +19,12 @@ class ParticipleFragment : Fragment() {
 
     private lateinit var viewModel: ParticipleViewModel
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        activity?.actionBar?.setDisplayHomeAsUpEnabled(false)
+        activity?.actionBar?.setHomeButtonEnabled(false)
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

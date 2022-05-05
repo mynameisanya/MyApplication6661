@@ -126,7 +126,7 @@
 
     <fragment
         android:id="@+id/navigation_participle"
-        android:name="com.example.myapplication666.ui.modules.what_skills.ParticipleFragment"
+        android:name="com.example.myapplication666.ui.modules.mindfulness.what_skills.ParticipleFragment"
         android:label="@string/participle">
     </fragment>
 
