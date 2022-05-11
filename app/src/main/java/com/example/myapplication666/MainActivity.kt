@@ -57,8 +57,12 @@ class MainActivity : AppCompatActivity() {
         navController.navigate(id, bundle)
     }
 
-    fun popBackStack(){
-        navController.popBackStack()
+    fun popBackStack(id:Int = 0) {
+        if (id != 0) {
+           val result =  navController.popBackStack(id, false)
+        } else {
+            navController.popBackStack()
+        }
     }
 
     override fun onSupportNavigateUp(): Boolean {
