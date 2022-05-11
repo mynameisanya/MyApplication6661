@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageButton
 import com.example.myapplication666.MainActivity
 import com.example.myapplication666.R
 
@@ -37,6 +38,11 @@ class ObserveFragment : Fragment() {
         buttonObservePage2.setOnClickListener()
         {
             (requireActivity() as MainActivity).navigationTo(R.id.navigation_observe_page2)
+        }
+        val buttonObserveClose = view.findViewById<ImageButton>(R.id.close_btn)
+        buttonObserveClose.setOnClickListener()
+        {
+            (requireActivity() as MainActivity).navigationTo(R.id.navigation_what_skills)
         }
     }
 

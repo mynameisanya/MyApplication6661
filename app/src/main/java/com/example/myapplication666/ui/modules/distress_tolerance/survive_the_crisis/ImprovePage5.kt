@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageButton
 import com.example.myapplication666.MainActivity
 import com.example.myapplication666.R
 
@@ -33,10 +34,20 @@ class ImprovePage5 : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val imageButtonImprovePage6 = view.findViewById<Button>(R.id.next_btn)
-        imageButtonImprovePage6.setOnClickListener()
+        val imageButtonImprovePage3 = view.findViewById<Button>(R.id.next_btn)
+        imageButtonImprovePage3.setOnClickListener()
         {
             (requireActivity() as MainActivity).navigationTo(R.id.navigation_improve_page6)
+        }
+        val ButtonImproveBack = view.findViewById<Button>(R.id.back_btn)
+        ButtonImproveBack.setOnClickListener()
+        {
+            (requireActivity() as MainActivity).navigationTo(R.id.navigation_improve_page4)
+        }
+        val ButtonImproveClose = view.findViewById<ImageButton>(R.id.close_btn)
+        ButtonImproveClose.setOnClickListener()
+        {
+            (requireActivity() as MainActivity).navigationTo(R.id.navigation_survive_the_crisis)
         }
     }
 

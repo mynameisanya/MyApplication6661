@@ -4,8 +4,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import com.example.myapplication666.ui.modules.distress_tolerance.survive_the_crisis.SurviveTheCrisisFragment;
-import com.example.myapplication666.accepting_reality.AcceptingRealityFragment;
-import com.example.myapplication666.dcba.DCBAFragment
+import com.example.myapplication666.ui.modules.distress_tolerance.accepting_reality.AcceptingRealityFragment;
+import com.example.myapplication666.ui.modules.distress_tolerance.dcba.DCBAFragment
 
 
 class DistressToleranceAdapter(activity: FragmentActivity) : FragmentStateAdapter(activity) {

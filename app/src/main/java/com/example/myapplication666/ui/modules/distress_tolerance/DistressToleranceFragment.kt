@@ -30,10 +30,10 @@ class DistressToleranceFragment : Fragment() {
         pager2.adapter = pagerAdapter
         TabLayoutMediator(tabLayout, pager2) { tab, position ->
             when (DistressToleranceEnum.values()[pagerAdapter.getItemViewType(position)]) {
-                DistressToleranceEnum.SURVIVE_THE_CRISIS -> tab.text = getString(R.string.survive_the_crisis_tab_text)
-                DistressToleranceEnum.ACCEPTING_REALITY -> tab.text = getString(R.string.accepting_reality_tab_text)
+                DistressToleranceEnum.SURVIVE_THE_CRISIS -> tab.text = "Кризис"
+                DistressToleranceEnum.ACCEPTING_REALITY -> tab.text = "Принятие"
                 //DistressToleranceEnum.BEFREE -> tab.text = "Стать свободной"
-                DistressToleranceEnum.ABCD -> tab.text = getString(R.string.abcd_tab_text)
+                DistressToleranceEnum.ABCD -> tab.text = "АСД"
             }
         }.attach()
 

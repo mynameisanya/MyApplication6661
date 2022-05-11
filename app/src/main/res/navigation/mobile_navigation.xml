@@ -48,11 +48,19 @@
     </fragment>
 
     <fragment
-        android:id="@+id/navigation_rational_mind"
-        android:name="com.example.myapplication666.ui.modules.mindfulness.wise_mind.RationalMindFragment"
-        android:label="@string/rational_mind">
+        android:id="@+id/navigation_mindfulness_page1"
+        android:name="com.example.myapplication666.ui.modules.mindfulness.MindfulnessPage1"
+        android:label="Что такое осознанность">
     </fragment>
-
+    <fragment
+        android:id="@+id/navigation_what_skills"
+        android:name="com.example.myapplication666.ui.modules.mindfulness.what_skills.WHATSkillsFragment">
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_wise_mind"
+        android:name="com.example.myapplication666.ui.modules.mindfulness.wise_mind.WiseMindFragment"
+        android:label="Мудрое сознание">
+    </fragment>
     <fragment
         android:id="@+id/navigation_wise_mind_page1"
         android:name="com.example.myapplication666.ui.modules.mindfulness.wise_mind.WiseMindPage1Fragment"
@@ -137,6 +145,11 @@
     </fragment>
 
     <fragment
+        android:id="@+id/navigation_how_skills"
+        android:name="com.example.myapplication666.ui.modules.mindfulness.how_skills.HOWSkillsFragment">
+    </fragment>
+
+    <fragment
         android:id="@+id/navigation_non_judmentally"
         android:name="com.example.myapplication666.ui.modules.mindfulness.how_skills.NonJudmentallyFragment"
         android:label="Безоценочность">
@@ -169,6 +182,11 @@
         android:id="@+id/navigation_effectively_page2"
         android:name="com.example.myapplication666.ui.modules.mindfulness.how_skills.EffectivelyPage2Fragment"
         android:label="Эффективность">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_survive_the_crisis"
+        android:name="com.example.myapplication666.ui.modules.distress_tolerance.survive_the_crisis.SurviveTheCrisisFragment">
     </fragment>
 
     <fragment
@@ -255,80 +273,96 @@
     <fragment
         android:id="@+id/navigation_improve_page7"
         android:name="com.example.myapplication666.ui.modules.distress_tolerance.survive_the_crisis.ImprovePage7"
-        android:label="Самоподдержка и переосмысление ситуации">
+        android:label="Самоподдержка">
     </fragment>
-
+    <fragment
+        android:id="@+id/navigation_accepting_reality"
+        android:name="com.example.myapplication666.ui.modules.distress_tolerance.accepting_reality.AcceptingRealityFragment">
+    </fragment>
     <fragment
         android:id="@+id/navigation_radical_acceptance"
-        android:name="com.example.myapplication666.accepting_reality.RadicalAcceptanceFragment"
+        android:name="com.example.myapplication666.ui.modules.distress_tolerance.accepting_reality.RadicalAcceptanceFragment"
         android:label="Радикальное принятие">
     </fragment>
 
     <fragment
         android:id="@+id/navigation_radical_acceptance_page2"
-        android:name="com.example.myapplication666.accepting_reality.RadicalAcceptancePage2"
-        android:label="Практика радикального принятия">
+        android:name="com.example.myapplication666.ui.modules.distress_tolerance.accepting_reality.RadicalAcceptancePage2"
+        android:label="Шаг за шагом">
     </fragment>
 
     <fragment
         android:id="@+id/navigation_turing_your_mind"
-        android:name="com.example.myapplication666.accepting_reality.TuringYourMindFragment"
+        android:name="com.example.myapplication666.ui.modules.distress_tolerance.accepting_reality.TuringYourMindFragment"
         android:label="Поворот сознания">
     </fragment>
 
     <fragment
         android:id="@+id/navigation_willingness"
-        android:name="com.example.myapplication666.accepting_reality.WillingnessFragment"
+        android:name="com.example.myapplication666.ui.modules.distress_tolerance.accepting_reality.WillingnessFragment"
         android:label="Готовность">
     </fragment>
 
     <fragment
         android:id="@+id/navigation_half_smile"
-        android:name="com.example.myapplication666.accepting_reality.HalfSmileFragment"
+        android:name="com.example.myapplication666.ui.modules.distress_tolerance.accepting_reality.HalfSmileFragment"
         android:label="Полуулыбка">
     </fragment>
 
     <fragment
+        android:id="@+id/navigation_focusing"
+        android:name="com.example.myapplication666.ui.modules.distress_tolerance.accepting_reality.Focusing"
+        android:label="Осознанность текущих мыслей">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_focusing_page2"
+        android:name="com.example.myapplication666.ui.modules.distress_tolerance.accepting_reality.FocusingPage2"
+        android:label="Практика осознанность мыслей">
+    </fragment>
+
+
+    <fragment
         android:id="@+id/navigation_abstinence"
-        android:name="com.example.myapplication666.dcba.AbstinenceFragment"
+        android:name="com.example.myapplication666.ui.modules.distress_tolerance.dcba.AbstinenceFragment"
         android:label="Диалектическая абстиненция">
     </fragment>
 
     <fragment
         android:id="@+id/navigation_abstinence_page2"
-        android:name="com.example.myapplication666.dcba.AbstinencePage2"
+        android:name="com.example.myapplication666.ui.modules.distress_tolerance.dcba.AbstinencePage2"
         android:label="План для абстиненции">
     </fragment>
 
     <fragment
         android:id="@+id/navigation_abstinence_page3"
-        android:name="com.example.myapplication666.dcba.AbstinencePage3"
+        android:name="com.example.myapplication666.ui.modules.distress_tolerance.dcba.AbstinencePage3"
         android:label="План для снижения вреда">
     </fragment>
     <fragment
         android:id="@+id/navigation_dcba"
-        android:name="com.example.myapplication666.dcba.DCBAFragment">
+        android:name="com.example.myapplication666.ui.modules.distress_tolerance.dcba.DCBAFragment">
     </fragment>
 
     <fragment
     android:id="@+id/navigation_clear_mind"
-    android:name="com.example.myapplication666.dcba.ClearMindFragment"
+    android:name="com.example.myapplication666.ui.modules.distress_tolerance.dcba.ClearMindFragment"
         android:label="Ясное сознание">
 </fragment>
 
     <fragment
         android:id="@+id/navigation_support_community"
-        android:name="com.example.myapplication666.dcba.SupportCommunityFragment"
+        android:name="com.example.myapplication666.ui.modules.distress_tolerance.dcba.SupportCommunityFragment"
         android:label="Поддержка сообщества">
     </fragment>
     <fragment
         android:id="@+id/navigation_bridges"
-        android:name="com.example.myapplication666.dcba.BrigdesFragment"
+        android:name="com.example.myapplication666.ui.modules.distress_tolerance.dcba.BrigdesFragment"
         android:label="Сжигание мостов">
     </fragment>
     <fragment
         android:id="@+id/navigation_riot"
-        android:name="com.example.myapplication666.dcba.RiotFragment"
+        android:name="com.example.myapplication666.ui.modules.distress_tolerance.dcba.RiotFragment"
         android:label="Альтернативный бунт">
     </fragment>
 
@@ -372,7 +406,25 @@
     </fragment>
     <fragment
         android:id="@+id/navigation_brides2"
-        android:name="com.example.myapplication666.dcba.Brides2"
+        android:name="com.example.myapplication666.ui.modules.distress_tolerance.dcba.Brides2"
         android:label="Построение новых мостов">
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_positive_emo"
+        android:name="com.example.myapplication666.ui.modules.emotional_regulation.abc_please.PositiveEmo"
+        android:label="Позитивные эмоции">
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_list_of_emo_page1"
+        android:name="com.example.myapplication666.ui.modules.emotional_regulation.abc_please.ListOfEmoPage1">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_list_of_emo_page2"
+        android:name="com.example.myapplication666.ui.modules.emotional_regulation.abc_please.ListOfEmoPage2">
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_list_of_emo_page3"
+        android:name="com.example.myapplication666.ui.modules.emotional_regulation.abc_please.ListOfEmoPage3">
     </fragment>
 </navigation>

@@ -6,6 +6,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
+import com.example.myapplication666.MainActivity
 import com.example.myapplication666.R
 
 class TIPFragment : Fragment() {
@@ -27,6 +29,16 @@ class TIPFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(TIViewModel::class.java)
         // TODO: Use the ViewModel
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val buttonTippClose = view.findViewById<ImageButton>(R.id.close_btn)
+        buttonTippClose.setOnClickListener()
+        {
+            (requireActivity() as MainActivity).navigationTo(R.id.navigation_survive_the_crisis)
+        }
     }
 
 }

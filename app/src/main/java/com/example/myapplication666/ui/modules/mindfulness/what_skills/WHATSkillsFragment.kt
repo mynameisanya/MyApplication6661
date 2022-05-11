@@ -1,6 +1,5 @@
-package com.example.myapplication666.ui.modules.what_skills
+package com.example.myapplication666.ui.modules.mindfulness.what_skills
 
-import android.app.AlertDialog
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -40,19 +39,16 @@ class WHATSkillsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        //val imageButtonObserve = view.findViewById<ImageButton>(R.id.observe_image)
-        //val builder = AlertDialog.Builder(context)
-        //val dialog = builder.create()
 
         observe_image.setOnClickListener()
         {
-            val view = View.inflate(context, R.layout.observe_fragment, null)
-            val builder = AlertDialog.Builder(context)
-            val dialog = builder.create()
-            //(requireActivity() as MainActivity).navigationTo(R.id.navigation_observe)
-            builder.setView(view)
-            dialog.show()
-            dialog.window?.setBackgroundDrawableResource(android.R.color.background_dark)
+//            val view = View.inflate(context, R.layout.observe_fragment, null)
+//            val builder = AlertDialog.Builder(context)
+//            val dialog = builder.create()
+            (requireActivity() as MainActivity).navigationTo(R.id.navigation_observe)
+//            builder.setView(view)
+//            dialog.show()
+//            dialog.window?.setBackgroundDrawableResource(android.R.color.background_dark)
 
         }
         val imageButtonDescribe = view.findViewById<ImageButton>(R.id.descibe_image)

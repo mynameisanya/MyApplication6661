@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageButton
 import com.example.myapplication666.MainActivity
 import com.example.myapplication666.R
 
@@ -36,6 +37,16 @@ class SelfSoothePage2Fragment : Fragment() {
         imageButtonSelfSoothePage3.setOnClickListener()
         {
             (requireActivity() as MainActivity).navigationTo(R.id.navigation_self_soothe_page3)
+        }
+        val imageButtonSelfSootheBack = view.findViewById<Button>(R.id.back_btn)
+        imageButtonSelfSootheBack.setOnClickListener()
+        {
+            (requireActivity() as MainActivity).navigationTo(R.id.navigation_self_soothe)
+        }
+        val imageButtonSelfSootheClose = view.findViewById<ImageButton>(R.id.close_btn)
+        imageButtonSelfSootheClose.setOnClickListener()
+        {
+            (requireActivity() as MainActivity).navigationTo(R.id.navigation_survive_the_crisis)
         }
     }
 

@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageButton
 import com.example.myapplication666.MainActivity
 import com.example.myapplication666.R
 import com.example.myapplication666.ui.modules.what_skills.ParticipleViewModel
@@ -44,6 +45,11 @@ class ParticipleFragment : Fragment() {
         buttonParticiplePage2.setOnClickListener()
         {
             (requireActivity() as MainActivity).navigationTo(R.id.navigation_participle_page2)
+        }
+        val buttonParticipleClose = view.findViewById<ImageButton>(R.id.close_btn)
+        buttonParticipleClose.setOnClickListener()
+        {
+            (requireActivity() as MainActivity).navigationTo(R.id.navigation_what_skills)
         }
     }
 

@@ -6,6 +6,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
+import com.example.myapplication666.MainActivity
 import com.example.myapplication666.R
 
 class WiseMindPage1Fragment : Fragment() {
@@ -27,6 +29,16 @@ class WiseMindPage1Fragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(WiseMindPage1ViewModel::class.java)
         // TODO: Use the ViewModel
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val buttonWiseClose = view.findViewById<ImageButton>(R.id.close_btn)
+        buttonWiseClose.setOnClickListener()
+        {
+            (requireActivity() as MainActivity).navigationTo(R.id.navigation_wise_mind)
+        }
     }
 
 }

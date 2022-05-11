@@ -9,13 +9,13 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.modules.what_skills.observe.ObservePage3Fragment">
+        tools:context=".ui.modules.what_skills.participate">
 
         <ScrollView
             android:id="@+id/scrollView2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingBottom="70dp">
+            android:paddingBottom="60dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -39,7 +39,7 @@
                     android:layout_marginLeft="14sp"
                     android:layout_marginTop="14sp"
                     android:layout_marginRight="14sp"
-                    android:layout_marginBottom="20dp"
+                    android:layout_marginBottom="10dp"
                     android:text="@string/participle_page1"
                     android:textSize="16sp"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -55,20 +55,8 @@
             android:layout_gravity="bottom|end"
             android:layout_marginBottom="@dimen/button_margin"
             android:text="Далее"
-            app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/flow" />
-
-        <Button
-            android:id="@+id/back_btn"
-            style="@style/ButtonStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:layout_marginBottom="@dimen/button_margin"
-            android:text="Назад"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/flow"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
         <androidx.constraintlayout.helper.widget.Flow

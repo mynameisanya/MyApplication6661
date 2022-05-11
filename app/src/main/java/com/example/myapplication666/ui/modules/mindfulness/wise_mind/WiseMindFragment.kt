@@ -42,10 +42,10 @@ class WiseMindFragment : Fragment() {
             (requireActivity() as MainActivity).navigationTo(R.id.navigation_wise_mind_page1)
         }
 
-        val imageButton = view.findViewById<ImageButton>(R.id.rational_mind_image)
+        val imageButton = view.findViewById<ImageButton>(R.id.mindfulness)
         imageButton.setOnClickListener()
         {
-            (requireActivity() as MainActivity).navigationTo(R.id.navigation_rational_mind)
+            (requireActivity() as MainActivity).navigationTo(R.id.navigation_mindfulness_page1)
         }
 
 

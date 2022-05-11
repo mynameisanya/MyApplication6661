@@ -1,13 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.modules.emotional_regulation.abc_please.AbcPlease">
+    android:background="@drawable/background3"
+    tools:context=".ui.modules.mindfulness.wise_mind.WiseMindFragment">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Hello" />
+        android:orientation="vertical">
 
-</FrameLayout>
+        <ImageButton
+            android:id="@+id/positive_emo"
+            android:layout_width="353dp"
+            android:layout_height="166dp"
+            android:src="@drawable/positive_emo"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp" />
+
+        <ImageButton
+            android:id="@+id/wise_mind_image"
+            android:layout_width="353dp"
+            android:layout_height="166dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/wise" />
+
+    </LinearLayout>
+</ScrollView>
