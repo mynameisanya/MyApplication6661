@@ -1275,5 +1275,6 @@
     <string name="step_five">ПРОВЕРЬТЕ ФАКТЫ! Перечислите как можно больше других интерпретаций фактов.</string>
     <string name="step_six">В случае необходимости ПЕРЕПИШИТЕ факты. Постарайтесь проверить аккуратность ваших интерпретаций.</string>
     <string name="save">Сохранить</string>
+    <string name="input_date_text">Введите дату заполнения</string>
 
 </resources>

@@ -40,18 +40,6 @@ class ExercisesFragment : Fragment() {
         {
             innerItems.add(InnerItem(it.first, it.second))
         }
-        adapter.items = listOf(
-            ExpandableItem(
-                "One expanded",
-                false,
-                innerItems
-            ),
-            ExpandableItem(
-                "Two expanded",
-                true,
-                innerItems
-            ),
-        )
 
         recycler.adapter = adapter
 
@@ -59,6 +47,7 @@ class ExercisesFragment : Fragment() {
             startActivity(Intent(context, CreateExerciseActivity::class.java))
         }
     }
+
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(ExercisesViewModel::class.java)
@@ -73,19 +62,26 @@ class ExercisesFragment : Fragment() {
         {
             innerItems.add(InnerItem(it.first, it.second))
         }
-        adapter.items = listOf(
-            ExpandableItem(
-                "One expanded",
-                false,
-                innerItems
-            ),
-            ExpandableItem(
-                "Two expanded",
-                true,
-                innerItems
-            ),
-        )
+
+        val mutableList = mutableListOf<ListItem>()
+        adapter.items?.let {
+            it.forEach { item->
+                if(item is ExpandableItem){
+                    item.isExpanded = false
+                }
+            }
+
+            mutableList.addAll(it)
+            mutableList.add(
+                ExpandableItem(
+                    Rep.title,
+                    false,
+                    innerItems
+                )
+            )
+        }
+
+        adapter.items = mutableList
         adapter.notifyDataSetChanged()
     }
-
 }
