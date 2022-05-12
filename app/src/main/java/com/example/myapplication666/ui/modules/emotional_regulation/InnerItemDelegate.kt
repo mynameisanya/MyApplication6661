@@ -3,7 +3,6 @@ package com.example.myapplication666.ui.modules.emotional_regulation
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.EditText
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication666.R
@@ -19,8 +18,8 @@ class InnerItemDelegate :
     }
 
     inner class InnerItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val textView: TextView = itemView.findViewById(R.id.title)
-        val editText:EditText = itemView.findViewById(R.id.editText)
+        val questionsTv: TextView = itemView.findViewById(R.id.question_tv)
+        val answerTv: TextView = itemView.findViewById(R.id.answer_tv)
     }
 
     override fun onBindViewHolder(
@@ -28,8 +27,8 @@ class InnerItemDelegate :
         holder: InnerItemViewHolder,
         payloads: MutableList<Any>
     ) {
-        holder.textView.text = item.title
-        holder.editText.setText(item.description)
+        holder.questionsTv.text = item.title
+        holder.answerTv.text = item.description
     }
 
     override fun isForViewType(
