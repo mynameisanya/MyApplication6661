@@ -37,6 +37,7 @@ class NewDiaryFragment : Fragment() {
     private var diaryList = mutableListOf<Model>()
 
     private var currentMonth = Months.APR
+    //вью модель для обмена данными между фрагментами нью дайри и дайри
     private val viewModel by activityViewModels<DiaryViewModel> {
         object : ViewModelProvider.Factory {
             override fun <T : ViewModel> create(modelClass: Class<T>): T {

@@ -42,7 +42,7 @@ class DescribeFragment : Fragment() {
         val buttonDescribeClose1 = view.findViewById<ImageButton>(R.id.close_btn)
         buttonDescribeClose1.setOnClickListener()
         {
-            (requireActivity() as MainActivity).navigationTo(R.id.navigation_what_skills)
+            (requireActivity() as MainActivity).popBackStack(R.id.navigation_mindfulness)
         }
     }
 

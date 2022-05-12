@@ -42,7 +42,7 @@ class ObserveFragment : Fragment() {
         val buttonObserveClose = view.findViewById<ImageButton>(R.id.close_btn)
         buttonObserveClose.setOnClickListener()
         {
-            (requireActivity() as MainActivity).navigationTo(R.id.navigation_what_skills)
+            (requireActivity() as MainActivity).popBackStack(R.id.navigation_mindfulness)
         }
     }
 

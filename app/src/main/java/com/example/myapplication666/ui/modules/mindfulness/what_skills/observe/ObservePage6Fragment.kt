@@ -42,12 +42,12 @@ class ObservePage6Fragment : Fragment() {
         val buttonObserveBack = view.findViewById<Button>(R.id.back_btn)
         buttonObserveBack.setOnClickListener()
         {
-            (requireActivity() as MainActivity).navigationTo(R.id.navigation_observe_page5)
+            (requireActivity() as MainActivity).popBackStack()
         }
         val buttonObserveClose = view.findViewById<ImageButton>(R.id.close_btn)
         buttonObserveClose.setOnClickListener()
         {
-            (requireActivity() as MainActivity).navigationTo(R.id.navigation_what_skills)
+            (requireActivity() as MainActivity).popBackStack(R.id.navigation_mindfulness)
         }
     }
     }

@@ -49,7 +49,7 @@ class ParticipleFragment : Fragment() {
         val buttonParticipleClose = view.findViewById<ImageButton>(R.id.close_btn)
         buttonParticipleClose.setOnClickListener()
         {
-            (requireActivity() as MainActivity).navigationTo(R.id.navigation_what_skills)
+            (requireActivity() as MainActivity).popBackStack(R.id.navigation_mindfulness)
         }
     }
 

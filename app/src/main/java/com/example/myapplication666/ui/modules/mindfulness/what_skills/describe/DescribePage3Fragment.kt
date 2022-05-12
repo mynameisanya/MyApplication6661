@@ -36,12 +36,12 @@ class DescribePage3Fragment : Fragment() {
         val buttonDescribeBack = view.findViewById<Button>(R.id.back_btn)
         buttonDescribeBack.setOnClickListener()
         {
-            (requireActivity() as MainActivity).navigationTo(R.id.navigation_describe_page2)
+            (requireActivity() as MainActivity).popBackStack()
         }
         val buttonDescribeClose = view.findViewById<ImageButton>(R.id.close_btn)
         buttonDescribeClose.setOnClickListener()
         {
-            (requireActivity() as MainActivity).navigationTo(R.id.navigation_what_skills)
+            (requireActivity() as MainActivity).popBackStack(R.id.navigation_mindfulness)
         }
     }
 }
