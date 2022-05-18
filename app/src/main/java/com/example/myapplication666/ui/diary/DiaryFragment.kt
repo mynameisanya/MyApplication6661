@@ -42,6 +42,7 @@ class DiaryFragment : Fragment() {
     }
 
     private var currentMonth = Months.APR
+    //список строк
     private var months = arrayOf<String>()
 
     override fun onCreateView(
@@ -82,6 +83,7 @@ class DiaryFragment : Fragment() {
     }
 
     private fun setClickListeners() {
+        //передвигает месяцы на следующую позицию
         nextArrow?.setOnClickListener {
             viewModel.updateList(currentMonth, diaryList)
             currentMonth = currentMonth.next()
@@ -98,7 +100,7 @@ class DiaryFragment : Fragment() {
         }
 
         nextBtn?.setOnClickListener {
-            val bundle = Bundle()
+             val bundle = Bundle()
             bundle.putSerializable(EXTRA_NEW_DIARY, currentMonth)
 
             (requireActivity() as MainActivity).navigationTo(
@@ -127,6 +129,7 @@ class DiaryFragment : Fragment() {
         if (diaryModel.data.isEmpty()) {
             return
         }
+        //принимает все значения из бд
         when (monthTv?.text) {
             months[0] -> setUpdatedDiaryList(diaryModel, Months.JAN)
             months[1] -> setUpdatedDiaryList(diaryModel, Months.FEB)

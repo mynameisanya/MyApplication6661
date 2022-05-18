@@ -36,12 +36,12 @@ class NonJudmentallyPage2Fragment : Fragment() {
         val buttonNonJudmentallyPage2 = view.findViewById<Button>(R.id.back_btn)
         buttonNonJudmentallyPage2.setOnClickListener()
         {
-            (requireActivity() as MainActivity).navigationTo(R.id.navigation_non_judmentally)
+            (requireActivity() as MainActivity).popBackStack()
         }
         val buttonNonJudmentallyClose = view.findViewById<ImageButton>(R.id.close_btn)
         buttonNonJudmentallyClose.setOnClickListener()
         {
-            (requireActivity() as MainActivity).navigationTo(R.id.navigation_how_skills)
+            (requireActivity() as MainActivity).popBackStack(R.id.navigation_mindfulness)
         }
     }
 

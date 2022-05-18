@@ -17,23 +17,37 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="60dp"
-        android:backgroundTint="@color/main_background_color"
-        android:text="Save"
-        android:textColor="@color/black"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="68dp"
+        android:backgroundTint="@color/backgroundButton"
+        android:text="Сохранить запись"
+        android:textColor="@color/textColorButton"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/showDialog" />
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+<!--    <Button-->
+<!--        android:id="@+id/showDialog"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="bottom|end"-->
+<!--        android:layout_marginStart="208dp"-->
+<!--        android:layout_marginBottom="68dp"-->
+<!--        android:backgroundTint="@color/backgroundButton"-->
+<!--        android:text="Добавить навык"-->
+<!--        android:textColor="@color/textColorButton"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.172"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/showDialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="60dp"
-        android:backgroundTint="@color/main_background_color"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="68dp"
+        android:backgroundTint="@color/backgroundButton"
         android:src="@android:drawable/ic_input_add"
-        app:backgroundTint="@color/main_background_color"
+        app:backgroundTint="@color/textColorButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

@@ -7,6 +7,7 @@ import java.io.Serializable
 
 @Entity(tableName = "table_diary")
 data class DiaryModel(
+    //хэш карта, в котором хранятся ключ-значения, месяц и к нему привязан список записей
     val data: HashMap<Months, List<Model>>,
     @PrimaryKey(autoGenerate = true) val id: Int = 0
 ) : Serializable

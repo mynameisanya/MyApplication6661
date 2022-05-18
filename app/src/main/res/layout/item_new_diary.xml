@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="70dp"
         android:layout_alignParentEnd="true"
-        android:background="#d65819"
+        android:background="@color/white"
         android:layout_marginEnd="20dp"
         android:gravity="end"
         android:orientation="horizontal"
@@ -40,8 +40,7 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/edit"
-                    app:tint="@android:color/white" />
+                    android:src="@drawable/edit" />
             </LinearLayout>
         </RelativeLayout>
 
@@ -76,15 +75,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="10dp"
+        android:background="#7DA0C0"
         android:clickable="true"
-        android:background="@drawable/background"
         android:elevation="4dp"
         android:focusable="true"
         android:orientation="horizontal"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="10dp">
+        tools:layout_editor_absoluteX="-60dp">
 
         <TextView
             android:id="@+id/counter"
@@ -92,6 +91,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
+            android:textColor="#1C143F"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="@id/seekBar"
             app:layout_constraintHorizontal_bias="0.501"
@@ -105,9 +105,10 @@
             android:layout_width="216dp"
             android:layout_height="70dp"
             android:ems="10"
-            android:paddingStart="20dp"
             android:gravity="center_vertical"
+            android:paddingStart="20dp"
             android:text="Name"
+            android:textColor="#1C143F"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -116,12 +117,13 @@
 
         <SeekBar
             android:id="@+id/seekBar"
-            android:layout_width="82dp"
-            android:layout_height="70dp"
+            android:layout_width="117dp"
+            android:layout_height="65dp"
             android:max="7"
             android:min="1"
             android:progress="0"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/text"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>

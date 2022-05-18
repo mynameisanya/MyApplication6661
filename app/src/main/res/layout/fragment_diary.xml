@@ -27,6 +27,7 @@
         android:layout_marginTop="20dp"
         android:gravity="center"
         android:textSize="24sp"
+        android:textColor="@color/textColorButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -57,23 +58,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="60dp"
-        android:backgroundTint="@color/main_background_color"
-        android:text="Save"
-        android:textColor="@color/black"
+        android:layout_marginBottom="64dp"
+        android:backgroundTint="@color/backgroundButton"
+        android:text="Сохранить"
+        android:textColor="@color/textColorButton"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/next_btn" />
+        app:layout_constraintEnd_toStartOf="@+id/next_btn"
+        app:layout_constraintHorizontal_bias="0.131"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/next_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="60dp"
-        android:backgroundTint="@color/main_background_color"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="64dp"
+        android:backgroundTint="@color/backgroundButton"
         android:src="@android:drawable/ic_input_add"
-        app:backgroundTint="@color/main_background_color"
+        app:backgroundTint="@color/textColorButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

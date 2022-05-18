@@ -36,12 +36,12 @@ class FocusingPage2 : Fragment() {
         val imageButtonFocusBack = view.findViewById<Button>(R.id.back_btn)
         imageButtonFocusBack.setOnClickListener()
         {
-            (requireActivity() as MainActivity).navigationTo(R.id.navigation_focusing)
+            (requireActivity() as MainActivity).popBackStack()
         }
         val imageButtonFocusClose = view.findViewById<ImageButton>(R.id.close_btn)
         imageButtonFocusClose.setOnClickListener()
         {
-            (requireActivity() as MainActivity).navigationTo(R.id.navigation_accepting_reality)
+            (requireActivity() as MainActivity).popBackStack(R.id.navigation_distress_tolerance)
         }
     }
 

@@ -41,12 +41,12 @@ class ListOfEmoPage1 : Fragment() {
         val imagePositiveBack = view.findViewById<Button>(R.id.back_btn)
         imagePositiveBack.setOnClickListener()
         {
-            (requireActivity() as MainActivity).navigationTo(R.id.navigation_positive_emo)
+            (requireActivity() as MainActivity).popBackStack()
         }
         val imageButtonPositiveClose = view.findViewById<ImageButton>(R.id.close_btn)
         imageButtonPositiveClose.setOnClickListener()
         {
-            (requireActivity() as MainActivity).navigationTo(R.id.navigation_abc_please)
+            (requireActivity() as MainActivity).popBackStack(R.id.navigation_emotional_regulation)
         }
     }
 

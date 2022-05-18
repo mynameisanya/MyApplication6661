@@ -36,12 +36,12 @@ class OneMindfullyPage2Fragment : Fragment() {
         val buttonOneMindfullyPage2 = view.findViewById<Button>(R.id.back_btn)
         buttonOneMindfullyPage2.setOnClickListener()
         {
-            (requireActivity() as MainActivity).navigationTo(R.id.navigation_one_mindfully)
+            (requireActivity() as MainActivity).popBackStack()
         }
         val buttonOneMindfullyClose = view.findViewById<ImageButton>(R.id.close_btn)
         buttonOneMindfullyClose.setOnClickListener()
         {
-            (requireActivity() as MainActivity).navigationTo(R.id.navigation_how_skills)
+            (requireActivity() as MainActivity).popBackStack(R.id.navigation_mindfulness)
         }
     }
 

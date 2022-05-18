@@ -42,7 +42,7 @@ class AcceptsFragment : Fragment() {
         val buttonEffectivelyClose = view.findViewById<ImageButton>(R.id.close_btn)
         buttonEffectivelyClose.setOnClickListener()
         {
-            (requireActivity() as MainActivity).navigationTo(R.id.navigation_survive_the_crisis)
+            (requireActivity() as MainActivity).popBackStack(R.id.navigation_distress_tolerance)
         }
     }
 

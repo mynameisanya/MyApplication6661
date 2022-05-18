@@ -4,7 +4,7 @@ import android.app.Application
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-//запускает первым при запуске приложения
+//запускается первым при запуске приложения
 class App : Application() {
 
     override fun onCreate() {

@@ -41,7 +41,7 @@ class PositiveEmo : Fragment() {
         val imageButtonPositiveClose = view.findViewById<ImageButton>(R.id.close_btn)
         imageButtonPositiveClose.setOnClickListener()
         {
-            (requireActivity() as MainActivity).navigationTo(R.id.navigation_abc_please)
+            (requireActivity() as MainActivity).popBackStack(R.id.navigation_emotional_regulation)
         }
     }
 

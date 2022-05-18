@@ -41,7 +41,7 @@ class BrigdesFragment : Fragment() {
         val buttonClose = view.findViewById<ImageButton>(R.id.close_btn)
         buttonClose.setOnClickListener()
         {
-            (requireActivity() as MainActivity).navigationTo(R.id.navigation_dcba)
+            (requireActivity() as MainActivity).popBackStack(R.id.navigation_distress_tolerance)
         }
     }
 }

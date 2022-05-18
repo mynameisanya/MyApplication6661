@@ -42,7 +42,7 @@ class RadicalAcceptanceFragment : Fragment() {
         val imageButtonRadicalClose = view.findViewById<ImageButton>(R.id.close_btn)
         imageButtonRadicalClose.setOnClickListener()
         {
-            (requireActivity() as MainActivity).navigationTo(R.id.navigation_accepting_reality)
+            (requireActivity() as MainActivity).popBackStack(R.id.navigation_distress_tolerance)
         }
     }
 

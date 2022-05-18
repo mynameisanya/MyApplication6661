@@ -36,12 +36,12 @@ class Brides2 : Fragment() {
         val buttonBrides = view.findViewById<Button>(R.id.back_btn)
         buttonBrides.setOnClickListener()
         {
-            (requireActivity() as MainActivity).navigationTo(R.id.navigation_bridges)
+            (requireActivity() as MainActivity).popBackStack()
         }
         val buttonClose = view.findViewById<ImageButton>(R.id.close_btn)
         buttonClose.setOnClickListener()
         {
-            (requireActivity() as MainActivity).navigationTo(R.id.navigation_dcba)
+            (requireActivity() as MainActivity).popBackStack(R.id.navigation_distress_tolerance)
         }
     }
 }

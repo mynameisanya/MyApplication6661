@@ -41,7 +41,7 @@ class OneMindfullyFragment : Fragment() {
         val buttonOneMindfullyClose = view.findViewById<ImageButton>(R.id.close_btn)
         buttonOneMindfullyClose.setOnClickListener()
         {
-            (requireActivity() as MainActivity).navigationTo(R.id.navigation_how_skills)
+            (requireActivity() as MainActivity).popBackStack(R.id.navigation_mindfulness)
         }
     }
 

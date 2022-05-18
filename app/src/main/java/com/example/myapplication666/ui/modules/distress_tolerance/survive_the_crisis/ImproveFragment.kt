@@ -41,7 +41,7 @@ class ImproveFragment : Fragment() {
         val buttonImproveClose = view.findViewById<ImageButton>(R.id.close_btn)
         buttonImproveClose.setOnClickListener()
         {
-            (requireActivity() as MainActivity).navigationTo(R.id.navigation_survive_the_crisis)
+            (requireActivity() as MainActivity).popBackStack(R.id.navigation_distress_tolerance)
         }
     }
 

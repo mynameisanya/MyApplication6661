@@ -42,12 +42,12 @@ class ImprovePage2 : Fragment() {
         val ButtonImproveBack = view.findViewById<Button>(R.id.back_btn)
         ButtonImproveBack.setOnClickListener()
         {
-            (requireActivity() as MainActivity).navigationTo(R.id.navigation_improve)
+            (requireActivity() as MainActivity).popBackStack()
         }
         val ButtonImproveClose = view.findViewById<ImageButton>(R.id.close_btn)
         ButtonImproveClose.setOnClickListener()
         {
-            (requireActivity() as MainActivity).navigationTo(R.id.navigation_survive_the_crisis)
+            (requireActivity() as MainActivity).popBackStack(R.id.navigation_distress_tolerance)
         }
     }
 

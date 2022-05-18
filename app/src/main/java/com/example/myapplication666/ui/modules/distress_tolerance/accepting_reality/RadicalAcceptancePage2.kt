@@ -36,12 +36,12 @@ class RadicalAcceptancePage2 : Fragment() {
         val imageButtonRadicalPage2 = view.findViewById<Button>(R.id.back_btn)
         imageButtonRadicalPage2.setOnClickListener()
         {
-            (requireActivity() as MainActivity).navigationTo(R.id.navigation_radical_acceptance)
+            (requireActivity() as MainActivity).popBackStack()
         }
         val imageButtonRadicalClose = view.findViewById<ImageButton>(R.id.close_btn)
         imageButtonRadicalClose.setOnClickListener()
         {
-            (requireActivity() as MainActivity).navigationTo(R.id.navigation_accepting_reality)
+            (requireActivity() as MainActivity).popBackStack(R.id.navigation_distress_tolerance)
         }
     }
 

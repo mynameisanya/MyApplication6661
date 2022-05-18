@@ -37,12 +37,12 @@ class AbstinencePage3 : Fragment() {
         val imageButtonAbstinenceBack = view.findViewById<Button>(R.id.back_btn)
         imageButtonAbstinenceBack.setOnClickListener()
         {
-            (requireActivity() as MainActivity).navigationTo(R.id.navigation_abstinence_page2)
+            (requireActivity() as MainActivity).popBackStack()
         }
         val imageButtonAbstinenceClose = view.findViewById<ImageButton>(R.id.close_btn)
         imageButtonAbstinenceClose.setOnClickListener()
         {
-            (requireActivity() as MainActivity).navigationTo(R.id.navigation_dcba)
+            (requireActivity() as MainActivity).popBackStack(R.id.navigation_distress_tolerance)
         }
     }
 

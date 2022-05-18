@@ -41,7 +41,7 @@ class Focusing : Fragment() {
         val imageButtonFocusClose = view.findViewById<ImageButton>(R.id.close_btn)
         imageButtonFocusClose.setOnClickListener()
         {
-            (requireActivity() as MainActivity).navigationTo(R.id.navigation_accepting_reality)
+            (requireActivity() as MainActivity).popBackStack(R.id.navigation_distress_tolerance)
         }
     }
 
