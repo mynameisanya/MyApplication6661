@@ -12,7 +12,7 @@ class App : Application() {
         //инициализация бд
         returnDatabase =
             Room.databaseBuilder(applicationContext, dataBase::class.java, "exampleDatabase")
-                .allowMainThreadQueries().build()
+                .allowMainThreadQueries().fallbackToDestructiveMigration().build()
 
     }
 
