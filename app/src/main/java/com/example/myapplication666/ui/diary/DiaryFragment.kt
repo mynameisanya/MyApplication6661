@@ -1,6 +1,7 @@
 package com.example.myapplication666.ui.diary
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -20,6 +21,8 @@ import com.example.myapplication666.database.App
 import com.example.myapplication666.database.DiaryModel
 import com.example.myapplication666.database.Model
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import java.text.SimpleDateFormat
+import java.util.*
 
 class DiaryFragment : Fragment() {
 
@@ -34,6 +37,7 @@ class DiaryFragment : Fragment() {
     private var saveBtn: Button? = null
 
     private val viewModel by activityViewModels<DiaryViewModel> {
+        //фабрика для создания вью модели
         object : ViewModelProvider.Factory {
             override fun <T : ViewModel> create(modelClass: Class<T>): T {
                 return DiaryViewModel(App.returnDatabase.returnDao()) as T
@@ -41,7 +45,8 @@ class DiaryFragment : Fragment() {
         }
     }
 
-    private var currentMonth = Months.APR
+    private lateinit var currentMonth: Months
+
     //список строк
     private var months = arrayOf<String>()
 
@@ -55,6 +60,10 @@ class DiaryFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val dateFormat = SimpleDateFormat("MM", Locale.ENGLISH)
+        val date = Date()
+        Log.e(javaClass.simpleName, "Month ${dateFormat.format(date)}")
+        setCurrentMonthByDate(dateFormat.format(date))
         initViews(view)
 
         months = resources.getStringArray(R.array.months)
@@ -66,6 +75,23 @@ class DiaryFragment : Fragment() {
             monthTv?.text = months[currentMonth.ordinal]
             mapDiaryList()
             diaryAdapter.setData(diaryList)
+        }
+    }
+
+    private fun setCurrentMonthByDate(months: String) {
+        when (months) {
+            "01" -> currentMonth = Months.JAN
+            "02" -> currentMonth = Months.FEB
+            "03" -> currentMonth = Months.MAR
+            "04" -> currentMonth = Months.APR
+            "05" -> currentMonth = Months.MAY
+            "06" -> currentMonth = Months.JUN
+            "07" -> currentMonth = Months.JUL
+            "08" -> currentMonth = Months.AUG
+            "09" -> currentMonth = Months.SEP
+            "10" -> currentMonth = Months.OCT
+            "11" -> currentMonth = Months.NOV
+            "12" -> currentMonth = Months.DEC
         }
     }
 
@@ -100,7 +126,7 @@ class DiaryFragment : Fragment() {
         }
 
         nextBtn?.setOnClickListener {
-             val bundle = Bundle()
+            val bundle = Bundle()
             bundle.putSerializable(EXTRA_NEW_DIARY, currentMonth)
 
             (requireActivity() as MainActivity).navigationTo(
