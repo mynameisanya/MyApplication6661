@@ -14,4 +14,9 @@ interface DatabaseDao {
     //получить все модели из бд
     @Query("select * from table_diary")
     fun getAllDiary(): DiaryModel
+
+    @Insert (onConflict = REPLACE)
+    fun insertExercise(data: DataExercise)
+    @Query ("select * from DataExercise")
+    fun getAllExercise(): List<DataExercise>
 }

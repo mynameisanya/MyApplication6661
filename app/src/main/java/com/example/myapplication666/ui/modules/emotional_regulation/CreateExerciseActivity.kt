@@ -3,6 +3,7 @@ package com.example.myapplication666.ui.modules.emotional_regulation
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -23,9 +24,16 @@ class CreateExerciseActivity : AppCompatActivity() {
             val adapterList = adapter.list.filter {
                 it.second.isNotEmpty()
             }
-            Rep.list = adapterList
-            Rep.title = titleEditText?.text.toString()
-            finish()
+            if(titleEditText!!.text.isEmpty() || adapterList.isEmpty())
+            {
+                Toast.makeText(this@CreateExerciseActivity, "Необходимо заполнить данные", Toast.LENGTH_SHORT).show()
+            }
+            else
+            {
+                Rep.list = adapterList
+                Rep.title = titleEditText?.text.toString()
+                finish()
+            }
         }
         val recycler = findViewById<RecyclerView>(R.id.recycler)
         recycler.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
