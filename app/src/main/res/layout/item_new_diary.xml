@@ -120,7 +120,7 @@
             android:layout_width="117dp"
             android:layout_height="65dp"
             android:max="7"
-            android:min="1"
+            android:min="0"
             android:progress="0"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

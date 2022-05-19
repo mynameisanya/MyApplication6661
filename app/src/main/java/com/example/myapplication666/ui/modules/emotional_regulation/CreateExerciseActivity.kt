@@ -20,7 +20,9 @@ class CreateExerciseActivity : AppCompatActivity() {
         titleEditText = findViewById(R.id.title_edit_text)
         save.setOnClickListener()
         {
-            val adapterList = adapter.list
+            val adapterList = adapter.list.filter {
+                it.second.isNotEmpty()
+            }
             Rep.list = adapterList
             Rep.title = titleEditText?.text.toString()
             finish()

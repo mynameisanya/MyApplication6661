@@ -86,11 +86,18 @@ class NewDiaryFragment : Fragment() {
         saveBtn?.setOnClickListener {
             Log.e(javaClass.simpleName, "saveBtn")
             try {
-                viewModel.saveData(currentMonth, diaryList)
+                val listToSave = mutableListOf<Model>()
+                diaryList.forEach{
+                    if(it.characteristic != 0)
+                        listToSave.add(it)
+                }
+                viewModel.saveData(currentMonth, listToSave)
                 (requireActivity() as MainActivity).popBackStack()
-            } catch (ex: IllegalStateException) {
+            }
+            catch (ex: IllegalStateException) {
                 Toast.makeText(context, "Вы хотите сохранить пустой список", Toast.LENGTH_SHORT)
                     .show()
+
             }
         }
     }
