@@ -20,7 +20,7 @@ class ExpandableItemDelegate(private val clickCallback: (expandableItem: Expanda
     }
 
     inner class ExpandableItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val textView = itemView.findViewById<TextView>(R.id.textView)
+        val headerText = itemView.findViewById<TextView>(R.id.header_text)
         val icon = itemView.findViewById<ImageView>(R.id.icon)
         val animation = animate(icon)
     }
@@ -30,7 +30,7 @@ class ExpandableItemDelegate(private val clickCallback: (expandableItem: Expanda
         holder: ExpandableItemViewHolder,
         payloads: MutableList<Any>
     ) {
-        holder.textView.text = item.text
+        holder.headerText.text = item.text
 
         holder.animation.cancel()
         if (payloads.isNotEmpty()) {
