@@ -7,9 +7,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.viewModels
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModel
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication666.R
+import com.example.myapplication666.database.App
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class ExercisesFragment : Fragment() {
@@ -18,8 +22,14 @@ class ExercisesFragment : Fragment() {
         fun newInstance() = ExercisesFragment()
     }
 
-    private lateinit var viewModel: ExercisesViewModel
-
+    private val viewModel by viewModels<ExercisesViewModel> {
+        //фабрика для создания вью модели
+        object : ViewModelProvider.Factory {
+            override fun <T : ViewModel> create(modelClass: Class<T>): T {
+                return ExercisesViewModel(App.returnDatabase.returnDao()) as T
+            }
+        }
+    }
     private val adapter = ExpandableAdapter()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -34,12 +44,8 @@ class ExercisesFragment : Fragment() {
 
         val createBtn = view.findViewById<FloatingActionButton>(R.id.create_btn)
         recycler.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-        val rep = Rep.list
-        val innerItems = mutableListOf<InnerItem>()
-        rep.forEach()
-        {
-            innerItems.add(InnerItem(it.first, it.second))
-        }
+
+        setData()
 
         recycler.adapter = adapter
 
@@ -48,40 +54,30 @@ class ExercisesFragment : Fragment() {
         }
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(ExercisesViewModel::class.java)
-        // TODO: Use the ViewModel
-    }
-
     override fun onResume() {
         super.onResume()
-        val rep = Rep.list
-        val innerItems = mutableListOf<InnerItem>()
-        rep.forEach()
-        {
-            innerItems.add(InnerItem(it.first, it.second))
-        }
+        setData()
+        adapter.notifyDataSetChanged()
+    }
+
+    private fun setData() {
+        val data = viewModel.getExercises()
 
         val mutableList = mutableListOf<ListItem>()
-        adapter.items?.let {
-            it.forEach { item->
-                if(item is ExpandableItem){
-                    item.isExpanded = false
-                }
+        data.forEach { exercise ->
+            val innerItems = mutableListOf<InnerItem>()
+            exercise.value.forEach {
+                innerItems.add(InnerItem(it.first, it.second))
             }
 
-            mutableList.addAll(it)
             mutableList.add(
                 ExpandableItem(
-                    Rep.title,
+                    exercise.date,
                     false,
                     innerItems
                 )
             )
         }
-
         adapter.items = mutableList
-        adapter.notifyDataSetChanged()
     }
 }
