@@ -1,4 +1,4 @@
-package com.example.myapplication666.ui.modules.emotional_regulation
+package com.example.myapplication666.ui.modules.interpersonal_effectiveness
 
 import android.view.LayoutInflater
 import android.view.View
@@ -10,8 +10,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication666.R
 import com.hannesdorfmann.adapterdelegates4.AbsListItemAdapterDelegate
 
-class ExpandableItemDelegate(private val clickCallback: (expandableItem: ExpandableItem) -> Unit) :
-    AbsListItemAdapterDelegate<ExpandableItem, ListItem, ExpandableItemDelegate.ExpandableItemViewHolder>() {
+class ExpandableItemDelegate2(private val clickCallback: (expandableItem: ExpandableItem2) -> Unit) :
+    AbsListItemAdapterDelegate<ExpandableItem2, ListItem2, ExpandableItemDelegate2.ExpandableItemViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup): ExpandableItemViewHolder {
         val view =
@@ -26,7 +26,7 @@ class ExpandableItemDelegate(private val clickCallback: (expandableItem: Expanda
     }
 
     override fun onBindViewHolder(
-        item: ExpandableItem,
+        item: ExpandableItem2,
         holder: ExpandableItemViewHolder,
         payloads: MutableList<Any>
     ) {
@@ -44,10 +44,10 @@ class ExpandableItemDelegate(private val clickCallback: (expandableItem: Expanda
     }
 
     override fun isForViewType(
-        item: ListItem,
-        items: MutableList<ListItem>,
+        item: ListItem2,
+        items: MutableList<ListItem2>,
         position: Int
     ): Boolean {
-        return item is ExpandableItem
+        return item is ExpandableItem2
     }
 }

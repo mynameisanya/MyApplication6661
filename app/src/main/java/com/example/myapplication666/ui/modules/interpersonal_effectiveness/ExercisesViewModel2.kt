@@ -1,10 +1,10 @@
-package com.example.myapplication666.ui.modules.emotional_regulation
+package com.example.myapplication666.ui.modules.interpersonal_effectiveness
 
 import androidx.lifecycle.ViewModel
 import com.example.myapplication666.database.DataExercise
 import com.example.myapplication666.database.DatabaseDao
 
-    class ExercisesViewModel(private val dao: DatabaseDao) : ViewModel() {
+    class ExercisesViewModel2(private val dao: DatabaseDao) : ViewModel() {
 
         fun getExercises():List<DataExercise> = dao.getAllExercise()
 

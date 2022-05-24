@@ -43,7 +43,7 @@
 
     <fragment
         android:id="@+id/navigation_interpersonal_effectiveness"
-        android:name="com.example.myapplication666.InterpersonalEffectiveness"
+        android:name="com.example.myapplication666.ui.modules.interpersonal_effectiveness.InterpersonalEffectiveness"
         android:label="@string/interpersonal_effectiveness">
     </fragment>
 
@@ -427,4 +427,24 @@
         android:id="@+id/navigation_list_of_emo_page3"
         android:name="com.example.myapplication666.ui.modules.emotional_regulation.abc_please.ListOfEmoPage3">
     </fragment>
+
+    <fragment
+        android:id="@+id/navigation_ask"
+        android:name="com.example.myapplication666.ui.modules.interpersonal_effectiveness.Ask"
+        android:label = "Попроси">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_friend"
+        android:name="com.example.myapplication666.ui.modules.interpersonal_effectiveness.Friend"
+        android:label = "Друг">
+
+        <fragment
+            android:id="@+id/navigation_honor"
+            android:name="com.example.myapplication666.ui.modules.interpersonal_effectiveness.Honor"
+            android:label = "Честь">
+        </fragment>
+    </fragment>
+
+
 </navigation>

@@ -1,4 +1,4 @@
-package com.example.myapplication666.ui.modules.emotional_regulation
+package com.example.myapplication666.ui.modules.interpersonal_effectiveness
 
 import android.content.Intent
 import androidx.lifecycle.ViewModelProvider
@@ -16,21 +16,21 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModel
 import com.example.myapplication666.database.App
 
-class ExercisesFragment : Fragment() {
+class ExercisesFragment2 : Fragment() {
 
     companion object {
-        fun newInstance() = ExercisesFragment()
+        fun newInstance() = ExercisesFragment2()
     }
 
-    private val viewModel by viewModels<ExercisesViewModel> {
+    private val viewModel by viewModels<ExercisesViewModel2> {
         //фабрика для создания вью модели
         object : ViewModelProvider.Factory {
             override fun <T : ViewModel> create(modelClass: Class<T>): T {
-                return ExercisesViewModel(App.returnDatabase.returnDao()) as T
+                return ExercisesViewModel2(App.returnDatabase.returnDao()) as T
             }
         }
     }
-    private val adapter = ExpandableAdapter()
+    private val adapter = ExpandableAdapter2()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -49,7 +49,7 @@ class ExercisesFragment : Fragment() {
         recycler.adapter = adapter
 
         createBtn.setOnClickListener {
-            startActivity(Intent(context, CreateExerciseActivity::class.java))
+            startActivity(Intent(context, CreateExerciseActivity2::class.java))
         }
     }
 
@@ -62,16 +62,16 @@ class ExercisesFragment : Fragment() {
 
     private fun setData() {
         val data = viewModel.getExercises()
-        val mutableList = mutableListOf<ListItem>()
+        val mutableList = mutableListOf<ListItem2>()
         data.forEach { exercise ->
-            val innerItems = mutableListOf<InnerItem>()
+            val innerItems = mutableListOf<InnerItem2>()
             exercise.value.forEach {
-                innerItems.add(InnerItem(it.first, it.second))
+                innerItems.add(InnerItem2(it.first, it.second))
             }
 
 
             mutableList.add(
-                ExpandableItem(
+                ExpandableItem2(
                     exercise.date,
                     false,
                     innerItems

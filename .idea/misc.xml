@@ -19,6 +19,7 @@
         <entry key="..\:/MyApplication666/app/src/main/res/layout/activity_main.xml" value="0.17708333333333334" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/activity_main2.xml" value="0.25416666666666665" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/activity_splash.xml" value="0.2" />
+        <entry key="..\:/MyApplication666/app/src/main/res/layout/ask_fragment.xml" value="0.25416666666666665" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/be_free_fragment.xml" value="0.25416666666666665" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/blank_fragment.xml" value="0.25416666666666665" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/brides2_fragment.xml" value="0.25416666666666665" />
@@ -36,16 +37,21 @@
         <entry key="..\:/MyApplication666/app/src/main/res/layout/emotional_regulation_fragment.xml" value="0.2513586956521739" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/emotions_fragment.xml" value="0.264" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/enum_fragment.xml" value="0.25416666666666665" />
+        <entry key="..\:/MyApplication666/app/src/main/res/layout/exercise_type_converter_fragment.xml" value="0.11354166666666667" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/exercises_fragment.xml" value="0.13451086956521738" />
+        <entry key="..\:/MyApplication666/app/src/main/res/layout/exercises_fragment2.xml" value="0.25416666666666665" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/focusing_fragment.xml" value="0.25416666666666665" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/focusing_page2_fragment.xml" value="0.24010416666666667" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/fragment_diary.xml" value="0.264" />
+        <entry key="..\:/MyApplication666/app/src/main/res/layout/fragment_exercise_type_converter.xml" value="0.11354166666666667" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/fragment_home.xml" value="0.1" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/fragment_mindfullness.xml" value="0.25416666666666665" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/fragment_modules.xml" value="0.264" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/fragment_second.xml" value="0.25416666666666665" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/fragment_settings.xml" value="0.25416666666666665" />
+        <entry key="..\:/MyApplication666/app/src/main/res/layout/friend_fragment.xml" value="0.24010416666666667" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/half_smile_fragment.xml" value="0.25416666666666665" />
+        <entry key="..\:/MyApplication666/app/src/main/res/layout/honor_fragment.xml" value="0.25416666666666665" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/how_skills_fragment.xml" value="0.4" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/improve_fragment.xml" value="0.24909420289855072" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/improve_page2_fragment.xml" value="0.25416666666666665" />
@@ -54,9 +60,15 @@
         <entry key="..\:/MyApplication666/app/src/main/res/layout/improve_page5_fragment.xml" value="0.25416666666666665" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/improve_page6_fragment.xml" value="0.1" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/improve_page7_fragment.xml" value="0.25416666666666665" />
+        <entry key="..\:/MyApplication666/app/src/main/res/layout/interpersonal_effectiviness_fragment.xml" value="0.25416666666666665" />
+        <entry key="..\:/MyApplication666/app/src/main/res/layout/interpersonal_exercise_fragment.xml" value="0.24010416666666667" />
+        <entry key="..\:/MyApplication666/app/src/main/res/layout/interpersonal_theory_fragment.xml" value="0.25416666666666665" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/item_exercise.xml" value="0.25416666666666665" />
+        <entry key="..\:/MyApplication666/app/src/main/res/layout/item_exercise2.xml" value="0.25416666666666665" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/item_expandable.xml" value="0.23324275362318841" />
+        <entry key="..\:/MyApplication666/app/src/main/res/layout/item_expandable2.xml" value="0.11354166666666667" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/item_inner.xml" value="0.23324275362318841" />
+        <entry key="..\:/MyApplication666/app/src/main/res/layout/item_inner2.xml" value="0.25416666666666665" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/item_new_diary.xml" value="0.4" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/list_of_emo_page1_fragment.xml" value="0.25416666666666665" />
         <entry key="..\:/MyApplication666/app/src/main/res/layout/list_of_emo_page2_fragment.xml" value="0.25416666666666665" />

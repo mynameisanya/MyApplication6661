@@ -1,4 +1,4 @@
-package com.example.myapplication666.ui.modules.emotional_regulation
+package com.example.myapplication666.ui.modules.interpersonal_effectiveness
 
 import android.os.Bundle
 import android.widget.Button
@@ -16,17 +16,17 @@ import com.example.myapplication666.database.DataExercise
 import com.example.myapplication666.ui.diary.DiaryViewModel
 
 
-class CreateExerciseActivity : AppCompatActivity() {
+class CreateExerciseActivity2 : AppCompatActivity() {
 
-    val adapter = ExercisesAdapter()
+    val adapter = ExercisesAdapter2()
 
     private var titleEditText:EditText? = null
 
-    private val viewModel by viewModels<ExercisesViewModel> {
+    private val viewModel by viewModels<ExercisesViewModel2> {
         //фабрика для создания вью модели
         object : ViewModelProvider.Factory {
             override fun <T : ViewModel> create(modelClass: Class<T>): T {
-                return ExercisesViewModel(App.returnDatabase.returnDao()) as T
+                return ExercisesViewModel2(App.returnDatabase.returnDao()) as T
             }
         }
     }
@@ -43,14 +43,14 @@ class CreateExerciseActivity : AppCompatActivity() {
             }
             if(titleEditText!!.text.isEmpty() || adapterList.isEmpty())
             {
-                Toast.makeText(this@CreateExerciseActivity, "Необходимо заполнить данные", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@CreateExerciseActivity2, "Необходимо заполнить данные", Toast.LENGTH_SHORT).show()
             }
             else
             {
                 val data = DataExercise(titleEditText?.text.toString(), adapterList)
                 viewModel.insertExercises(data)
-                Rep.list = adapterList
-                Rep.title = titleEditText?.text.toString()
+                Rep2.list = adapterList
+                Rep2.title = titleEditText?.text.toString()
                 finish()
             }
         }

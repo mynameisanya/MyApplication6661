@@ -19,4 +19,10 @@ interface DatabaseDao {
     fun insertExercise(data: DataExercise)
     @Query ("select * from DataExercise")
     fun getAllExercise(): List<DataExercise>
+
+
+    @Insert (onConflict = REPLACE)
+    fun insertExercise2(data: DataExercise2)
+    @Query ("select * from DataExercise2")
+    fun getAllExercise2(): List<DataExercise2>
 }
