@@ -429,6 +429,12 @@
     </fragment>
 
     <fragment
+        android:id="@+id/navigation_care"
+        android:name="com.example.myapplication666.ui.modules.emotional_regulation.abc_please.Care"
+        android:label = "Забота">
+    </fragment>
+
+    <fragment
         android:id="@+id/navigation_ask"
         android:name="com.example.myapplication666.ui.modules.interpersonal_effectiveness.Ask"
         android:label = "Попроси">

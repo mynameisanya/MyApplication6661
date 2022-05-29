@@ -1,13 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.modules.emotional_regulation.tips_of_emo.TipsOfEmo">
+    android:background="@drawable/background3"
+    tools:context=".ui.modules.mindfulness.wise_mind.WiseMindFragment">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Hello" />
+        android:orientation="vertical">
 
-</FrameLayout>
+        <ImageButton
+            android:id="@+id/purpose_emotional"
+            android:layout_width="353dp"
+            android:layout_height="166dp"
+            android:src="@drawable/anger"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp" />
+
+        <ImageButton
+            android:id="@+id/name_of_emotional"
+            android:layout_width="353dp"
+            android:layout_height="166dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/disgust1" />
+        <ImageButton
+            android:id="@+id/myths_of_emo"
+            android:layout_width="353dp"
+            android:layout_height="166dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/jealousy" />
+    </LinearLayout>
+</ScrollView>
