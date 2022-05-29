@@ -49,8 +49,6 @@ class CreateExerciseActivity : AppCompatActivity() {
             {
                 val data = DataExercise(titleEditText?.text.toString(), adapterList)
                 viewModel.insertExercises(data)
-                Rep.list = adapterList
-                Rep.title = titleEditText?.text.toString()
                 finish()
             }
         }

@@ -4,7 +4,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.myapplication666.EnumER
-import com.example.myapplication666.ui.modules.interpersonal_effectiveness.InterpersonalExercise
+import com.example.myapplication666.ui.modules.interpersonal_effectiveness.InterpersonalExerciseFragment
 import com.example.myapplication666.ui.modules.interpersonal_effectiveness.InterpersonalTheory
 
 class InterpersonalEffectivenessAdapter(activity: FragmentActivity): FragmentStateAdapter(activity) {
@@ -16,7 +16,7 @@ class InterpersonalEffectivenessAdapter(activity: FragmentActivity): FragmentSta
         return when (EnumER.values()[getItemViewType(position)])
         {
             EnumER.THEORY -> InterpersonalTheory()
-            EnumER.EXERCISES -> InterpersonalExercise()
+            EnumER.EXERCISES -> InterpersonalExerciseFragment()
         }
     }
 

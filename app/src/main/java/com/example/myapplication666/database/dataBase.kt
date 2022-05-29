@@ -5,7 +5,7 @@ import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 
 //описание базы данных, описываются модели, которые мы сохраняем в бд и интерфейс методов, которые будут доступны в бд
-@Database(entities = [DiaryModel::class, DataExercise::class, DataExercise2::class], version = 3, exportSchema = false)
+@Database(entities = [DiaryModel::class, DataExercise::class, DataInterpersonalExercise::class], version = 2, exportSchema = false)
 //перечисляются все конвертеры, которые используются бд
 @TypeConverters(DiaryModelTypeConverter::class, ExerciseTypeConverter::class)
 abstract class dataBase : RoomDatabase() {

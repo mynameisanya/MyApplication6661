@@ -7,30 +7,29 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModel
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication666.R
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import androidx.activity.viewModels
-import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModel
 import com.example.myapplication666.database.App
+import com.example.myapplication666.ui.modules.emotional_regulation.*
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
-class ExercisesFragment2 : Fragment() {
-
+class InterpersonalExerciseFragment : Fragment() {
     companion object {
-        fun newInstance() = ExercisesFragment2()
+        fun newInstance() = InterpersonalExerciseFragment()
     }
 
-    private val viewModel by viewModels<ExercisesViewModel2> {
+    private val viewModel by viewModels<InterpersonalExerciseViewModel> {
         //фабрика для создания вью модели
         object : ViewModelProvider.Factory {
             override fun <T : ViewModel> create(modelClass: Class<T>): T {
-                return ExercisesViewModel2(App.returnDatabase.returnDao()) as T
+                return InterpersonalExerciseViewModel(App.returnDatabase.returnDao()) as T
             }
         }
     }
-    private val adapter = ExpandableAdapter2()
+    private val adapter = ExpandableAdapter()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -49,7 +48,7 @@ class ExercisesFragment2 : Fragment() {
         recycler.adapter = adapter
 
         createBtn.setOnClickListener {
-            startActivity(Intent(context, CreateExerciseActivity2::class.java))
+            startActivity(Intent(context, CreateInterpersonalExercise::class.java))
         }
     }
 
@@ -62,16 +61,16 @@ class ExercisesFragment2 : Fragment() {
 
     private fun setData() {
         val data = viewModel.getExercises()
-        val mutableList = mutableListOf<ListItem2>()
+        val mutableList = mutableListOf<ListItem>()
         data.forEach { exercise ->
-            val innerItems = mutableListOf<InnerItem2>()
+            val innerItems = mutableListOf<InnerItem>()
             exercise.value.forEach {
-                innerItems.add(InnerItem2(it.first, it.second))
+                innerItems.add(InnerItem(it.first, it.second))
             }
 
 
             mutableList.add(
-                ExpandableItem2(
+                ExpandableItem(
                     exercise.date,
                     false,
                     innerItems
@@ -81,4 +80,5 @@ class ExercisesFragment2 : Fragment() {
 
         adapter.items = mutableList
     }
+
 }

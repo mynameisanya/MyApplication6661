@@ -26,6 +26,7 @@
         </activity>
 
         <activity android:name=".ui.modules.emotional_regulation.CreateExerciseActivity"/>
+        <activity android:name=".ui.modules.interpersonal_effectiveness.CreateInterpersonalExercise"/>
     </application>
 
 </manifest>

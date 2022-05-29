@@ -12,21 +12,21 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication666.R
 import com.example.myapplication666.database.App
-import com.example.myapplication666.database.DataExercise
-import com.example.myapplication666.ui.diary.DiaryViewModel
+import com.example.myapplication666.database.DataInterpersonalExercise
+import com.example.myapplication666.ui.modules.emotional_regulation.ExercisesAdapter
 
 
-class CreateExerciseActivity2 : AppCompatActivity() {
+class CreateInterpersonalExercise : AppCompatActivity() {
 
-    val adapter = ExercisesAdapter2()
+    val adapter = ExercisesAdapter()
 
-    private var titleEditText:EditText? = null
+    private var titleEditText: EditText? = null
 
-    private val viewModel by viewModels<ExercisesViewModel2> {
+    private val viewModel by viewModels<InterpersonalExerciseViewModel> {
         //фабрика для создания вью модели
         object : ViewModelProvider.Factory {
             override fun <T : ViewModel> create(modelClass: Class<T>): T {
-                return ExercisesViewModel2(App.returnDatabase.returnDao()) as T
+                return InterpersonalExerciseViewModel(App.returnDatabase.returnDao()) as T
             }
         }
     }
@@ -41,16 +41,15 @@ class CreateExerciseActivity2 : AppCompatActivity() {
             val adapterList = adapter.list.filter {
                 it.second.isNotEmpty()
             }
-            if(titleEditText!!.text.isEmpty() || adapterList.isEmpty())
-            {
-                Toast.makeText(this@CreateExerciseActivity2, "Необходимо заполнить данные", Toast.LENGTH_SHORT).show()
-            }
-            else
-            {
-                val data = DataExercise(titleEditText?.text.toString(), adapterList)
+            if (titleEditText!!.text.isEmpty() || adapterList.isEmpty()) {
+                Toast.makeText(
+                    this@CreateInterpersonalExercise,
+                    "Необходимо заполнить данные",
+                    Toast.LENGTH_SHORT
+                ).show()
+            } else {
+                val data = DataInterpersonalExercise(titleEditText?.text.toString(), adapterList)
                 viewModel.insertExercises(data)
-                Rep2.list = adapterList
-                Rep2.title = titleEditText?.text.toString()
                 finish()
             }
         }
