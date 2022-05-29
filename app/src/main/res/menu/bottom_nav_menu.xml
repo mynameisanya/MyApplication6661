@@ -11,9 +11,4 @@
         android:icon="@drawable/diary1"
         android:title="@string/title_diary" />
 
-    <item
-        android:id="@+id/navigation_config"
-        android:icon="@drawable/config"
-        android:title="@string/title_config" />
-
 </menu>

@@ -18,12 +18,6 @@
         tools:layout="@layout/fragment_diary" />
 
     <fragment
-        android:id="@+id/navigation_config"
-        android:name="com.example.myapplication666.ui.config.ConfigFragment"
-        android:label="@string/title_config"
-        tools:layout="@layout/config_fragment" />
-
-    <fragment
         android:id="@+id/navigation_mindfulness"
         android:name="com.example.myapplication666.MindfulnessFragment"
         android:label="@string/mindfulness">
