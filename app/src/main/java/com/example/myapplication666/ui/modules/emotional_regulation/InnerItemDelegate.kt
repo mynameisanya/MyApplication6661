@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication666.R
 import com.hannesdorfmann.adapterdelegates4.AbsListItemAdapterDelegate
 
-class InnerItemDelegate :
+class InnerItemDelegate(private val isHideDescription:Boolean = false) :
     AbsListItemAdapterDelegate<InnerItem, ListItem, InnerItemDelegate.InnerItemViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup): InnerItemViewHolder {
@@ -29,6 +29,9 @@ class InnerItemDelegate :
     ) {
         holder.questionsTv.text = item.title
         holder.answerTv.text = item.description
+        if (isHideDescription) {
+            holder.answerTv.visibility = View.GONE
+        }
     }
 
     override fun isForViewType(

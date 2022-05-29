@@ -19,12 +19,17 @@ import com.example.myapplication666.MainActivity
 import com.example.myapplication666.R
 import com.example.myapplication666.database.App
 import com.example.myapplication666.database.Model
+import com.example.myapplication666.ui.modules.emotional_regulation.ExpandableAdapter
+import com.example.myapplication666.ui.modules.emotional_regulation.ExpandableItem
+import com.example.myapplication666.ui.modules.emotional_regulation.InnerItem
+import com.example.myapplication666.ui.modules.emotional_regulation.ListItem
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class NewDiaryFragment : Fragment() {
 
     private var recycler: RecyclerView? = null
+    private var expandableList: RecyclerView? = null
     private var saveBtn: Button? = null
     private var dialogView: View? = null
     private var btnSave: Button? = null
@@ -34,9 +39,11 @@ class NewDiaryFragment : Fragment() {
     private lateinit var alertDialog: AlertDialog
 
     val diaryAdapter = DiaryAdapter()
+    private val expandableAdapter = ExpandableAdapter(true)
     private var diaryList = mutableListOf<Model>()
 
     private var currentMonth = Months.APR
+
     //вью модель для обмена данными между фрагментами нью дайри и дайри
     private val viewModel by activityViewModels<DiaryViewModel> {
         object : ViewModelProvider.Factory {
@@ -60,9 +67,36 @@ class NewDiaryFragment : Fragment() {
         buildAlertDialog()
         initAdapter()
         setClickListeners()
+
+        expandableList?.layoutManager =
+            LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+        setData()
+        expandableList?.adapter = expandableAdapter
+
         currentMonth = arguments?.get(DiaryFragment.EXTRA_NEW_DIARY) as Months
         diaryList = viewModel.getDefaultDiaryList()
         diaryAdapter.setData(diaryList)
+    }
+
+    private fun setData() {
+
+        val mutableList = mutableListOf<ListItem>()
+
+        val innerItems = mutableListOf<InnerItem>()
+
+        for(i in 0..3) {
+            innerItems.add(InnerItem("inner $i", ""))
+        }
+        mutableList.add(
+            ExpandableItem(
+                "diary",
+                false,
+                innerItems
+            )
+        )
+
+
+        expandableAdapter.items = mutableList
     }
 
     private fun setClickListeners() {
@@ -87,14 +121,13 @@ class NewDiaryFragment : Fragment() {
             Log.e(javaClass.simpleName, "saveBtn")
             try {
                 val listToSave = mutableListOf<Model>()
-                diaryList.forEach{
-                    if(it.characteristic != 0)
+                diaryList.forEach {
+                    if (it.characteristic != 0)
                         listToSave.add(it)
                 }
                 viewModel.saveData(currentMonth, listToSave)
                 (requireActivity() as MainActivity).popBackStack()
-            }
-            catch (ex: IllegalStateException) {
+            } catch (ex: IllegalStateException) {
                 Toast.makeText(context, "Вы хотите сохранить пустой список", Toast.LENGTH_SHORT)
                     .show()
 
@@ -155,6 +188,7 @@ class NewDiaryFragment : Fragment() {
         recycler = view.findViewById(R.id.recycler)
         saveBtn = view.findViewById(R.id.save_btn)
         btnAddAction = view.findViewById(R.id.showDialog)
+        expandableList = view.findViewById(R.id.expandable_list)
     }
 
     override fun onDestroy() {

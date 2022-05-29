@@ -3,7 +3,7 @@ package com.example.myapplication666.ui.modules.emotional_regulation
 import androidx.recyclerview.widget.DiffUtil
 import com.hannesdorfmann.adapterdelegates4.ListDelegationAdapter
 
-class ExpandableAdapter : ListDelegationAdapter<List<ListItem>>() {
+class ExpandableAdapter(private val isHideDescription: Boolean = false) : ListDelegationAdapter<List<ListItem>>() {
     private var sourceList: List<ListItem> = emptyList()
 
     init {
@@ -14,7 +14,7 @@ class ExpandableAdapter : ListDelegationAdapter<List<ListItem>>() {
             setItems(newSourceList)
         }
         delegatesManager.addDelegate(expandableItemDelegate)
-        delegatesManager.addDelegate(InnerItemDelegate())
+        delegatesManager.addDelegate(InnerItemDelegate(isHideDescription))
     }
 
     override fun setItems(sourceList: List<ListItem>?) {
