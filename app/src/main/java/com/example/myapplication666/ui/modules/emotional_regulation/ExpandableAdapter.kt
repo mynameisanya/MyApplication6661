@@ -3,16 +3,20 @@ package com.example.myapplication666.ui.modules.emotional_regulation
 import androidx.recyclerview.widget.DiffUtil
 import com.hannesdorfmann.adapterdelegates4.ListDelegationAdapter
 
-class ExpandableAdapter(private val isHideDescription: Boolean = false) : ListDelegationAdapter<List<ListItem>>() {
+class ExpandableAdapter(
+    private val isHideDescription: Boolean = false,
+    private val onDeleteClickListener: (item: ExpandableItem) -> Unit = {}
+) : ListDelegationAdapter<List<ListItem>>() {
     private var sourceList: List<ListItem> = emptyList()
 
     init {
-        val expandableItemDelegate = ExpandableItemDelegate { item: ExpandableItem ->
-            val newSourceList = sourceList.toMutableList()
-            val itemIndex = sourceList.indexOf(item)
-            newSourceList[itemIndex] = item.copy(isExpanded = !item.isExpanded)
-            setItems(newSourceList)
-        }
+        val expandableItemDelegate =
+            ExpandableItemDelegate(onDeleteClickListener) { item: ExpandableItem ->
+                val newSourceList = sourceList.toMutableList()
+                val itemIndex = sourceList.indexOf(item)
+                newSourceList[itemIndex] = item.copy(isExpanded = !item.isExpanded)
+                setItems(newSourceList)
+            }
         delegatesManager.addDelegate(expandableItemDelegate)
         delegatesManager.addDelegate(InnerItemDelegate(isHideDescription))
     }

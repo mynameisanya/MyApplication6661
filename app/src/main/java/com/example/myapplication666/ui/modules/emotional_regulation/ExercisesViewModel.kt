@@ -11,4 +11,8 @@ class ExercisesViewModel(private val dao: DatabaseDao) : ViewModel() {
     fun insertExercises(data: DataExercise) {
         dao.insertExercise(data)
     }
+
+    fun deleteExercise(data: DataExercise){
+        dao.deleteExercise(data)
+    }
 }

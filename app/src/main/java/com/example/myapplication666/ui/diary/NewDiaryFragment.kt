@@ -84,9 +84,10 @@ class NewDiaryFragment : Fragment() {
 
         val innerItems = mutableListOf<InnerItem>()
 
-        for(i in 0..3) {
-            innerItems.add(InnerItem("inner $i", ""))
-        }
+        innerItems.add(InnerItem("inner $", ""))
+        innerItems.add(InnerItem("inner two", ""))
+        innerItems.add(InnerItem("inner three", ""))
+
         mutableList.add(
             ExpandableItem(
                 "diary",

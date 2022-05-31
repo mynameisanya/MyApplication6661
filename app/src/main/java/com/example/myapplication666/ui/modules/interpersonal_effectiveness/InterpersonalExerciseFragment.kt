@@ -13,7 +13,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication666.R
 import com.example.myapplication666.database.App
+import com.example.myapplication666.database.DataExercise
+import com.example.myapplication666.database.DataInterpersonalExercise
 import com.example.myapplication666.ui.modules.emotional_regulation.*
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class InterpersonalExerciseFragment : Fragment() {
@@ -29,7 +32,7 @@ class InterpersonalExerciseFragment : Fragment() {
             }
         }
     }
-    private val adapter = ExpandableAdapter()
+    private lateinit var adapter:ExpandableAdapter
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -42,6 +45,9 @@ class InterpersonalExerciseFragment : Fragment() {
         val recycler = view.findViewById<RecyclerView>(R.id.recycler)
 
         val createBtn = view.findViewById<FloatingActionButton>(R.id.create_btn)
+        adapter = ExpandableAdapter { expandableItem ->
+            createDialog(expandableItem)
+        }
         recycler.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
         setData()
 
@@ -50,6 +56,44 @@ class InterpersonalExerciseFragment : Fragment() {
         createBtn.setOnClickListener {
             startActivity(Intent(context, CreateInterpersonalExercise::class.java))
         }
+    }
+
+    private fun createDialog(expandableItem: ExpandableItem) {
+        MaterialAlertDialogBuilder(requireContext())
+            .setTitle(resources.getString(R.string.delete_exercise))
+            .setMessage(resources.getString(R.string.are_you_sure_to_delete))
+            .setNegativeButton(resources.getString(R.string.cancel)) { dialog, which ->
+                // Respond to negative button press
+            }
+            .setPositiveButton(resources.getString(R.string.ok)) { dialog, which ->
+                deleteExercise(expandableItem)
+            }
+            .show()
+    }
+
+    private fun deleteExercise(expandableItem: ExpandableItem) {
+        val position = adapter.items!!.indexOf(expandableItem)
+        val data = viewModel.getExercises()
+        val exercise = data.find { dataExercise ->
+            dataExercise.date == expandableItem.text && isListEquals(expandableItem, dataExercise)
+        }
+        exercise?.let {
+            viewModel.deleteExercise(it)
+            setData()
+            adapter.notifyItemRemoved(position)
+        }
+    }
+
+    private fun isListEquals(expandableItem: ExpandableItem, data: DataInterpersonalExercise): Boolean {
+        for (i in 0 until expandableItem.innerItems.size) {
+            if (expandableItem.innerItems[i].title != data.value[i].first &&
+                expandableItem.innerItems[i].description != data.value[i].second
+            ) {
+                return false
+            }
+        }
+
+        return true
     }
 
 

@@ -10,7 +10,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication666.R
 import com.hannesdorfmann.adapterdelegates4.AbsListItemAdapterDelegate
 
-class ExpandableItemDelegate(private val clickCallback: (expandableItem: ExpandableItem) -> Unit) :
+class ExpandableItemDelegate(
+    private val onDeleteClickListener: (item: ExpandableItem) -> Unit,
+    private val clickCallback: (expandableItem: ExpandableItem) -> Unit
+) :
     AbsListItemAdapterDelegate<ExpandableItem, ListItem, ExpandableItemDelegate.ExpandableItemViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup): ExpandableItemViewHolder {
@@ -40,6 +43,11 @@ class ExpandableItemDelegate(private val clickCallback: (expandableItem: Expanda
         }
         holder.itemView.setOnClickListener {
             clickCallback(item)
+        }
+
+        holder.itemView.setOnLongClickListener {
+            onDeleteClickListener(item)
+            return@setOnLongClickListener true
         }
     }
 

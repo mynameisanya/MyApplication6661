@@ -1,6 +1,7 @@
 package com.example.myapplication666.database
 
 import androidx.room.Dao
+import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy.REPLACE
 import androidx.room.Query
@@ -24,4 +25,9 @@ interface DatabaseDao {
     fun insertInterpersonalExercise(data: DataInterpersonalExercise)
     @Query ("select * from DataInterpersonalExercise")
     fun getAllInterpersonalExercise(): List<DataInterpersonalExercise>
+    @Delete
+    fun deleteExercise(data: DataExercise)
+
+    @Delete
+    fun deleteExercise(data: DataInterpersonalExercise)
 }
