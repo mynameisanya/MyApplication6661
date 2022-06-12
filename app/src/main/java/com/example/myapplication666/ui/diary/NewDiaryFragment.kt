@@ -1,14 +1,18 @@
 package com.example.myapplication666.ui.diary
 
+import android.app.DatePickerDialog
+import android.app.DatePickerDialog.OnDateSetListener
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.DatePicker
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModel
@@ -23,8 +27,10 @@ import com.example.myapplication666.ui.modules.emotional_regulation.ExpandableAd
 import com.example.myapplication666.ui.modules.emotional_regulation.ExpandableItem
 import com.example.myapplication666.ui.modules.emotional_regulation.InnerItem
 import com.example.myapplication666.ui.modules.emotional_regulation.ListItem
+import com.example.myapplication666.utils.getDateTextFormatter
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import java.util.*
 
 class NewDiaryFragment : Fragment() {
 
@@ -36,6 +42,7 @@ class NewDiaryFragment : Fragment() {
     private var editTextAdd: EditText? = null
     private var btnAddAction: FloatingActionButton? = null
     private var btnCancel: Button? = null
+    private var calendarBtn: Button? = null
     private lateinit var alertDialog: AlertDialog
 
     val diaryAdapter = DiaryAdapter()
@@ -43,6 +50,7 @@ class NewDiaryFragment : Fragment() {
     private var diaryList = mutableListOf<Model>()
 
     private var currentMonth = Months.APR
+    private lateinit var currentDay: String
 
     //вью модель для обмена данными между фрагментами нью дайри и дайри
     private val viewModel by activityViewModels<DiaryViewModel> {
@@ -74,6 +82,7 @@ class NewDiaryFragment : Fragment() {
         expandableList?.adapter = expandableAdapter
 
         currentMonth = arguments?.get(DiaryFragment.EXTRA_NEW_DIARY) as Months
+
         diaryList = viewModel.getDefaultDiaryList()
         diaryAdapter.setData(diaryList)
     }
@@ -110,7 +119,7 @@ class NewDiaryFragment : Fragment() {
             btnSave?.setOnClickListener()
             {
                 val editText = editTextAdd?.text.toString()
-                val model = Model(editText, 0)
+                val model = Model(currentDay, editText, 0)
                 diaryList.add(model)
                 diaryAdapter.notifyItemInserted(diaryList.size - 1)
                 alertDialog.dismiss()
@@ -119,21 +128,51 @@ class NewDiaryFragment : Fragment() {
         }
 
         saveBtn?.setOnClickListener {
-            Log.e(javaClass.simpleName, "saveBtn")
-            try {
-                val listToSave = mutableListOf<Model>()
-                diaryList.forEach {
-                    if (it.characteristic != 0)
-                        listToSave.add(it)
-                }
-                viewModel.saveData(currentMonth, listToSave)
-                (requireActivity() as MainActivity).popBackStack()
-            } catch (ex: IllegalStateException) {
-                Toast.makeText(context, "Вы хотите сохранить пустой список", Toast.LENGTH_SHORT)
-                    .show()
+            if (this::currentDay.isInitialized) {
+                Log.e(javaClass.simpleName, "saveBtn")
+                try {
+                    val listToSave = mutableListOf<Model>()
+                    diaryList.forEach {
+                        if (it.characteristic != 0) {
+                            it.day = currentDay
+                            listToSave.add(it)
+                        }
+                    }
+                    viewModel.saveData(currentMonth, listToSave)
+                    (requireActivity() as MainActivity).popBackStack()
+                } catch (ex: IllegalStateException) {
+                    Toast.makeText(context, "Вы хотите сохранить пустой список", Toast.LENGTH_SHORT)
+                        .show()
 
+                }
+            } else {
+                Toast.makeText(context, "Выберите дату", Toast.LENGTH_SHORT).show()
             }
         }
+
+        calendarBtn?.setOnClickListener {
+            setUpDatePicker()
+        }
+    }
+
+    private fun setUpDatePicker() {
+        val dateAndTime = Calendar.getInstance()
+        val datePickerDialog = DatePickerDialog(
+            requireContext(),
+            OnDateSetListener { datePicker: DatePicker?, year: Int, month: Int, day: Int ->
+                dateAndTime[year, month] = day
+                val chooseTime = dateAndTime.timeInMillis
+                currentDay = getDateTextFormatter(chooseTime)
+            },
+            dateAndTime[Calendar.YEAR],
+            currentMonth.ordinal,
+            dateAndTime[Calendar.DAY_OF_MONTH]
+        )
+        datePickerDialog.show()
+        datePickerDialog.getButton(DatePickerDialog.BUTTON_NEGATIVE)
+            .setTextColor(ContextCompat.getColor(requireContext(), R.color.main_background_color))
+        datePickerDialog.getButton(DatePickerDialog.BUTTON_POSITIVE)
+            .setTextColor(ContextCompat.getColor(requireContext(), R.color.main_background_color))
     }
 
     private fun buildAlertDialog() {
@@ -173,7 +212,7 @@ class NewDiaryFragment : Fragment() {
                         editTextAdd?.setText(diaryList[position].text)
                         btnSave?.setOnClickListener {
                             val editText = editTextAdd?.text.toString()
-                            val model = Model(editText, 0)
+                            val model = Model(currentDay, editText, 0)
                             diaryList[position] = model
                             diaryAdapter.notifyItemChanged(position)
                             alertDialog.dismiss()
@@ -190,6 +229,7 @@ class NewDiaryFragment : Fragment() {
         saveBtn = view.findViewById(R.id.save_btn)
         btnAddAction = view.findViewById(R.id.showDialog)
         expandableList = view.findViewById(R.id.expandable_list)
+        calendarBtn = view.findViewById(R.id.calendarBtn)
     }
 
     override fun onDestroy() {

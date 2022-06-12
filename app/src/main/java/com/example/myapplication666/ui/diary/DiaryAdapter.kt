@@ -23,7 +23,9 @@ class DiaryAdapter : RecyclerView.Adapter<DiaryAdapter.NewDiaryVewHolder>() {
         val textView = itemView.findViewById<TextView>(R.id.text)
         val seekBar = itemView.findViewById<SeekBar>(R.id.seekBar)
         val counter = itemView.findViewById<TextView>(R.id.counter)
+        val day = itemView.findViewById<TextView>(R.id.day)
         fun bind(position: Int) {
+            day.text = list[position].day
             textView.text = list[position].text
             seekBar.progress = list[position].characteristic
             seekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {

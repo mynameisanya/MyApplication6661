@@ -85,6 +85,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="-60dp">
 
+
         <TextView
             android:id="@+id/counter"
             android:layout_width="wrap_content"
@@ -99,6 +100,17 @@
             app:layout_constraintTop_toTopOf="parent"
 
             tools:text="90" />
+
+        <TextView
+            android:id="@+id/day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:text="18.02.2012"
+            android:textColor="#1C143F"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/text"

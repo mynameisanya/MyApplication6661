@@ -40,12 +40,12 @@ class DiaryViewModel(private val diaryDao: DatabaseDao) : ViewModel() {
 
     fun getDefaultDiaryList(): MutableList<Model> {
         return mutableListOf(
-            Model("Наблюдение", 0),
-            Model("Описание", 0),
-            Model("Участие", 0),
-            Model("СТОП", 0),
-            Model("ТРУД", 0),
-            Model("ПЕРЕЖИТЬ", 0),
+            Model("","Наблюдение", 0),
+            Model("","Описание", 0),
+            Model("","Участие", 0),
+            Model("","СТОП", 0),
+            Model("","ТРУД", 0),
+            Model("","ПЕРЕЖИТЬ", 0),
 
         )
     }

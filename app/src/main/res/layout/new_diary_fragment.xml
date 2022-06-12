@@ -5,6 +5,15 @@
     android:layout_height="match_parent"
     android:background="@drawable/background3">
 
+    <Button
+        android:id="@+id/calendarBtn"
+        android:layout_width="wrap_content"
+        android:text="Открыть календарь"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/expandable_list"
         android:layout_width="match_parent"
@@ -12,7 +21,7 @@
         android:paddingBottom="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/calendarBtn" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler"
@@ -34,21 +43,21 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-<!--    <Button-->
-<!--        android:id="@+id/showDialog"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_gravity="bottom|end"-->
-<!--        android:layout_marginStart="208dp"-->
-<!--        android:layout_marginBottom="68dp"-->
-<!--        android:backgroundTint="@color/backgroundButton"-->
-<!--        android:text="Добавить навык"-->
-<!--        android:textColor="@color/textColorButton"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.172"-->
-<!--        app:layout_constraintStart_toStartOf="parent" />-->
+    <!--    <Button-->
+    <!--        android:id="@+id/showDialog"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_gravity="bottom|end"-->
+    <!--        android:layout_marginStart="208dp"-->
+    <!--        android:layout_marginBottom="68dp"-->
+    <!--        android:backgroundTint="@color/backgroundButton"-->
+    <!--        android:text="Добавить навык"-->
+    <!--        android:textColor="@color/textColorButton"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.172"-->
+    <!--        app:layout_constraintStart_toStartOf="parent" />-->
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/showDialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
