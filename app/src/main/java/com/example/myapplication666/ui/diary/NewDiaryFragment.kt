@@ -79,8 +79,7 @@ class NewDiaryFragment : Fragment() {
         expandableList?.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
         setData()
-        expandableList?.adapter = expandableAdapter
-
+       expandableList?.adapter = expandableAdapter
         currentMonth = arguments?.get(DiaryFragment.EXTRA_NEW_DIARY) as Months
 
         diaryList = viewModel.getDefaultDiaryList()
@@ -93,20 +92,22 @@ class NewDiaryFragment : Fragment() {
 
         val innerItems = mutableListOf<InnerItem>()
 
-        innerItems.add(InnerItem("inner $", ""))
-        innerItems.add(InnerItem("inner two", ""))
-        innerItems.add(InnerItem("inner three", ""))
-
+        innerItems.add(InnerItem("1 - Не думала, не использовала", ""))
+        innerItems.add(InnerItem("2 - Думала, не использовала, не пыталась", ""))
+        innerItems.add(InnerItem("3 - Думала, не использовала, пыталась", ""))
+        innerItems.add(InnerItem("4 - Пыталась, но не смогла использовать", ""))
+        innerItems.add(InnerItem("5 - Использовала, но не помогло", ""))
+        innerItems.add(InnerItem("6 - Использовала, помогло", ""))
         mutableList.add(
             ExpandableItem(
-                "diary",
+                "Использование навыков",
                 false,
                 innerItems
             )
         )
 
 
-        expandableAdapter.items = mutableList
+            expandableAdapter.items = mutableList
     }
 
     private fun setClickListeners() {

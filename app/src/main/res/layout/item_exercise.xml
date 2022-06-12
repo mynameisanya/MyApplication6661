@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/back8"
     android:layout_height="wrap_content">
 
     <TextView
@@ -11,7 +12,7 @@
         android:layout_height="wrap_content"
         tools:text="@string/step_two"
         android:layout_margin="20dp"
-        android:textColor="@color/main_background_color"
+        android:textColor="@color/textColorButton"
         app:layout_constraintBottom_toTopOf="@+id/editText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,7 +22,7 @@
         android:id="@+id/editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/main_background_color"
+        android:textColor="@color/textColorButton"
         android:layout_marginTop="24dp"
         android:ems="10"
         android:layout_margin="20dp"
